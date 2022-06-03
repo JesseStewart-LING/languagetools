@@ -5,4 +5,4 @@
 <body>
 <h1>Herramientas Lingüísticas • Language Tools</h1>
 <a href="MediaLengua.html"><img src="ML_banner.jpg" width="75%" height="125" align="left" border="0"></a>
-</body></html>
+</body>
