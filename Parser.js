@@ -188,8 +188,10 @@ var y19 = b[j].charAt(0) + b[j].charAt(1) + b[j].charAt(2) + b[j].charAt(3) + b[
 var y20 = b[j].charAt(0) + b[j].charAt(1) + b[j].charAt(2) + b[j].charAt(3) + b[j].charAt(4) + b[j].charAt(5) + b[j].charAt(6) + b[j].charAt(7) + b[j].charAt(8) + b[j].charAt(9) + b[j].charAt(10) + b[j].charAt(11) + b[j].charAt(12) + b[j].charAt(13) + b[j].charAt(14) + b[j].charAt(15) + b[j].charAt(16) + b[j].charAt(17) + b[j].charAt(18) + b[j].charAt(19)
 var y21 = b[j].charAt(0) + b[j].charAt(1) + b[j].charAt(2) + b[j].charAt(3) + b[j].charAt(4) + b[j].charAt(5) + b[j].charAt(6) + b[j].charAt(7) + b[j].charAt(8) + b[j].charAt(9) + b[j].charAt(10) + b[j].charAt(11) + b[j].charAt(12) + b[j].charAt(13) + b[j].charAt(14) + b[j].charAt(15) + b[j].charAt(16) + b[j].charAt(17) + b[j].charAt(18) + b[j].charAt(19) + b[j].charAt(20)
 var y22 = b[j].charAt(0) + b[j].charAt(1) + b[j].charAt(2) + b[j].charAt(3) + b[j].charAt(4) + b[j].charAt(5) + b[j].charAt(6) + b[j].charAt(7) + b[j].charAt(8) + b[j].charAt(9) + b[j].charAt(10) + b[j].charAt(11) + b[j].charAt(12) + b[j].charAt(13) + b[j].charAt(14) + b[j].charAt(15) + b[j].charAt(16) + b[j].charAt(17) + b[j].charAt(18) + b[j].charAt(19) + b[j].charAt(20) + b[j].charAt(21)
+//y22 captures the entre word, one of the previous 'y's will capture the root since it gets built up one character at a time, next we compare each 'y' to an entry in the dictionary and take the longest 'y' that matches.
+//kirini would not match as 'kirini' is not in the dictionary, but 'y4' would match an entry as 'kiri' is the root of 'kirina'
 
-//verbs
+//Here we create empty variables to fill in the following loops. These are specifically for verbs.
 var a = ""
 var a2 = ""
 var a3 = ""
@@ -213,6 +215,7 @@ var a20 = ""
 var a21 = ""
 var a22 = ""
 
+//Now the 'y's are being matched for entries in the VERB dictionary. The question here is, does 'y1' (with one character) match a verb dictionary entry? If not, move to the next for loop, does 'y2' (with two characters) match a verb dictionary entry? And this continues to 'y22'.
 for (let i = 0; i < verbs.length; i++) {
 	if (verbs[i].RootIPA[0] === y1) {
 		var a = verbs[i].RootIPA[0];
@@ -302,6 +305,7 @@ for (let i = 0; i < verbs.length; i++) {
 		var a22 = verbs[i].RootIPA[0];
 }}
 
+//These if statements set 'undefined' values to zero and adds grabs the length of the 'a' variables that had matches in the previous for loops.
 if (a === undefined) {
 var len_a=0;
 }else{
@@ -434,10 +438,13 @@ var len_a22=0;
 var len_a22=a22.length;
 }
 
+//Now we get the 'a' variable with the longest character length.
 var len_max = Math.max(len_a, len_a2, len_a3, len_a4, len_a5, len_a6, len_a7, len_a8, len_a9, len_a10, len_a11, len_a12, len_a13, len_a14, len_a15, len_a16, len_a17, len_a18, len_a19, len_a20, len_a21, len_a22)
 
+//Now we take the length of the root, collected in 'len_max' above, and with 'substring' we remove that length from the left and place it in its own variable (establishing the root).  
 var word_root = b[j].substring(0, len_max)
 
+//This for loop allows us to collect additional information about the root. If the root is found in the dictionary, collect the IPA, English, Quichua, and Spanish translations from the same entry.
 for (let i = 0; i < verbs.length; i++) {
 	if (verbs[i].RootIPA[0] === word_root) {
 		var IPA_verb = verbs[i].IPA2[0];
@@ -446,7 +453,7 @@ for (let i = 0; i < verbs.length; i++) {
 		var Es_verb = verbs[i].Spanish[0];
 }}
 
-//non-verbs
+//We now transition to non-verbs (nouns, adjectives, adverbs etc) and do the process as above (here, we create empty variables for the following for loops).
 var aNoun = ""
 var aNoun2 = ""
 var aNoun3 = ""
@@ -470,6 +477,7 @@ var aNoun20 = ""
 var aNoun21 = ""
 var aNoun22 = ""
 
+//Now, the 'y's are being matched for entries in the NOUN dictionary. The question here is, does 'y1' (with one character) match a noun dictionary entry? If not, move to the next for loop, does 'y2' (with two characters) match a noun dictionary entry? And this continues to 'y22'.
 for (let i = 0; i < nouns.length; i++) {
 	if (nouns[i].IPA[0] === y1) {
 		var aNoun = nouns[i].IPA[0];
@@ -559,6 +567,7 @@ for (let i = 0; i < nouns.length; i++) {
 		var aNoun22 = nouns[i].IPA[0];
 }}
 
+//These if statements set 'undefined' values to zero and adds grabs the length of the 'a' variables that had matches in the previous for loops.
 if (aNoun === undefined) {
 var len_noun_a=0;
 }else{
@@ -691,10 +700,13 @@ var len_noun_a22=0;
 var len_noun_a22=aNoun22.length;
 }
 
+//Now we get the 'a' variable with the longest character length.
 var len_noun_max = Math.max(len_noun_a, len_noun_a2, len_noun_a3, len_noun_a4, len_noun_a5, len_noun_a6, len_noun_a7, len_noun_a8, len_noun_a9, len_noun_a10, len_noun_a11, len_noun_a12, len_noun_a13, len_noun_a14, len_noun_a15, len_noun_a16, len_noun_a17, len_noun_a18, len_noun_a19, len_noun_a20, len_noun_a21, len_noun_a22)
 
+//Now we take the length of the non-verb root, collected in 'len_noun_max' above, and with 'substring' we remove that length from the left and place it in its own variable (establishing the root).  
 var word_root_noun = b[j].substring(0, len_noun_max)
 
+//This for loop allows us to collect additional information about the non-verb root. If the root is found in the noun dictionary, collect the IPA, English, Quichua, and Spanish translations from the same entry.
 for (let i = 0; i < nouns.length; i++) {
 	if (nouns[i].IPA[0] === word_root_noun) {
 		var IPA_noun = nouns[i].IPA2[0];
@@ -703,8 +715,191 @@ for (let i = 0; i < nouns.length; i++) {
 		var Es_noun = nouns[i].Spanish[0];
 }}
 
+//These variables contain the morphology that is stripped off the root.
 var morph_verb = b[j].substring(len_max)
 var morph_noun = b[j].substring(len_noun_max)
+
+///NEW PREDICTOR CODE
+bb = y22
+//This for loop takes the user input in bb, then removes n (starting with 15 - this needs to be changed if a longer cluster is found) characters off the input and compares it to the combined morpheme library.
+for (let i = 0; i < Pred_VN.length; i++) {
+	if (Pred_VN[i].IPA[0] === bb.substr(bb.length-15)) {
+		var predict_1a = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-14)) {
+		var predict_1b = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-13)) {
+		var predict_1c = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-12)) {
+		var predict_1d = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-11)) {
+		var predict_1e = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-10)) {
+		var predict_1f = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-9)) {
+		var predict_1g = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-8)) {
+		var predict_1h = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-7)) {
+		var predict_1i = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-6)) {
+		var predict_1j = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-5)) {
+		var predict_1k = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-4)) {
+		var predict_1l = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-3)) {
+		var predict_1m = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-2)) {
+		var predict_1n = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-1)) {
+		var predict_1o = Pred_VN[i].IPA[0]}}
+		
+//These if statements make 'undefined' values into something countable. Since ʘ isn't found in ML or Q it can be used to show a length of 1 without risking accidently comparing it to something like 'k'.
+if (predict_1a === undefined) {
+var predict_1a = "ʘ";
+}else{
+var predict_1a = predict_1a;
+}
+
+if (predict_1b === undefined) {
+var predict_1b = "ʘ";
+}else{
+var predict_1b = predict_1b;
+}
+
+if (predict_1c === undefined) {
+var predict_1c = "ʘ";
+}else{
+var predict_1c = predict_1c;
+}
+
+if (predict_1d === undefined) {
+var predict_1d = "ʘ";
+}else{
+var predict_1d = predict_1d;
+}
+
+if (predict_1e === undefined) {
+var predict_1e = "ʘ";
+}else{
+var predict_1e = predict_1e;
+}
+
+if (predict_1f === undefined) {
+var predict_1f = "ʘ";
+}else{
+var predict_1f = predict_1f;
+}
+
+if (predict_1g === undefined) {
+var predict_1g = "ʘ";
+}else{
+var predict_1g = predict_1g;
+}
+
+if (predict_1h === undefined) {
+var predict_1h = "ʘ";
+}else{
+var predict_1h = predict_1h;
+}
+
+if (predict_1i === undefined) {
+var predict_1i = "ʘ";
+}else{
+var predict_1i = predict_1i;
+}
+
+if (predict_1j === undefined) {
+var predict_1j = "ʘ";
+}else{
+var predict_1j = predict_1j;
+}
+
+if (predict_1k === undefined) {
+var predict_1k = "ʘ";
+}else{
+var predict_1k = predict_1k;
+}
+
+if (predict_1l === undefined) {
+var predict_1l = "ʘ";
+}else{
+var predict_1l = predict_1l;
+}
+
+if (predict_1m === undefined) {
+var predict_1m = "ʘ";
+}else{
+var predict_1m = predict_1m;
+}
+
+if (predict_1n === undefined) {
+var predict_1n = "ʘ";
+}else{
+var predict_1n = predict_1n;
+}
+
+if (predict_1o === undefined) {
+var predict_1o = "ʘ";
+}else{
+var predict_1o = predict_1o;
+}
+
+//Now comparing lengths to get the longest morpheme combination.
+var Pred_morph = "ʘ"
+if (predict_1a.length > predict_1b.length) {
+	var Pred_morph = predict_1a;}
+
+if (predict_1b.length > Pred_morph.length) {
+	var Pred_morph = predict_1b;}
+
+if (predict_1c.length > Pred_morph.length) {
+	var Pred_morph = predict_1c;}
+	
+if (predict_1d.length > Pred_morph.length) {
+	var Pred_morph = predict_1d;}
+
+if (predict_1e.length > Pred_morph.length) {
+	var Pred_morph = predict_1e;}
+
+if (predict_1f.length > Pred_morph.length) {
+	var Pred_morph = predict_1f;}
+	
+if (predict_1g.length > Pred_morph.length) {
+	var Pred_morph = predict_1g;}
+	
+if (predict_1h.length > Pred_morph.length) {
+	var Pred_morph = predict_1h;}
+
+if (predict_1i.length > Pred_morph.length) {
+	var Pred_morph = predict_1i;}
+	
+if (predict_1j.length > Pred_morph.length) {
+	var Pred_morph = predict_1j;}
+	
+if (predict_1k.length > Pred_morph.length) {
+	var Pred_morph = predict_1k;}
+
+if (predict_1l.length > Pred_morph.length) {
+	var Pred_morph = predict_1l;}
+
+if (predict_1m.length > Pred_morph.length) {
+	var Pred_morph = predict_1m;}
+
+if (predict_1n.length > Pred_morph.length) {
+	var Pred_morph = predict_1n;}
+	
+if (predict_1o.length > Pred_morph.length) {
+	var Pred_morph = predict_1o;}
+
+//boom!
+var Root_W = bb.slice(0,bb.length-Pred_morph.length);
+var Pred_morph = Pred_morph
+
+var morph_verb_pred = Pred_morph
+var morph_noun_pred = Pred_morph
+
+////END OF PREDICTOR CODE
 
 //Morpheme 1
 //
@@ -3239,33 +3434,53 @@ var dash10N = dash10N
 ee=j*10
 ei=j+1
 
-//If statement for writing the data to the HTML file
+//If statement to get the data into the HTML file.
+//This first step in the IF statement should catpture instances of 'kan' and as the user if it's a verb or pronoun
 if (word_root_noun === "kan" & y8_morph_nounX9.length == y8_morph_verbX9){
 var val = prompt(word_root_noun+"\n"+"\n"+"Option 1:          Option 2: " + "\nEs: "+ Es_noun + "               Es: "+ Es_verb + "\nQui: " + Qui_noun + "          Qui: " + Qui_verb + "\nEng: " + Eng_noun + "          Eng: " + Eng_verb, "1")
 
+//These are the results based on the user input from the prompt. If they enter a 1, it will display the pronoun, if not it will display the verb.
 	if (val === "1") {
 	parsed_data[j] = "<b style='color:#380c5e'>"+IPA_noun+"</b>" + dash1N + IPA_nominal + dash2N + IPA_nominalX1 + dash3N + IPA_nominalX2 + dash4N + IPA_nominalX3 + dash5N + IPA_nominalX4 + dash6N + IPA_nominalX5 + dash7N + IPA_nominalX6 + dash8N + IPA_nominalX7 + dash9N + IPA_nominalX8 + dash10N + IPA_nominalX9 + " ";
 	parsed_data_Es[j] = "<b style='color:#380c5e'>"+Es_noun+"</b>" + dash1N + Gloss_nominal + dash2N + Gloss_nominalX1 + dash3N + Gloss_nominalX2 + dash4N + Gloss_nominalX3 + dash5N + Gloss_nominalX4 + dash6N + Gloss_nominalX5 + dash7N + Gloss_nominalX6 + dash8N + Gloss_nominalX7 + dash9N + Gloss_nominalX8 + dash10N + Gloss_nominalX9 + " ";
 	parsed_data_Qui[j] = "<b style='color:#380c5e'>"+Qui_noun+"</b>" + dash1N + Gloss_nominal + dash2N + Gloss_nominalX1 + dash3N + Gloss_nominalX2 + dash4N + Gloss_nominalX3 + dash5N + Gloss_nominalX4 + dash6N + Gloss_nominalX5 + dash7N + Gloss_nominalX6 + dash8N + Gloss_nominalX7 + dash9N + Gloss_nominalX8 + dash10N + Gloss_nominalX9 + " ";
 	parsed_data_En[j] = "<b style='color:#380c5e'>"+Eng_noun+"</b>" + dash1N + Gloss_nominal + dash2N + Gloss_nominalX1 + dash3N + Gloss_nominalX2 + dash4N + Gloss_nominalX3 + dash5N + Gloss_nominalX4 + dash6N + Gloss_nominalX5 + dash7N + Gloss_nominalX6 + dash8N + Gloss_nominalX7 + dash9N + Gloss_nominalX8 + dash10N + Gloss_nominalX9 + " ";
 	}else {
-	parsed_data[j] = "<b style='color:#a129"+ee+"'>"+IPA_verb+"</b>" + dash1 + IPA_verbal + dash2 + IPA_verbalX1 + dash3 + IPA_verbalX2 + dash4 + IPA_verbalX3 + dash5 + IPA_verbalX4 + dash6 + IPA_verbalX5 + dash7 + IPA_verbalX6 + dash8 + IPA_verbalX7 + dash9 + IPA_verbalX8 + dash10 + IPA_verbalX9 + " ";
-	parsed_data_Es[j] = "<b style='color:#a129"+ee+"'>"+Es_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
-	parsed_data_Qui[j] = "<b style='color:#a129"+ee+"'>"+Qui_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
-	parsed_data_En[j] = "<b style='color:#a129"+ee+"'>"+Eng_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
+	parsed_data[j] = "<b style='color:#a1290'>"+IPA_verb+"</b>" + dash1 + IPA_verbal + dash2 + IPA_verbalX1 + dash3 + IPA_verbalX2 + dash4 + IPA_verbalX3 + dash5 + IPA_verbalX4 + dash6 + IPA_verbalX5 + dash7 + IPA_verbalX6 + dash8 + IPA_verbalX7 + dash9 + IPA_verbalX8 + dash10 + IPA_verbalX9 + " ";
+	parsed_data_Es[j] = "<b style='color:#a1290'>"+Es_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
+	parsed_data_Qui[j] = "<b style='color:#a1290'>"+Qui_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
+	parsed_data_En[j] = "<b style='color:#a1290'>"+Eng_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
 	}
-	
-}else if (word_root_noun === "" || y8_morph_nounX9.length>0) {
-parsed_data[j] = "<b style='color:#a129"+ee+"'>"+IPA_verb+"</b>" + dash1 + IPA_verbal + dash2 + IPA_verbalX1 + dash3 + IPA_verbalX2 + dash4 + IPA_verbalX3 + dash5 + IPA_verbalX4 + dash6 + IPA_verbalX5 + dash7 + IPA_verbalX6 + dash8 + IPA_verbalX7 + dash9 + IPA_verbalX8 + dash10 + IPA_verbalX9 + " ";
-parsed_data_Es[j] = "<b style='color:#a129"+ee+"'>"+Es_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
-parsed_data_Qui[j] = "<b style='color:#a129"+ee+"'>"+Qui_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
-parsed_data_En[j] = "<b style='color:#a129"+ee+"'>"+Eng_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
 
-} else {
-parsed_data[j] = "<b style='color:#380c5e'>"+IPA_noun+"</b>" + dash1N + IPA_nominal + dash2N + IPA_nominalX1 + dash3N + IPA_nominalX2 + dash4N + IPA_nominalX3 + dash5N + IPA_nominalX4 + dash6N + IPA_nominalX5 + dash7N + IPA_nominalX6 + dash8N + IPA_nominalX7 + dash9N + IPA_nominalX8 + dash10N + IPA_nominalX9 + " ";
-parsed_data_Es[j] = "<b style='color:#380c5e'>"+Es_noun+"</b>" + dash1N + Gloss_nominal + dash2N + Gloss_nominalX1 + dash3N + Gloss_nominalX2 + dash4N + Gloss_nominalX3 + dash5N + Gloss_nominalX4 + dash6N + Gloss_nominalX5 + dash7N + Gloss_nominalX6 + dash8N + Gloss_nominalX7 + dash9N + Gloss_nominalX8 + dash10N + Gloss_nominalX9 + " ";
-parsed_data_Qui[j] = "<b style='color:#380c5e'>"+Qui_noun+"</b>" + dash1N + Gloss_nominal + dash2N + Gloss_nominalX1 + dash3N + Gloss_nominalX2 + dash4N + Gloss_nominalX3 + dash5N + Gloss_nominalX4 + dash6N + Gloss_nominalX5 + dash7N + Gloss_nominalX6 + dash8N + Gloss_nominalX7 + dash9N + Gloss_nominalX8 + dash10N + Gloss_nominalX9 + " ";
-parsed_data_En[j] = "<b style='color:#380c5e'>"+Eng_noun+"</b>" + dash1N + Gloss_nominal + dash2N + Gloss_nominalX1 + dash3N + Gloss_nominalX2 + dash4N + Gloss_nominalX3 + dash5N + Gloss_nominalX4 + dash6N + Gloss_nominalX5 + dash7N + Gloss_nominalX6 + dash8N + Gloss_nominalX7 + dash9N + Gloss_nominalX8 + dash10N + Gloss_nominalX9 + " ";
+//If the result is not a noun, display the verb output.
+}else if (word_root_noun === "" || y8_morph_nounX9.length>0) {
+parsed_data[j] = "<b style='color:#a1290'>"+IPA_verb+"</b>" + dash1 + IPA_verbal + dash2 + IPA_verbalX1 + dash3 + IPA_verbalX2 + dash4 + IPA_verbalX3 + dash5 + IPA_verbalX4 + dash6 + IPA_verbalX5 + dash7 + IPA_verbalX6 + dash8 + IPA_verbalX7 + dash9 + IPA_verbalX8 + dash10 + IPA_verbalX9 + " ";
+parsed_data_Es[j] = "<b style='color:#a1290'>"+Es_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
+parsed_data_Qui[j] = "<b style='color:#a1290'>"+Qui_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
+parsed_data_En[j] = "<b style='color:#a1290'>"+Eng_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
+//Comparing a poriton of the input (that the same length of IPA_Verb) from y22 (the user input) against IPA_verb, If there is no match, it will go to the next IF statement with code3 !== code4 
+var code = String(parsed_data[j])
+var code1 = code.substring(24)
+var code2 = code1.substring(0,9)
+var code3 = code.substring(0,24+String(IPA_verb).length)
+var code4 = code.substring(0,24)+y22.substring(0,String(IPA_verb).length)
+
+//This portion provides information about user input that is not found in the dictionary
+//This works for 'undefined' words and incorrect words that do not match a shorter word in the dictionary (e.g., if 'nigeriapi' is the input, it will be parsed as 'ni' because 'ni' is an entry in the dictionary). 
+//Something weird is going on when a noun appears after a verb; it takes the verbal morphology from the previous verb.
+	if (code3 !== code4) {
+	parsed_data[j] = "<b style='color:#FF0000'>"+Root_W+"-"+morph_noun_pred+"</b>";
+	parsed_data_Es[j] = "<b style='color:#FF0000'>"+Root_W+"-"+morph_noun_pred+"</b>";
+	parsed_data_Qui[j] = "<b style='color:#FF0000'>"+Root_W+"-"+morph_noun_pred+"</b>";
+	parsed_data_En[j] = "<b style='color:#FF0000'>"+Root_W+"-"+morph_noun_pred+"</b>";}
+
+//If the result is not a verb, display the noun output.
+	} else {
+	parsed_data[j] = "<b style='color:#380c5e'>"+IPA_noun+"</b>" + dash1N + IPA_nominal + dash2N + IPA_nominalX1 + dash3N + IPA_nominalX2 + dash4N + IPA_nominalX3 + dash5N + IPA_nominalX4 + dash6N + IPA_nominalX5 + dash7N + IPA_nominalX6 + dash8N + IPA_nominalX7 + dash9N + IPA_nominalX8 + dash10N + IPA_nominalX9 + " ";
+	parsed_data_Es[j] = "<b style='color:#380c5e'>"+Es_noun+"</b>" + dash1N + Gloss_nominal + dash2N + Gloss_nominalX1 + dash3N + Gloss_nominalX2 + dash4N + Gloss_nominalX3 + dash5N + Gloss_nominalX4 + dash6N + Gloss_nominalX5 + dash7N + Gloss_nominalX6 + dash8N + Gloss_nominalX7 + dash9N + Gloss_nominalX8 + dash10N + Gloss_nominalX9 + " ";
+	parsed_data_Qui[j] = "<b style='color:#380c5e'>"+Qui_noun+"</b>" + dash1N + Gloss_nominal + dash2N + Gloss_nominalX1 + dash3N + Gloss_nominalX2 + dash4N + Gloss_nominalX3 + dash5N + Gloss_nominalX4 + dash6N + Gloss_nominalX5 + dash7N + Gloss_nominalX6 + dash8N + Gloss_nominalX7 + dash9N + Gloss_nominalX8 + dash10N + Gloss_nominalX9 + " ";
+	parsed_data_En[j] = "<b style='color:#380c5e'>"+Eng_noun+"</b>" + dash1N + Gloss_nominal + dash2N + Gloss_nominalX1 + dash3N + Gloss_nominalX2 + dash4N + Gloss_nominalX3 + dash5N + Gloss_nominalX4 + dash6N + Gloss_nominalX5 + dash7N + Gloss_nominalX6 + dash8N + Gloss_nominalX7 + dash9N + Gloss_nominalX8 + dash10N + Gloss_nominalX9 + " ";
+	var morph_noun_pred = "";
 }
 
 document.getElementById("Parse").innerHTML = (parsed_data.join('	'));
@@ -3431,7 +3646,7 @@ var verbal =
 "Gloss" : ["SS.PURP-TOP"]},
 
 {"Morpheme" : ["shcallatak"],
-"IPA" : ["ʃka-ʒatak"],
+"IPA" : ["ʃkaʒatak"],
 "IPA2" : ["ʃka-ʒatak"],
 "Gloss" : ["PRT-TOT"]},
 
@@ -14248,6 +14463,16 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
+{"Lexeme" : ["ñucanchic"],
+IPA : ["ɲukanʧik"],
+IPA2 : ["ɲukanʧik"],
+Spanish : ["nosotros"],
+Quichua : ["ñucanchi"],
+English : ["1p"],
+Root : ["NA"],
+Origin : ["ML"],
+Dict : ["SPG"]},
+
 {"Lexeme" : ["ñucanchi"],
 IPA : ["ɲukanʧi"],
 IPA2 : ["ɲukanʧi"],
@@ -21319,6 +21544,16 @@ IPA2 : ["diɾiʧu"],
 Spanish : ["derecho"],
 Quichua : ["dirichu"],
 English : ["right"],
+Root : ["NA"],
+Origin : ["ML"],
+Dict : ["SPG"]},
+
+{"Lexeme" : ["laverdad"],
+IPA : ["laβeɾdad"],
+IPA2 : ["laβeɾdad"],
+Spanish : ["la.verdad"],
+Quichua : ["siertopacha"],
+English : ["the.truth"],
 Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
@@ -72292,16 +72527,6 @@ Root : ["NA"],
 Origin : ["Q"],
 Dict : ["SPG"]},
 
-{"Lexeme" : ["can"],
-IPA : ["kan"],
-IPA2 : ["kan"],
-Spanish : ["vos"],
-Quichua : ["can"],
-English : ["you"],
-Root : ["NA"],
-Origin : ["Q"],
-Dict : ["SPG"]},
-
 {"Lexeme" : ["cay"],
 IPA : ["kai"],
 IPA2 : ["kai"],
@@ -93514,4 +93739,985 @@ Root : ["ya"],
 RootIPA : ["ja"],
 Origin : ["Q"],
 Dict : ["SPG"]},
+]
+
+//////////////////////////////////////////////////////
+//////Mophemes combined for prediction///////////////
+////////////////////////////////////////////////////
+
+var Pred_VN =
+[
+{IPA : ["kunamantandinmi"]},
+{IPA : ["kunamanʒataima"]},
+{IPA : ["naxuɾkanʧimaɾi"]},
+{IPA : ["ɾinaxupaʃkanʧi"]},
+{IPA : ["ʃkamantaʒapiʃ"]},
+{IPA : ["kunakamanmaɾi"]},
+{IPA : ["ɾiʃkagutaima"]},
+{IPA : ["ɾingakamanʒa"]},
+{IPA : ["kunataimapaʃ"]},
+{IPA : ["mugɾixuɾkani"]},
+{IPA : ["kunaʒatatami"]},
+{IPA : ["naxuɾkangiʧi"]},
+{IPA : ["ʃkakunamanka"]},
+{IPA : ["ʃkamantapaʧa"]},
+{IPA : ["xuɾigɾinjaɾi"]},
+{IPA : ["nkaɾkangiʧu"]},
+{IPA : ["wakunaimaka"]},
+{IPA : ["kunamanʒata"]},
+{IPA : ["kunapakʒata"]},
+{IPA : ["naxunʧimaɾi"]},
+{IPA : ["gukunawanmi"]},
+{IPA : ["kunaʒawanmi"]},
+{IPA : ["najaʧixunma"]},
+{IPA : ["gukunaimami"]},
+{IPA : ["ʧiʃpapaʧaʧo"]},
+{IPA : ["ʃkakunaʒata"]},
+{IPA : ["nankaɾkanʧi"]},
+{IPA : ["kunamanʒami"]},
+{IPA : ["wakunaɾapiʃ"]},
+{IPA : ["gɾixunijaɾi"]},
+{IPA : ["naxukkunata"]},
+{IPA : ["mantapaʧami"]},
+{IPA : ["nkaɾkangiʧi"]},
+{IPA : ["ɾukukunawan"]},
+{IPA : ["nkaɾkanʧika"]},
+{IPA : ["mantakunaʧu"]},
+{IPA : ["xuʃpakapai"]},
+{IPA : ["ɾinjaɾiŋga"]},
+{IPA : ["gukunapima"]},
+{IPA : ["gukunapimi"]},
+{IPA : ["kunapimaka"]},
+{IPA : ["gukunaʒapi"]},
+{IPA : ["wakunaʒami"]},
+{IPA : ["ɾukukunata"]},
+{IPA : ["naxuʃunnʧi"]},
+{IPA : ["naxuɾkanʧi"]},
+{IPA : ["ngapaimaka"]},
+{IPA : ["ngapamapiʃ"]},
+{IPA : ["guʒaimapiʃ"]},
+{IPA : ["ɾiangamaɾi"]},
+{IPA : ["ʃkajaɾinka"]},
+{IPA : ["kunaimapaʃ"]},
+{IPA : ["gɾixuɾkani"]},
+{IPA : ["naxuʃpapiʃ"]},
+{IPA : ["ɾkangijaɾi"]},
+{IPA : ["paɾiangami"]},
+{IPA : ["gɾinkaniʧo"]},
+{IPA : ["kunaimapiʃ"]},
+{IPA : ["ɾkanʧimaɾi"]},
+{IPA : ["ngakamanka"]},
+{IPA : ["wakunataka"]},
+{IPA : ["ʃkamantami"]},
+{IPA : ["guʒatatami"]},
+{IPA : ["kunapakpaʃ"]},
+{IPA : ["kunaʒatami"]},
+{IPA : ["naxuʃkanʧi"]},
+{IPA : ["kunapakpiʃ"]},
+{IPA : ["wakunatami"]},
+{IPA : ["kunamanpiʃ"]},
+{IPA : ["kunawamaɾi"]},
+{IPA : ["nakaɾkanʧi"]},
+{IPA : ["ʧiɾkanʧika"]},
+{IPA : ["ɾingakaman"]},
+{IPA : ["ʧixunjaɾin"]},
+{IPA : ["ɾingaʧuima"]},
+{IPA : ["ngakamanmi"]},
+{IPA : ["ʧikaɾkanʧi"]},
+{IPA : ["nkaɾkajaɾi"]},
+{IPA : ["puɾaguʒami"]},
+{IPA : ["kunamanpaʃ"]},
+{IPA : ["wakunaʒata"]},
+{IPA : ["gɾixunmaɾi"]},
+{IPA : ["naʃpaʒata"]},
+{IPA : ["gukunaima"]},
+{IPA : ["ʃkaʒatata"]},
+{IPA : ["kunatapaʃ"]},
+{IPA : ["kunamanka"]},
+{IPA : ["kunamanma"]},
+{IPA : ["kunamanta"]},
+{IPA : ["mantapaʧa"]},
+{IPA : ["mantaʒata"]},
+{IPA : ["guʒatapiʃ"]},
+{IPA : ["ɾukuʃnaka"]},
+{IPA : ["naxupanʧi"]},
+{IPA : ["ngapakpiʃ"]},
+{IPA : ["nkaɾkanʧi"]},
+{IPA : ["wagunapiʃ"]},
+{IPA : ["ŋkaɾiaŋga"]},
+{IPA : ["ɾinajaɾin"]},
+{IPA : ["kunatapiʃ"]},
+{IPA : ["kunapipaʃ"]},
+{IPA : ["kunataima"]},
+{IPA : ["naxuɾkaka"]},
+{IPA : ["gukunawan"]},
+{IPA : ["wakunawan"]},
+{IPA : ["muiʒatata"]},
+{IPA : ["ɾingajaɾi"]},
+{IPA : ["kunaʃnaka"]},
+{IPA : ["naxukpica"]},
+{IPA : ["naxukpika"]},
+{IPA : ["ɾkaɾkanʧi"]},
+{IPA : ["kunamanmi"]},
+{IPA : ["kunawanka"]},
+{IPA : ["ʃkaimapaʃ"]},
+{IPA : ["ʃkakunaka"]},
+{IPA : ["ʃpaimanka"]},
+{IPA : ["kunapaman"]},
+{IPA : ["wakunapiʃ"]},
+{IPA : ["guʒapipiʃ"]},
+{IPA : ["guʒawanta"]},
+{IPA : ["kunaimaka"]},
+{IPA : ["kunapipiʃ"]},
+{IPA : ["kunawanmi"]},
+{IPA : ["ʒawantami"]},
+{IPA : ["gɾiʃpapiʃ"]},
+{IPA : ["ʧikaŋgiʧu"]},
+{IPA : ["mantatami"]},
+{IPA : ["xukpimaka"]},
+{IPA : ["kunamanʒa"]},
+{IPA : ["natanmaɾi"]},
+{IPA : ["ngapaiman"]},
+{IPA : ["mantakuna"]},
+{IPA : ["kunaʒapaʃ"]},
+{IPA : ["kunapiʃma"]},
+{IPA : ["kunaimami"]},
+{IPA : ["nkaɾkanga"]},
+{IPA : ["naxungiʧi"]},
+{IPA : ["naxunʧimi"]},
+{IPA : ["gukunapak"]},
+{IPA : ["ngapakima"]},
+{IPA : ["ŋgapakpiʃ"]},
+{IPA : ["niɾapaima"]},
+{IPA : ["gɾiniʒami"]},
+{IPA : ["ʧingapaka"]},
+{IPA : ["gukunaman"]},
+{IPA : ["wakunaman"]},
+{IPA : ["kunakaɾin"]},
+{IPA : ["kunamanga"]},
+{IPA : ["ʧiʃkatami"]},
+{IPA : ["naxuŋgami"]},
+{IPA : ["kunaimaʒa"]},
+{IPA : ["nkaʃkanʧi"]},
+{IPA : ["ʃkakunata"]},
+{IPA : ["ʧixuɾkani"]},
+{IPA : ["ɾinaxunʧi"]},
+{IPA : ["gukunapaʃ"]},
+{IPA : ["nkaɾianga"]},
+{IPA : ["wakunaima"]},
+{IPA : ["moxunmaɾi"]},
+{IPA : ["kunapaima"]},
+{IPA : ["ʃpaimapiʃ"]},
+{IPA : ["mantajaɾi"]},
+{IPA : ["naʒawanmi"]},
+{IPA : ["ɾinakaʃka"]},
+{IPA : ["naxuʃpaka"]},
+{IPA : ["gɾiɾkanʧi"]},
+{IPA : ["ɡunaɡapak"]},
+{IPA : ["gukunapiʃ"]},
+{IPA : ["guʒatapaʃ"]},
+{IPA : ["ʧiɾiɾkaʒa"]},
+{IPA : ["xuɾkangi"]},
+{IPA : ["ʃkangiʧu"]},
+{IPA : ["waɾkangi"]},
+{IPA : ["njaɾinka"]},
+{IPA : ["ʒapitami"]},
+{IPA : ["ɾkaŋgiʧu"]},
+{IPA : ["kunaʒama"]},
+{IPA : ["gupaʒaka"]},
+{IPA : ["wakunama"]},
+{IPA : ["wakunata"]},
+{IPA : ["gɾinaxun"]},
+{IPA : ["kaɾkanʧi"]},
+{IPA : ["xunjaɾin"]},
+{IPA : ["ɾigɾinʧi"]},
+{IPA : ["ɾkangiʧi"]},
+{IPA : ["guʒamaɾi"]},
+{IPA : ["nkaɾkani"]},
+{IPA : ["nkaɾkaʧi"]},
+{IPA : ["ɾinkaɾka"]},
+{IPA : ["ɾkangiʧu"]},
+{IPA : ["ʃkangiʧi"]},
+{IPA : ["ʧinaʒami"]},
+{IPA : ["kunataka"]},
+{IPA : ["paʧamaɾi"]},
+{IPA : ["ʒatamaɾi"]},
+{IPA : ["gukunata"]},
+{IPA : ["mantapaʃ"]},
+{IPA : ["mantapiʃ"]},
+{IPA : ["ngapapiʃ"]},
+{IPA : ["nkaʃkaka"]},
+{IPA : ["ʃpaimaʧu"]},
+{IPA : ["gukunapa"]},
+{IPA : ["manpiʃmi"]},
+{IPA : ["tapaʧami"]},
+{IPA : ["kunaʒata"]},
+{IPA : ["kunandin"]},
+{IPA : ["munkaɾka"]},
+{IPA : ["kunapaka"]},
+{IPA : ["wakunami"]},
+{IPA : ["nmikaɾka"]},
+{IPA : ["ngakaman"]},
+{IPA : ["ʒapimaɾi"]},
+{IPA : ["ktaimami"]},
+{IPA : ["ɾkanʧika"]},
+{IPA : ["kpicaɾin"]},
+{IPA : ["ngapakʒa"]},
+{IPA : ["kunatami"]},
+{IPA : ["gɾiʧunka"]},
+{IPA : ["gukunapi"]},
+{IPA : ["kunaʒapi"]},
+{IPA : ["wapatami"]},
+{IPA : ["ʃkakangi"]},
+{IPA : ["guɾintai"]},
+{IPA : ["gɾiŋgiʧu"]},
+{IPA : ["naʒamaɾi"]},
+{IPA : ["ngapapaʃ"]},
+{IPA : ["ʃkanʧiʧu"]},
+{IPA : ["ʃpapiʃmi"]},
+{IPA : ["ʃpaɾapaʃ"]},
+{IPA : ["gutakpiʃ"]},
+{IPA : ["kunapika"]},
+{IPA : ["niimanmi"]},
+{IPA : ["gamanpiʃ"]},
+{IPA : ["kpikaɾin"]},
+{IPA : ["ɾkaŋgiʧi"]},
+{IPA : ["wangiman"]},
+{IPA : ["ʒapitaʧo"]},
+{IPA : ["ʒapitaʧu"]},
+{IPA : ["kunapima"]},
+{IPA : ["ngaʧoima"]},
+{IPA : ["gunʃpaka"]},
+{IPA : ["ʃkamanta"]},
+{IPA : ["guimapiʃ"]},
+{IPA : ["nkaɾkaka"]},
+{IPA : ["kunapimi"]},
+{IPA : ["ngaimami"]},
+{IPA : ["wakunaka"]},
+{IPA : ["ʧiɾiaŋgi"]},
+{IPA : ["gunataka"]},
+{IPA : ["ʧiɾkanʧi"]},
+{IPA : ["ʧiʃkanʧi"]},
+{IPA : ["kunajaɾi"]},
+{IPA : ["ʃkakaman"]},
+{IPA : ["gukunami"]},
+{IPA : ["imamanka"]},
+{IPA : ["xukpipaʃ"]},
+{IPA : ["ʃkanʧimi"]},
+{IPA : ["pitajaɾi"]},
+{IPA : ["ɾiɾkanʧi"]},
+{IPA : ["ʃunnʧiʒa"]},
+{IPA : ["ngapaima"]},
+{IPA : ["tapaʧaka"]},
+{IPA : ["kunaʒami"]},
+{IPA : ["ʧinkaɾka"]},
+{IPA : ["ʃkaɾkani"]},
+{IPA : ["kaɾkaŋgi"]},
+{IPA : ["xugɾiʧun"]},
+{IPA : ["gukunaka"]},
+{IPA : ["naxunaʒa"]},
+{IPA : ["ʃkatapaʃ"]},
+{IPA : ["xuniʒami"]},
+{IPA : ["ʒatatami"]},
+{IPA : ["ŋgakaman"]},
+{IPA : ["gɾiʃpama"]},
+{IPA : ["wanʒapaʃ"]},
+{IPA : ["kunatata"]},
+{IPA : ["kunataʒa"]},
+{IPA : ["xunijaɾi"]},
+{IPA : ["guʒatami"]},
+{IPA : ["waimapiʃ"]},
+{IPA : ["ʧigɾiʃa"]},
+{IPA : ["ʃkamaɾi"]},
+{IPA : ["ʃpaʒata"]},
+{IPA : ["kunaman"]},
+{IPA : ["doɾkuna"]},
+{IPA : ["xuɾkani"]},
+{IPA : ["wangiʧu"]},
+{IPA : ["naxunʧi"]},
+{IPA : ["kʒapimi"]},
+{IPA : ["nʒamaɾi"]},
+{IPA : ["ʧingapa"]},
+{IPA : ["ɾiɾkaʒa"]},
+{IPA : ["kamanka"]},
+{IPA : ["mantaka"]},
+{IPA : ["mantama"]},
+{IPA : ["ngapaka"]},
+{IPA : ["ɾikpica"]},
+{IPA : ["ɾinmaɾi"]},
+{IPA : ["kunawan"]},
+{IPA : ["nʧiʒami"]},
+{IPA : ["ʃkanimi"]},
+{IPA : ["ʃkaniʧu"]},
+{IPA : ["ʒatapiʃ"]},
+{IPA : ["ɾikpika"]},
+{IPA : ["ɾiʃpaka"]},
+{IPA : ["kaʃpami"]},
+{IPA : ["naxuɾka"]},
+{IPA : ["manʧaɾi"]},
+{IPA : ["kunaima"]},
+{IPA : ["kunapiʃ"]},
+{IPA : ["ʧiʃpaʒa"]},
+{IPA : ["xuktaka"]},
+{IPA : ["ɾingaʧa"]},
+{IPA : ["ɾiŋgaʧu"]},
+{IPA : ["kamanma"]},
+{IPA : ["ktamaɾi"]},
+{IPA : ["ŋgapaka"]},
+{IPA : ["ngajaɾi"]},
+{IPA : ["iʒatami"]},
+{IPA : ["naxunga"]},
+{IPA : ["ɾkajaɾi"]},
+{IPA : ["ngapami"]},
+{IPA : ["xuɾkami"]},
+{IPA : ["ʃkanika"]},
+{IPA : ["xunmaɾi"]},
+{IPA : ["nikaima"]},
+{IPA : ["ŋgijaɾi"]},
+{IPA : ["ɾiɾkaka"]},
+{IPA : ["mungapa"]},
+{IPA : ["ngaʒami"]},
+{IPA : ["muxunmi"]},
+{IPA : ["waɾkaʧu"]},
+{IPA : ["mantaʧu"]},
+{IPA : ["ɾiʃkani"]},
+{IPA : ["mantami"]},
+{IPA : ["ngiʒami"]},
+{IPA : ["kpimaɾi"]},
+{IPA : ["ɾkamaɾi"]},
+{IPA : ["mantata"]},
+{IPA : ["manʒami"]},
+{IPA : ["kunapak"]},
+{IPA : ["kunapaʃ"]},
+{IPA : ["mankuna"]},
+{IPA : ["xungapa"]},
+{IPA : ["ngiʧiʧo"]},
+{IPA : ["ʒatapaʃ"]},
+{IPA : ["ʃpaʒama"]},
+{IPA : ["gumanta"]},
+{IPA : ["kpimaka"]},
+{IPA : ["nakaŋga"]},
+{IPA : ["najanka"]},
+{IPA : ["ɾinʒami"]},
+{IPA : ["ɾkanika"]},
+{IPA : ["ɾkanimi"]},
+{IPA : ["ʧaguʧun"]},
+{IPA : ["ʃpaʒami"]},
+{IPA : ["ʧiŋgiʧi"]},
+{IPA : ["kpiʃina"]},
+{IPA : ["ɾkanima"]},
+{IPA : ["gɾixuni"]},
+{IPA : ["gutapiʃ"]},
+{IPA : ["pakʒata"]},
+{IPA : ["manʒata"]},
+{IPA : ["ngapaʒa"]},
+{IPA : ["ngiʧimi"]},
+{IPA : ["xungimi"]},
+{IPA : ["ʃkakuna"]},
+{IPA : ["takjaɾi"]},
+{IPA : ["ʃpapaʧa"]},
+{IPA : ["ʧinaxun"]},
+{IPA : ["piimaka"]},
+{IPA : ["gɾiʧimi"]},
+{IPA : ["gutaima"]},
+{IPA : ["ʃpakama"]},
+{IPA : ["gunʒami"]},
+{IPA : ["xuŋgiʧo"]},
+{IPA : ["ʃkaʒami"]},
+{IPA : ["ɾinʒama"]},
+{IPA : ["ʧiitaka"]},
+{IPA : ["ŋgapaʒa"]},
+{IPA : ["naimaka"]},
+{IPA : ["ɾingama"]},
+{IPA : ["naxukpi"]},
+{IPA : ["naxuŋga"]},
+{IPA : ["xunʒama"]},
+{IPA : ["wanʒata"]},
+{IPA : ["waɾkaka"]},
+{IPA : ["ɾkaʒaʧu"]},
+{IPA : ["ɾiitaka"]},
+{IPA : ["ɾingami"]},
+{IPA : ["xunʒami"]},
+{IPA : ["mantapi"]},
+{IPA : ["mantaʃi"]},
+{IPA : ["kunaʃna"]},
+{IPA : ["ɾkaʒama"]},
+{IPA : ["ngapama"]},
+{IPA : ["ʧixukpi"]},
+{IPA : ["naxuʃpa"]},
+{IPA : ["ɾiʃpami"]},
+{IPA : ["ʧiʃpami"]},
+{IPA : ["ɾingaka"]},
+{IPA : ["ngimaɾi"]},
+{IPA : ["ʧixunʧu"]},
+{IPA : ["xuʃpami"]},
+{IPA : ["pamanka"]},
+{IPA : ["pakpika"]},
+{IPA : ["ʃpamaɾi"]},
+{IPA : ["njaɾika"]},
+{IPA : ["najaɾin"]},
+{IPA : ["ngijaɾi"]},
+{IPA : ["guɾinka"]},
+{IPA : ["ʃkatami"]},
+{IPA : ["igunama"]},
+{IPA : ["wamanta"]},
+{IPA : ["mantaʧo"]},
+{IPA : ["gakaman"]},
+{IPA : ["xutapiʃ"]},
+{IPA : ["xuʃpaʒa"]},
+{IPA : ["wanʒama"]},
+{IPA : ["ʧinjaɾi"]},
+{IPA : ["ʒagupaʃ"]},
+{IPA : ["naxukta"]},
+{IPA : ["wangapa"]},
+{IPA : ["ɾingapa"]},
+{IPA : ["naxunmi"]},
+{IPA : ["muitaka"]},
+{IPA : ["muʃpaka"]},
+{IPA : ["xukpika"]},
+{IPA : ["xunjaɾi"]},
+{IPA : ["naʃnami"]},
+{IPA : ["ʃpaʒaka"]},
+{IPA : ["ʃunjaɾi"]},
+{IPA : ["guwanʒa"]},
+{IPA : ["kuna[ta"]},
+{IPA : ["gutapaʃ"]},
+{IPA : ["kunata"]},
+{IPA : ["ɾkangi"]},
+{IPA : ["kunaka"]},
+{IPA : ["gɾixun"]},
+{IPA : ["kunapi"]},
+{IPA : ["ɾkanʧi"]},
+{IPA : ["nkaɾka"]},
+{IPA : ["ʒapita"]},
+{IPA : ["itapiʃ"]},
+{IPA : ["kpipaʃ"]},
+{IPA : ["kpipiʃ"]},
+{IPA : ["nkpica"]},
+{IPA : ["nmanta"]},
+{IPA : ["nkaʃka"]},
+{IPA : ["ʃkapaʃ"]},
+{IPA : ["gɾinʧi"]},
+{IPA : ["gupima"]},
+{IPA : ["pimaɾi"]},
+{IPA : ["ʒapika"]},
+{IPA : ["pikaʧi"]},
+{IPA : ["manpiʃ"]},
+{IPA : ["itapaʃ"]},
+{IPA : ["paʒama"]},
+{IPA : ["pakpaʃ"]},
+{IPA : ["ngapak"]},
+{IPA : ["niʒami"]},
+{IPA : ["ɾigɾin"]},
+{IPA : ["ɾinaka"]},
+{IPA : ["xunaʒa"]},
+{IPA : ["ɾianga"]},
+{IPA : ["paʧama"]},
+{IPA : ["ʃpaima"]},
+{IPA : ["ʃpapiʃ"]},
+{IPA : ["ʒatami"]},
+{IPA : ["endoka"]},
+{IPA : ["ʒajaɾi"]},
+{IPA : ["ʒatama"]},
+{IPA : ["manpaʃ"]},
+{IPA : ["ʧiɾami"]},
+{IPA : ["ʃpapaʃ"]},
+{IPA : ["ʒamaɾi"]},
+{IPA : ["pamaɾi"]},
+{IPA : ["pakpiʃ"]},
+{IPA : ["piʒama"]},
+{IPA : ["tamaɾi"]},
+{IPA : ["gutaka"]},
+{IPA : ["ɾkaŋka"]},
+{IPA : ["wanpiʃ"]},
+{IPA : ["gɾiʧon"]},
+{IPA : ["nimaɾi"]},
+{IPA : ["xuɾina"]},
+{IPA : ["ʒatata"]},
+{IPA : ["ŋgapak"]},
+{IPA : ["wakuna"]},
+{IPA : ["njaɾin"]},
+{IPA : ["ʃkanʧi"]},
+{IPA : ["naxuna"]},
+{IPA : ["wamaɾi"]},
+{IPA : ["imapaʃ"]},
+{IPA : ["wataka"]},
+{IPA : ["kunapa"]},
+{IPA : ["ʒataʧo"]},
+{IPA : ["paʧami"]},
+{IPA : ["ʒaguta"]},
+{IPA : ["ʒakuna"]},
+{IPA : ["wanman"]},
+{IPA : ["ʃkaman"]},
+{IPA : ["ʃpaɾan"]},
+{IPA : ["munaʒa"]},
+{IPA : ["gupika"]},
+{IPA : ["gɾiʧun"]},
+{IPA : ["xunata"]},
+{IPA : ["nmapiʃ"]},
+{IPA : ["ʒagumi"]},
+{IPA : ["wanʃna"]},
+{IPA : ["ktapaʃ"]},
+{IPA : ["ʧinaʧu"]},
+{IPA : ["naxuɾa"]},
+{IPA : ["kunami"]},
+{IPA : ["kunama"]},
+{IPA : ["gukuna"]},
+{IPA : ["gɾiʃka"]},
+{IPA : ["gutaʒa"]},
+{IPA : ["guʒami"]},
+{IPA : ["guʒata"]},
+{IPA : ["kunaʧa"]},
+{IPA : ["ndinmi"]},
+{IPA : ["ʒataka"]},
+{IPA : ["ʃkangi"]},
+{IPA : ["npaʃma"]},
+{IPA : ["ʒapima"]},
+{IPA : ["wakama"]},
+{IPA : ["naʧaɾi"]},
+{IPA : ["xunimi"]},
+{IPA : ["ɾkaŋgi"]},
+{IPA : ["ʃkaŋgi"]},
+{IPA : ["naʒami"]},
+{IPA : ["xunika"]},
+{IPA : ["kpiima"]},
+{IPA : ["ngiman"]},
+{IPA : ["ɾianka"]},
+{IPA : ["ɾiaŋga"]},
+{IPA : ["ʃkaŋga"]},
+{IPA : ["ɾiʃpan"]},
+{IPA : ["taʒami"]},
+{IPA : ["xawapi"]},
+{IPA : ["naguta"]},
+{IPA : ["wanpaʃ"]},
+{IPA : ["ʃajaɾi"]},
+{IPA : ["naʒama"]},
+{IPA : ["gɾingi"]},
+{IPA : ["gunaka"]},
+{IPA : ["naiman"]},
+{IPA : ["xuʃami"]},
+{IPA : ["kunaʃi"]},
+{IPA : ["ʃkatak"]},
+{IPA : ["tapika"]},
+{IPA : ["naʧika"]},
+{IPA : ["ʃkawan"]},
+{IPA : ["gutami"]},
+{IPA : ["kunaʧo"]},
+{IPA : ["kiɾini"]},
+{IPA : ["naxuni"]},
+{IPA : ["pakaɾi"]},
+{IPA : ["piʧaɾi"]},
+{IPA : ["DIMwan"]},
+{IPA : ["taʃina"]},
+{IPA : ["ʃunnʧi"]},
+{IPA : ["tapaʧa"]},
+{IPA : ["ʧunpiʃ"]},
+{IPA : ["kmanka"]},
+{IPA : ["wapimi"]},
+{IPA : ["watami"]},
+{IPA : ["waʒaka"]},
+{IPA : ["ʃkapiʃ"]},
+{IPA : ["najaɾi"]},
+{IPA : ["ʧiʃami"]},
+{IPA : ["natami"]},
+{IPA : ["ngiima"]},
+{IPA : ["ɾkaɾka"]},
+{IPA : ["puɾami"]},
+{IPA : ["ngapiʃ"]},
+{IPA : ["kunaʧu"]},
+{IPA : ["ʒaʒata"]},
+{IPA : ["ʧinaʒa"]},
+{IPA : ["puɾawa"]},
+{IPA : ["gɾiʃpa"]},
+{IPA : ["ʧinata"]},
+{IPA : ["mushca"]},
+{IPA : ["ʃkaɾka"]},
+{IPA : ["pakman"]},
+{IPA : ["matami"]},
+{IPA : ["najata"]},
+{IPA : ["imapiʃ"]},
+{IPA : ["wangi"]},
+{IPA : ["kaman"]},
+{IPA : ["manta"]},
+{IPA : ["ɾkani"]},
+{IPA : ["xuɾta"]},
+{IPA : ["ngiʧu"]},
+{IPA : ["naxun"]},
+{IPA : ["ngapa"]},
+{IPA : ["ʧiwai"]},
+{IPA : ["waɾka"]},
+{IPA : ["ɾiʃpa"]},
+{IPA : ["xunmi"]},
+{IPA : ["ʃkami"]},
+{IPA : ["waɾka"]},
+{IPA : ["ɾiɾka"]},
+{IPA : ["ɾkami"]},
+{IPA : ["ʃpaka"]},
+{IPA : ["xuɾka"]},
+{IPA : ["xongi"]},
+{IPA : ["ngimi"]},
+{IPA : ["manka"]},
+{IPA : ["ɾkaka"]},
+{IPA : ["itaka"]},
+{IPA : ["kpika"]},
+{IPA : ["kpica"]},
+{IPA : ["njaɾi"]},
+{IPA : ["ʃpaʧu"]},
+{IPA : ["guman"]},
+{IPA : ["pipaʃ"]},
+{IPA : ["pipiʃ"]},
+{IPA : ["guima"]},
+{IPA : ["gɾina"]},
+{IPA : ["nʒama"]},
+{IPA : ["ɾinʧi"]},
+{IPA : ["ɾkaʧu"]},
+{IPA : ["ʧiɾka"]},
+{IPA : ["ɾikpi"]},
+{IPA : ["ɾiʃka"]},
+{IPA : ["ʃpami"]},
+{IPA : ["manʒa"]},
+{IPA : ["wanka"]},
+{IPA : ["ɾinka"]},
+{IPA : ["tapaʃ"]},
+{IPA : ["manmi"]},
+{IPA : ["pakmi"]},
+{IPA : ["ʃpaʒa"]},
+{IPA : ["imaka"]},
+{IPA : ["tapiʃ"]},
+{IPA : ["najan"]},
+{IPA : ["xunka"]},
+{IPA : ["ʃkani"]},
+{IPA : ["wanʒa"]},
+{IPA : ["ʃnaka"]},
+{IPA : ["kaɾen"]},
+{IPA : ["kaɾin"]},
+{IPA : ["ʧonka"]},
+{IPA : ["ʧunka"]},
+{IPA : ["gupiʃ"]},
+{IPA : ["ngaʧa"]},
+{IPA : ["paʃʧo"]},
+{IPA : ["ɾinga"]},
+{IPA : ["ʃkaʧu"]},
+{IPA : ["ŋgapa"]},
+{IPA : ["ʒatak"]},
+{IPA : ["ɾinʧu"]},
+{IPA : ["iʧiʧo"]},
+{IPA : ["manpi"]},
+{IPA : ["ʧiʃpa"]},
+{IPA : ["nʧimi"]},
+{IPA : ["ʃunʧa"]},
+{IPA : ["ʃpaʧo"]},
+{IPA : ["ʒatan"]},
+{IPA : ["guwan"]},
+{IPA : ["ʃkaka"]},
+{IPA : ["kaɾka"]},
+{IPA : ["kpiɾa"]},
+{IPA : ["ŋgami"]},
+{IPA : ["gapai"]},
+{IPA : ["ngaka"]},
+{IPA : ["ʃunʒa"]},
+{IPA : ["kʒapi"]},
+{IPA : ["ktaka"]},
+{IPA : ["nmaka"]},
+{IPA : ["nmaɾi"]},
+{IPA : ["ngiʧi"]},
+{IPA : ["ŋgaʧo"]},
+{IPA : ["ʃkata"]},
+{IPA : ["xukta"]},
+{IPA : ["nʧika"]},
+{IPA : ["xuʃpa"]},
+{IPA : ["ngaʒa"]},
+{IPA : ["ŋgiʧi"]},
+{IPA : ["munʧi"]},
+{IPA : ["waima"]},
+{IPA : ["paʃna"]},
+{IPA : ["nʧiʧu"]},
+{IPA : ["waiʧi"]},
+{IPA : ["ŋgaka"]},
+{IPA : ["ʧinka"]},
+{IPA : ["ʧikpi"]},
+{IPA : ["ʃkaʃi"]},
+{IPA : ["ʃpaʃi"]},
+{IPA : ["nʧiʒa"]},
+{IPA : ["gɾini"]},
+{IPA : ["ɾkama"]},
+{IPA : ["ʒapaʃ"]},
+{IPA : ["paman"]},
+{IPA : ["munʒa"]},
+{IPA : ["taima"]},
+{IPA : ["wanmi"]},
+{IPA : ["ɲaxun"]},
+{IPA : ["nʧima"]},
+{IPA : ["ʃkaʒa"]},
+{IPA : ["nʒami"]},
+{IPA : ["paʃmi"]},
+{IPA : ["wanpi"]},
+{IPA : ["taʃna"]},
+{IPA : ["xukpi"]},
+{IPA : ["nɾami"]},
+{IPA : ["ɾanmi"]},
+{IPA : ["ɾiŋgi"]},
+{IPA : ["ʃpama"]},
+{IPA : ["niman"]},
+{IPA : ["xuman"]},
+{IPA : ["matak"]},
+{IPA : ["nʒaʧo"]},
+{IPA : ["niʧun"]},
+{IPA : ["xunta"]},
+{IPA : ["ʧaxun"]},
+{IPA : ["gupaʃ"]},
+{IPA : ["ngama"]},
+{IPA : ["paima"]},
+{IPA : ["jaɾin"]},
+{IPA : ["panʧu"]},
+{IPA : ["panʧi"]},
+{IPA : ["ŋgaʧu"]},
+{IPA : ["ɾinma"]},
+{IPA : ["moxun"]},
+{IPA : ["ngami"]},
+{IPA : ["ɾiŋga"]},
+{IPA : ["wanta"]},
+{IPA : ["ʧiʃun"]},
+{IPA : ["wawan"]},
+{IPA : ["iʒata"]},
+{IPA : ["manma"]},
+{IPA : ["ʧunʒa"]},
+{IPA : ["ʃunmi"]},
+{IPA : ["nʧiʧo"]},
+{IPA : ["papiʃ"]},
+{IPA : ["ɾixun"]},
+{IPA : ["naʃpa"]},
+{IPA : ["manʧo"]},
+{IPA : ["xunʒa"]},
+{IPA : ["mapiʃ"]},
+{IPA : ["papaʃ"]},
+{IPA : ["xunga"]},
+{IPA : ["itama"]},
+{IPA : ["gɾiʧi"]},
+{IPA : ["xuʃka"]},
+{IPA : ["ʧinʧi"]},
+{IPA : ["kpimi"]},
+{IPA : ["paʃun"]},
+{IPA : ["ŋgika"]},
+{IPA : ["ʧixun"]},
+{IPA : ["ngiʒa"]},
+{IPA : ["itami"]},
+{IPA : ["manʧu"]},
+{IPA : ["imama"]},
+{IPA : ["piʃmi"]},
+{IPA : ["ngima"]},
+{IPA : ["ngiʧo"]},
+{IPA : ["ʃkama"]},
+{IPA : ["ʃpata"]},
+{IPA : ["paʃka"]},
+{IPA : ["piʃta"]},
+{IPA : ["naima"]},
+{IPA : ["piʃka"]},
+{IPA : ["paiʒa"]},
+{IPA : ["xuima"]},
+{IPA : ["pakka"]},
+{IPA : ["mungi"]},
+{IPA : ["muʃpa"]},
+{IPA : ["ʒawan"]},
+{IPA : ["ʃnama"]},
+{IPA : ["ʒaima"]},
+{IPA : ["piʃma"]},
+{IPA : ["paŋgi"]},
+{IPA : ["ktami"]},
+{IPA : ["ɾimun"]},
+{IPA : ["muxun"]},
+{IPA : ["wanma"]},
+{IPA : ["niʧu"]},
+{IPA : ["xuka"]},
+{IPA : ["kuna"]},
+{IPA : ["maɾi"]},
+{IPA : ["paka"]},
+{IPA : ["taka"]},
+{IPA : ["nata"]},
+{IPA : ["kama"]},
+{IPA : ["ʒata"]},
+{IPA : ["ngap"]},
+{IPA : ["xuni"]},
+{IPA : ["waʃa"]},
+{IPA : ["pita"]},
+{IPA : ["xuta"]},
+{IPA : ["iaɾi"]},
+{IPA : ["pika"]},
+{IPA : ["jaɾi"]},
+{IPA : ["nika"]},
+{IPA : ["guta"]},
+{IPA : ["gɾin"]},
+{IPA : ["paja"]},
+{IPA : ["xuna"]},
+{IPA : ["ʒapi"]},
+{IPA : ["pima"]},
+{IPA : ["pimi"]},
+{IPA : ["piʧu"]},
+{IPA : ["tama"]},
+{IPA : ["ʒami"]},
+{IPA : ["guka"]},
+{IPA : ["naka"]},
+{IPA : ["guʒa"]},
+{IPA : ["ʒama"]},
+{IPA : ["paʧa"]},
+{IPA : ["ɾina"]},
+{IPA : ["ɾini"]},
+{IPA : ["ʃina"]},
+{IPA : ["nama"]},
+{IPA : ["tami"]},
+{IPA : ["ʒaʧo"]},
+{IPA : ["taʧu"]},
+{IPA : ["kata"]},
+{IPA : ["nami"]},
+{IPA : ["naʒa"]},
+{IPA : ["tata"]},
+{IPA : ["puɾa"]},
+{IPA : ["maka"]},
+{IPA : ["ktak"]},
+{IPA : ["taʒa"]},
+{IPA : ["ʒagu"]},
+{IPA : ["ʃaʧu"]},
+{IPA : ["guna"]},
+{IPA : ["kman"]},
+{IPA : ["paʒa"]},
+{IPA : ["ʒaʧu"]},
+{IPA : ["ʧaɾi"]},
+{IPA : ["ʒapa"]},
+{IPA : ["ando"]},
+{IPA : ["wata"]},
+{IPA : ["gupa"]},
+{IPA : ["niʧo"]},
+{IPA : ["taʧo"]},
+{IPA : ["nimi"]},
+{IPA : ["piɾa"]},
+{IPA : ["ʧina"]},
+{IPA : ["npaʃ"]},
+{IPA : ["naʃa"]},
+{IPA : ["mama"]},
+{IPA : ["nʧon"]},
+{IPA : ["ʃami"]},
+{IPA : ["maɾe"]},
+{IPA : ["POSS"]},
+{IPA : ["niʒa"]},
+{IPA : ["pani"]},
+{IPA : ["ɾian"]},
+{IPA : ["piʧo"]},
+{IPA : ["waka"]},
+{IPA : ["gupi"]},
+{IPA : ["tapi"]},
+{IPA : ["ʧiga"]},
+{IPA : ["gɾii"]},
+{IPA : ["endo"]},
+{IPA : ["gumi"]},
+{IPA : ["ʧiʃa"]},
+{IPA : ["wapi"]},
+{IPA : ["wapa"]},
+{IPA : ["ndin"]},
+{IPA : ["piʧi"]},
+{IPA : ["pami"]},
+{IPA : ["ngiy"]},
+{IPA : ["inan"]},
+{IPA : ["piʧa"]},
+{IPA : ["ʐoku"]},
+{IPA : ["waɾa"]},
+{IPA : ["soʧu"]},
+{IPA : ["naʧu"]},
+{IPA : ["kaka"]},
+{IPA : ["waʒa"]},
+{IPA : ["ʃaʒa"]},
+{IPA : ["ʒaka"]},
+{IPA : ["taca"]},
+{IPA : ["wami"]},
+{IPA : ["taʃi"]},
+{IPA : ["ʃpan"]},
+{IPA : ["iʃpa"]},
+{IPA : ["sapa"]},
+{IPA : ["ŋgik"]},
+{IPA : ["doɾʃ"]},
+{IPA : ["papi"]},
+{IPA : ["ipaʃ"]},
+{IPA : ["mapi"]},
+{IPA : ["ɾka"]},
+{IPA : ["man"]},
+{IPA : ["nʧi"]},
+{IPA : ["xun"]},
+{IPA : ["ʃpa"]},
+{IPA : ["paʃ"]},
+{IPA : ["ʃun"]},
+{IPA : ["nga"]},
+{IPA : ["ngi"]},
+{IPA : ["ʃka"]},
+{IPA : ["wan"]},
+{IPA : ["ado"]},
+{IPA : ["pak"]},
+{IPA : ["ita"]},
+{IPA : ["xon"]},
+{IPA : ["ima"]},
+{IPA : ["kpi"]},
+{IPA : ["nka"]},
+{IPA : ["nmi"]},
+{IPA : ["nʧu"]},
+{IPA : ["ŋka"]},
+{IPA : ["nma"]},
+{IPA : ["ɾin"]},
+{IPA : ["nʧo"]},
+{IPA : ["lla"]},
+{IPA : ["pan"]},
+{IPA : ["ŋgi"]},
+{IPA : ["ʃna"]},
+{IPA : ["piʃ"]},
+{IPA : ["iʒu"]},
+{IPA : ["ʧin"]},
+{IPA : ["ʧun"]},
+{IPA : ["ɾii"]},
+{IPA : ["tan"]},
+{IPA : ["nʒa"]},
+{IPA : ["kta"]},
+{IPA : ["ŋga"]},
+{IPA : ["tak"]},
+{IPA : ["ʧon"]},
+{IPA : ["wai"]},
+{IPA : ["nʃi"]},
+{IPA : ["rka"]},
+{IPA : ["gun"]},
+{IPA : ["aβa"]},
+{IPA : ["ɾen"]},
+{IPA : ["ʧii"]},
+{IPA : ["nʧa"]},
+{IPA : ["ʃai"]},
+{IPA : ["ian"]},
+{IPA : ["kka"]},
+{IPA : ["pai"]},
+{IPA : ["ika"]},
+{IPA : ["muj"]},
+{IPA : ["mui"]},
+{IPA : ["gɾi"]},
+{IPA : ["nai"]},
+{IPA : ["mun"]},
+{IPA : ["ka"]},
+{IPA : ["mi"]},
+{IPA : ["ta"]},
+{IPA : ["pa"]},
+{IPA : ["ni"]},
+{IPA : ["ʃa"]},
+{IPA : ["wa"]},
+{IPA : ["pi"]},
+{IPA : ["na"]},
+{IPA : ["ʒa"]},
+{IPA : ["ʧu"]},
+{IPA : ["ku"]},
+{IPA : ["bi"]},
+{IPA : ["ia"]},
+{IPA : ["ga"]},
+{IPA : ["pe"]},
+{IPA : ["ʧi"]},
+{IPA : ["ʧo"]},
+{IPA : ["gu"]},
+{IPA : ["xu"]},
+{IPA : ["ʃi"]},
+{IPA : ["ʧa"]},
+{IPA : ["ki"]},
+{IPA : ["ɾi"]},
+{IPA : ["i"]},
+{IPA : ["k"]},
 ]
