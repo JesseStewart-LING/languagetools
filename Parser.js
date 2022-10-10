@@ -719,8 +719,29 @@ for (let i = 0; i < nouns.length; i++) {
 var morph_verb = b[j].substring(len_max)
 var morph_noun = b[j].substring(len_noun_max)
 
-///NEW PREDICTOR CODE
+///PREDICTOR CODE
 bb = y22
+
+//creating variables set to "". Without these, on the next loop information from the previous loop will remain here.
+Root_W="";
+morph_verb_pred="";
+morph_noun_pred="";
+predict_1a="";
+predict_1b="";
+predict_1c="";
+predict_1d="";
+predict_1e="";
+predict_1f="";
+predict_1g="";
+predict_1h="";
+predict_1i="";
+predict_1j="";
+predict_1k="";
+predict_1l="";
+predict_1m="";
+predict_1n="";
+predict_1o="";
+
 //This for loop takes the user input in bb, then removes n (starting with 15 - this needs to be changed if a longer cluster is found) characters off the input and compares it to the combined morpheme library.
 for (let i = 0; i < Pred_VN.length; i++) {
 	if (Pred_VN[i].IPA[0] === bb.substr(bb.length-15)) {
@@ -753,7 +774,7 @@ for (let i = 0; i < Pred_VN.length; i++) {
 		var predict_1n = Pred_VN[i].IPA[0]
 	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-1)) {
 		var predict_1o = Pred_VN[i].IPA[0]}}
-		
+	
 //These if statements make 'undefined' values into something countable. Since ʘ isn't found in ML or Q it can be used to show a length of 1 without risking accidently comparing it to something like 'k'.
 if (predict_1a === undefined) {
 var predict_1a = "ʘ";
@@ -894,7 +915,6 @@ if (predict_1o.length > Pred_morph.length) {
 
 //boom!
 var Root_W = bb.slice(0,bb.length-Pred_morph.length);
-var Pred_morph = Pred_morph
 
 var morph_verb_pred = Pred_morph
 var morph_noun_pred = Pred_morph
@@ -3436,43 +3456,32 @@ ei=j+1
 
 //If statement to get the data into the HTML file.
 //This first step in the IF statement should catpture instances of 'kan' and as the user if it's a verb or pronoun
-if (word_root_noun === "kan" & y8_morph_nounX9.length == y8_morph_verbX9){
-var val = prompt(word_root_noun+"\n"+"\n"+"Option 1:          Option 2: " + "\nEs: "+ Es_noun + "               Es: "+ Es_verb + "\nQui: " + Qui_noun + "          Qui: " + Qui_verb + "\nEng: " + Eng_noun + "          Eng: " + Eng_verb, "1")
-
-//These are the results based on the user input from the prompt. If they enter a 1, it will display the pronoun, if not it will display the verb.
-	if (val === "1") {
-	parsed_data[j] = "<b style='color:#380c5e'>"+IPA_noun+"</b>" + dash1N + IPA_nominal + dash2N + IPA_nominalX1 + dash3N + IPA_nominalX2 + dash4N + IPA_nominalX3 + dash5N + IPA_nominalX4 + dash6N + IPA_nominalX5 + dash7N + IPA_nominalX6 + dash8N + IPA_nominalX7 + dash9N + IPA_nominalX8 + dash10N + IPA_nominalX9 + " ";
-	parsed_data_Es[j] = "<b style='color:#380c5e'>"+Es_noun+"</b>" + dash1N + Gloss_nominal + dash2N + Gloss_nominalX1 + dash3N + Gloss_nominalX2 + dash4N + Gloss_nominalX3 + dash5N + Gloss_nominalX4 + dash6N + Gloss_nominalX5 + dash7N + Gloss_nominalX6 + dash8N + Gloss_nominalX7 + dash9N + Gloss_nominalX8 + dash10N + Gloss_nominalX9 + " ";
-	parsed_data_Qui[j] = "<b style='color:#380c5e'>"+Qui_noun+"</b>" + dash1N + Gloss_nominal + dash2N + Gloss_nominalX1 + dash3N + Gloss_nominalX2 + dash4N + Gloss_nominalX3 + dash5N + Gloss_nominalX4 + dash6N + Gloss_nominalX5 + dash7N + Gloss_nominalX6 + dash8N + Gloss_nominalX7 + dash9N + Gloss_nominalX8 + dash10N + Gloss_nominalX9 + " ";
-	parsed_data_En[j] = "<b style='color:#380c5e'>"+Eng_noun+"</b>" + dash1N + Gloss_nominal + dash2N + Gloss_nominalX1 + dash3N + Gloss_nominalX2 + dash4N + Gloss_nominalX3 + dash5N + Gloss_nominalX4 + dash6N + Gloss_nominalX5 + dash7N + Gloss_nominalX6 + dash8N + Gloss_nominalX7 + dash9N + Gloss_nominalX8 + dash10N + Gloss_nominalX9 + " ";
-	}else {
-	parsed_data[j] = "<b style='color:#a1290'>"+IPA_verb+"</b>" + dash1 + IPA_verbal + dash2 + IPA_verbalX1 + dash3 + IPA_verbalX2 + dash4 + IPA_verbalX3 + dash5 + IPA_verbalX4 + dash6 + IPA_verbalX5 + dash7 + IPA_verbalX6 + dash8 + IPA_verbalX7 + dash9 + IPA_verbalX8 + dash10 + IPA_verbalX9 + " ";
-	parsed_data_Es[j] = "<b style='color:#a1290'>"+Es_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
-	parsed_data_Qui[j] = "<b style='color:#a1290'>"+Qui_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
-	parsed_data_En[j] = "<b style='color:#a1290'>"+Eng_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
-	}
-
-//If the result is not a noun, display the verb output.
-}else if (word_root_noun === "" || y8_morph_nounX9.length>0) {
+if (word_root_noun === "" || y8_morph_nounX9.length>0) {
 parsed_data[j] = "<b style='color:#a1290'>"+IPA_verb+"</b>" + dash1 + IPA_verbal + dash2 + IPA_verbalX1 + dash3 + IPA_verbalX2 + dash4 + IPA_verbalX3 + dash5 + IPA_verbalX4 + dash6 + IPA_verbalX5 + dash7 + IPA_verbalX6 + dash8 + IPA_verbalX7 + dash9 + IPA_verbalX8 + dash10 + IPA_verbalX9 + " ";
 parsed_data_Es[j] = "<b style='color:#a1290'>"+Es_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
 parsed_data_Qui[j] = "<b style='color:#a1290'>"+Qui_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
 parsed_data_En[j] = "<b style='color:#a1290'>"+Eng_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
-//Comparing a poriton of the input (that the same length of IPA_Verb) from y22 (the user input) against IPA_verb, If there is no match, it will go to the next IF statement with code3 !== code4 
-var code = String(parsed_data[j])
-var code1 = code.substring(24)
-var code2 = code1.substring(0,9)
-var code3 = code.substring(0,24+String(IPA_verb).length)
-var code4 = code.substring(0,24)+y22.substring(0,String(IPA_verb).length)
+//I'm no longer using the next 5 variables, but I'm keeping the here in case I need o reference them in the future. 
+//These variables compared a poriton of the input (that the same length of IPA_Verb) from y22 (the user input) against IPA_verb, If there is no match, it will go to the next IF statement with code3 !== code4 
+//var code = String(parsed_data[j])
+//var code1 = code.substring(24)
+//var code2 = code1.substring(0,9)
+//var code3 = code.substring(0,24+String(IPA_verb).length)
+//var code4 = code.substring(0,24)+y22.substring(0,String(IPA_verb).length)
+
+//This variable takes the input with the morphemes already parsed out and removes dashes and other non-IPA characters (in code6) and then compares it against y22 (the user input) in the next if statement, if there isn't a match, the root wasn't found in the dictionary.
+var code5 = IPA_verb+IPA_verbal+IPA_verbalX1+IPA_verbalX2+IPA_verbalX3+IPA_verbalX4+IPA_verbalX5+IPA_verbalX6+IPA_verbalX7+IPA_verbalX8+IPA_verbalX9;
+var code6 = code5.replace(/(\(|\)|-|_|h|\.|,|;|¿|!|\?|'|"|\"|¡|\[|\]|\n)/gi, "");
 
 //This portion provides information about user input that is not found in the dictionary
-//This works for 'undefined' words and incorrect words that do not match a shorter word in the dictionary (e.g., if 'nigeriapi' is the input, it will be parsed as 'ni' because 'ni' is an entry in the dictionary). 
-//Something weird is going on when a noun appears after a verb; it takes the verbal morphology from the previous verb.
-	if (code3 !== code4) {
+//This works for 'undefined' input (not found in the dictionary) and partial matches (e.g., nigeriapi where the 'ni' matches a dictionary entry ('ni') by comparing 'code6' with 'y22'.
+//There are still misses (e.g., pepperonica (pepperoni-TOP) will hit 'nica' in the pred_morph variable and parse the word as peppero-nica). A note now appears staying that predictions are approximations. 
+	if (code6 ==="undefined" || code6 !== y22) { //(code3 !== code4)
 	parsed_data[j] = "<b style='color:#FF0000'>"+Root_W+"-"+morph_noun_pred+"</b>";
 	parsed_data_Es[j] = "<b style='color:#FF0000'>"+Root_W+"-"+morph_noun_pred+"</b>";
 	parsed_data_Qui[j] = "<b style='color:#FF0000'>"+Root_W+"-"+morph_noun_pred+"</b>";
-	parsed_data_En[j] = "<b style='color:#FF0000'>"+Root_W+"-"+morph_noun_pred+"</b>";}
+	parsed_data_En[j] = "<b style='color:#FF0000'>"+Root_W+"-"+morph_noun_pred+"</b>";
+	document.getElementById("Warning").innerHTML = "Aviso: <i><span style='color:red'>Las palabras en color rojo no se encuentran en el diccionario y las divisiones morfológicas solo son aproximaciones.</span></i>";}
 
 //If the result is not a verb, display the noun output.
 	} else {
@@ -3481,6 +3490,7 @@ var code4 = code.substring(0,24)+y22.substring(0,String(IPA_verb).length)
 	parsed_data_Qui[j] = "<b style='color:#380c5e'>"+Qui_noun+"</b>" + dash1N + Gloss_nominal + dash2N + Gloss_nominalX1 + dash3N + Gloss_nominalX2 + dash4N + Gloss_nominalX3 + dash5N + Gloss_nominalX4 + dash6N + Gloss_nominalX5 + dash7N + Gloss_nominalX6 + dash8N + Gloss_nominalX7 + dash9N + Gloss_nominalX8 + dash10N + Gloss_nominalX9 + " ";
 	parsed_data_En[j] = "<b style='color:#380c5e'>"+Eng_noun+"</b>" + dash1N + Gloss_nominal + dash2N + Gloss_nominalX1 + dash3N + Gloss_nominalX2 + dash4N + Gloss_nominalX3 + dash5N + Gloss_nominalX4 + dash6N + Gloss_nominalX5 + dash7N + Gloss_nominalX6 + dash8N + Gloss_nominalX7 + dash9N + Gloss_nominalX8 + dash10N + Gloss_nominalX9 + " ";
 	var morph_noun_pred = "";
+	var Root_W = "";
 }
 
 document.getElementById("Parse").innerHTML = (parsed_data.join('	'));
@@ -94489,6 +94499,7 @@ var Pred_VN =
 {IPA : ["naʃpa"]},
 {IPA : ["manʧo"]},
 {IPA : ["xunʒa"]},
+{IPA : ["xungi"]},
 {IPA : ["mapiʃ"]},
 {IPA : ["papaʃ"]},
 {IPA : ["xunga"]},
