@@ -158,7 +158,7 @@ if(re4.test(nouns[k].IPA[0])){
 	}
 }}
 
-//create variable for data output
+//create object for data output
 var parsed_data = [];
 var parsed_data_Es = [];
 var parsed_data_Qui = [];
@@ -191,7 +191,7 @@ var y22 = b[j].charAt(0) + b[j].charAt(1) + b[j].charAt(2) + b[j].charAt(3) + b[
 //y22 captures the entre word, one of the previous 'y's will capture the root since it gets built up one character at a time, next we compare each 'y' to an entry in the dictionary and take the longest 'y' that matches.
 //kirini would not match as 'kirini' is not in the dictionary, but 'y4' would match an entry as 'kiri' is the root of 'kirina'
 
-//Here we create empty variables to fill in the following loops. These are specifically for verbs.
+//Here we create empty objects to fill in the following loops. These are specifically for verbs.
 var a = ""
 var a2 = ""
 var a3 = ""
@@ -305,7 +305,7 @@ for (let i = 0; i < verbs.length; i++) {
 		var a22 = verbs[i].RootIPA[0];
 }}
 
-//These if statements set 'undefined' values to zero and adds grabs the length of the 'a' variables that had matches in the previous for loops.
+//These if statements set 'undefined' values to zero and adds grabs the length of the 'a' objects that had matches in the previous for loops.
 if (a === undefined) {
 var len_a=0;
 }else{
@@ -438,10 +438,10 @@ var len_a22=0;
 var len_a22=a22.length;
 }
 
-//Now we get the 'a' variable with the longest character length.
+//Now we get the 'a' object with the longest character length.
 var len_max = Math.max(len_a, len_a2, len_a3, len_a4, len_a5, len_a6, len_a7, len_a8, len_a9, len_a10, len_a11, len_a12, len_a13, len_a14, len_a15, len_a16, len_a17, len_a18, len_a19, len_a20, len_a21, len_a22)
 
-//Now we take the length of the root, collected in 'len_max' above, and with 'substring' we remove that length from the left and place it in its own variable (establishing the root).  
+//Now we take the length of the root, collected in 'len_max' above, and with 'substring' we remove that length from the left and place it in its own object (establishing the root).  
 var word_root = b[j].substring(0, len_max)
 
 //This for loop allows us to collect additional information about the root. If the root is found in the dictionary, collect the IPA, English, Quichua, and Spanish translations from the same entry.
@@ -453,7 +453,7 @@ for (let i = 0; i < verbs.length; i++) {
 		var Es_verb = verbs[i].Spanish[0];
 }}
 
-//We now transition to non-verbs (nouns, adjectives, adverbs etc) and do the process as above (here, we create empty variables for the following for loops).
+//We now transition to non-verbs (nouns, adjectives, adverbs etc) and do the process as above (here, we create empty objects for the following for loops).
 var aNoun = ""
 var aNoun2 = ""
 var aNoun3 = ""
@@ -567,7 +567,7 @@ for (let i = 0; i < nouns.length; i++) {
 		var aNoun22 = nouns[i].IPA[0];
 }}
 
-//These if statements set 'undefined' values to zero and adds grabs the length of the 'a' variables that had matches in the previous for loops.
+//These if statements set 'undefined' values to zero and adds grabs the length of the 'a' objects that had matches in the previous for loops.
 if (aNoun === undefined) {
 var len_noun_a=0;
 }else{
@@ -700,10 +700,10 @@ var len_noun_a22=0;
 var len_noun_a22=aNoun22.length;
 }
 
-//Now we get the 'a' variable with the longest character length.
+//Now we get the 'a' object with the longest character length.
 var len_noun_max = Math.max(len_noun_a, len_noun_a2, len_noun_a3, len_noun_a4, len_noun_a5, len_noun_a6, len_noun_a7, len_noun_a8, len_noun_a9, len_noun_a10, len_noun_a11, len_noun_a12, len_noun_a13, len_noun_a14, len_noun_a15, len_noun_a16, len_noun_a17, len_noun_a18, len_noun_a19, len_noun_a20, len_noun_a21, len_noun_a22)
 
-//Now we take the length of the non-verb root, collected in 'len_noun_max' above, and with 'substring' we remove that length from the left and place it in its own variable (establishing the root).  
+//Now we take the length of the non-verb root, collected in 'len_noun_max' above, and with 'substring' we remove that length from the left and place it in its own object (establishing the root).  
 var word_root_noun = b[j].substring(0, len_noun_max)
 
 //This for loop allows us to collect additional information about the non-verb root. If the root is found in the noun dictionary, collect the IPA, English, Quichua, and Spanish translations from the same entry.
@@ -715,14 +715,14 @@ for (let i = 0; i < nouns.length; i++) {
 		var Es_noun = nouns[i].Spanish[0];
 }}
 
-//These variables contain the morphology that is stripped off the root.
+//These objects contain the morphology that is stripped off the root.
 var morph_verb = b[j].substring(len_max)
 var morph_noun = b[j].substring(len_noun_max)
 
 ///PREDICTOR CODE
 bb = y22
 
-//creating variables set to "". Without these, on the next loop information from the previous loop will remain here.
+//creating objects set to "". Without these, on the next loop information from the previous loop will remain here.
 Root_W="";
 morph_verb_pred="";
 morph_noun_pred="";
@@ -3455,28 +3455,28 @@ ee=j*10
 ei=j+1
 
 //If statement to get the data into the HTML file.
-//This first step in the IF statement should catpture instances of 'kan' and as the user if it's a verb or pronoun
+//If the 'word root' object dedicated to nouns is empty or the last noun morpheme is full (something that doesn't happen naturally, meaning it was a parsing error since the user input was not a noun) it must be a verb, so add the verb to object for data output 
 if (word_root_noun === "" || y8_morph_nounX9.length>0) {
 parsed_data[j] = "<b style='color:#a1290'>"+IPA_verb+"</b>" + dash1 + IPA_verbal + dash2 + IPA_verbalX1 + dash3 + IPA_verbalX2 + dash4 + IPA_verbalX3 + dash5 + IPA_verbalX4 + dash6 + IPA_verbalX5 + dash7 + IPA_verbalX6 + dash8 + IPA_verbalX7 + dash9 + IPA_verbalX8 + dash10 + IPA_verbalX9 + " ";
 parsed_data_Es[j] = "<b style='color:#a1290'>"+Es_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
 parsed_data_Qui[j] = "<b style='color:#a1290'>"+Qui_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
 parsed_data_En[j] = "<b style='color:#a1290'>"+Eng_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
-//I'm no longer using the next 5 variables, but I'm keeping the here in case I need o reference them in the future. 
-//These variables compared a poriton of the input (that the same length of IPA_Verb) from y22 (the user input) against IPA_verb, If there is no match, it will go to the next IF statement with code3 !== code4 
+//I'm no longer using the next 5 objects, but I'm keeping the here in case I need o reference them in the future. 
+//These objects compared a poriton of the input (that the same length of IPA_Verb) from y22 (the user input) against IPA_verb, If there is no match, it will go to the next IF statement with code3 !== code4 
 //var code = String(parsed_data[j])
 //var code1 = code.substring(24)
 //var code2 = code1.substring(0,9)
 //var code3 = code.substring(0,24+String(IPA_verb).length)
 //var code4 = code.substring(0,24)+y22.substring(0,String(IPA_verb).length)
 
-//This variable takes the input with the morphemes already parsed out and removes dashes and other non-IPA characters (in code6) and then compares it against y22 (the user input) in the next if statement, if there isn't a match, the root wasn't found in the dictionary.
+//This object takes the input with the morphemes already parsed out and removes dashes and other non-IPA characters (in code6) and then compares it against y22 (the user input) in the next if statement, if there isn't a match, the root wasn't found in the dictionary.
 var code5 = IPA_verb+IPA_verbal+IPA_verbalX1+IPA_verbalX2+IPA_verbalX3+IPA_verbalX4+IPA_verbalX5+IPA_verbalX6+IPA_verbalX7+IPA_verbalX8+IPA_verbalX9;
 var code6 = code5.replace(/(\(|\)|-|_|h|\.|,|;|¿|!|\?|'|"|\"|¡|\[|\]|\n)/gi, "");
 
 //This portion provides information about user input that is not found in the dictionary
 //This works for 'undefined' input (not found in the dictionary) and partial matches (e.g., nigeriapi where the 'ni' matches a dictionary entry ('ni') by comparing 'code6' with 'y22'.
-//There are still misses (e.g., pepperonica (pepperoni-TOP) will hit 'nica' in the pred_morph variable and parse the word as peppero-nica). A note now appears staying that predictions are approximations. 
-	if (code6 ==="undefined" || code6 !== y22) { //(code3 !== code4)
+//There are still misses (e.g., pepperonica (pepperoni-TOP) will hit 'nica' in the pred_morph object and parse the word as peppero-nica). A note now appears staying that predictions are approximations. 
+	if (code6 ==="undefined" || code6 !== y22) {
 	parsed_data[j] = "<b style='color:#FF0000'>"+Root_W+"-"+morph_noun_pred+"</b>";
 	parsed_data_Es[j] = "<b style='color:#FF0000'>"+Root_W+"-"+morph_noun_pred+"</b>";
 	parsed_data_Qui[j] = "<b style='color:#FF0000'>"+Root_W+"-"+morph_noun_pred+"</b>";
@@ -3484,13 +3484,13 @@ var code6 = code5.replace(/(\(|\)|-|_|h|\.|,|;|¿|!|\?|'|"|\"|¡|\[|\]|\n)/gi, "
 	document.getElementById("Warning").innerHTML = "Aviso: <i><span style='color:red'>Las palabras en color rojo no se encuentran en el diccionario y las divisiones morfológicas solo son aproximaciones.</span></i>";}
 
 //If the result is not a verb, display the noun output.
-	} else {
-	parsed_data[j] = "<b style='color:#380c5e'>"+IPA_noun+"</b>" + dash1N + IPA_nominal + dash2N + IPA_nominalX1 + dash3N + IPA_nominalX2 + dash4N + IPA_nominalX3 + dash5N + IPA_nominalX4 + dash6N + IPA_nominalX5 + dash7N + IPA_nominalX6 + dash8N + IPA_nominalX7 + dash9N + IPA_nominalX8 + dash10N + IPA_nominalX9 + " ";
-	parsed_data_Es[j] = "<b style='color:#380c5e'>"+Es_noun+"</b>" + dash1N + Gloss_nominal + dash2N + Gloss_nominalX1 + dash3N + Gloss_nominalX2 + dash4N + Gloss_nominalX3 + dash5N + Gloss_nominalX4 + dash6N + Gloss_nominalX5 + dash7N + Gloss_nominalX6 + dash8N + Gloss_nominalX7 + dash9N + Gloss_nominalX8 + dash10N + Gloss_nominalX9 + " ";
-	parsed_data_Qui[j] = "<b style='color:#380c5e'>"+Qui_noun+"</b>" + dash1N + Gloss_nominal + dash2N + Gloss_nominalX1 + dash3N + Gloss_nominalX2 + dash4N + Gloss_nominalX3 + dash5N + Gloss_nominalX4 + dash6N + Gloss_nominalX5 + dash7N + Gloss_nominalX6 + dash8N + Gloss_nominalX7 + dash9N + Gloss_nominalX8 + dash10N + Gloss_nominalX9 + " ";
-	parsed_data_En[j] = "<b style='color:#380c5e'>"+Eng_noun+"</b>" + dash1N + Gloss_nominal + dash2N + Gloss_nominalX1 + dash3N + Gloss_nominalX2 + dash4N + Gloss_nominalX3 + dash5N + Gloss_nominalX4 + dash6N + Gloss_nominalX5 + dash7N + Gloss_nominalX6 + dash8N + Gloss_nominalX7 + dash9N + Gloss_nominalX8 + dash10N + Gloss_nominalX9 + " ";
-	var morph_noun_pred = "";
-	var Root_W = "";
+} else {
+parsed_data[j] = "<b style='color:#380c5e'>"+IPA_noun+"</b>" + dash1N + IPA_nominal + dash2N + IPA_nominalX1 + dash3N + IPA_nominalX2 + dash4N + IPA_nominalX3 + dash5N + IPA_nominalX4 + dash6N + IPA_nominalX5 + dash7N + IPA_nominalX6 + dash8N + IPA_nominalX7 + dash9N + IPA_nominalX8 + dash10N + IPA_nominalX9 + " ";
+parsed_data_Es[j] = "<b style='color:#380c5e'>"+Es_noun+"</b>" + dash1N + Gloss_nominal + dash2N + Gloss_nominalX1 + dash3N + Gloss_nominalX2 + dash4N + Gloss_nominalX3 + dash5N + Gloss_nominalX4 + dash6N + Gloss_nominalX5 + dash7N + Gloss_nominalX6 + dash8N + Gloss_nominalX7 + dash9N + Gloss_nominalX8 + dash10N + Gloss_nominalX9 + " ";
+parsed_data_Qui[j] = "<b style='color:#380c5e'>"+Qui_noun+"</b>" + dash1N + Gloss_nominal + dash2N + Gloss_nominalX1 + dash3N + Gloss_nominalX2 + dash4N + Gloss_nominalX3 + dash5N + Gloss_nominalX4 + dash6N + Gloss_nominalX5 + dash7N + Gloss_nominalX6 + dash8N + Gloss_nominalX7 + dash9N + Gloss_nominalX8 + dash10N + Gloss_nominalX9 + " ";
+parsed_data_En[j] = "<b style='color:#380c5e'>"+Eng_noun+"</b>" + dash1N + Gloss_nominal + dash2N + Gloss_nominalX1 + dash3N + Gloss_nominalX2 + dash4N + Gloss_nominalX3 + dash5N + Gloss_nominalX4 + dash6N + Gloss_nominalX5 + dash7N + Gloss_nominalX6 + dash8N + Gloss_nominalX7 + dash9N + Gloss_nominalX8 + dash10N + Gloss_nominalX9 + " ";
+var morph_noun_pred = "";
+var Root_W = "";
 }
 
 document.getElementById("Parse").innerHTML = (parsed_data.join('	'));
@@ -48379,6 +48379,16 @@ IPA2 : ["kin"],
 Spanish : ["quién"],
 Quichua : ["pi"],
 English : ["who"],
+Root : ["NA"],
+Origin : ["ML"],
+Dict : ["SPG"]},
+
+{"Lexeme" : ["rana"],
+IPA : ["ʐana"],
+IPA2 : ["ʐana"],
+Spanish : ["rana"],
+Quichua : ["hambatu"],
+English : ["frog"],
 Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
