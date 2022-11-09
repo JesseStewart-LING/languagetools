@@ -109,6 +109,9 @@ var y = document.getElementById("inputText").value;
 	var b = b.replace (/wiɾba/gi, "giɾba");
 //	var b = b.replace (/ /gi, "");
 	var b = b.replace (/(\(|\)|-|_|h|\.|,|;|¿|!|\?|'|"|\"|¡|\[|\]|\n)/gi, "");
+	var b = b.replace (/\s{2}/gi, " ");
+	var b = b.replace (/\s$/gi, "");
+	var b = b.replace (/\s{2}$/gi, "");
 
 //string to array (basically creating seperate strings for each word in the sentence)
 var z = b.split(" ")
@@ -120,6 +123,7 @@ for (k = 0; k < nouns.length; k++) {
 
 //Get the first two letters of the next word
 var zz = b[x+1].charAt(0)+b[x+1].charAt(1)
+
 
 var re = new RegExp('^'+b[x] + " " + zz + ".*");
 var re2 = new RegExp('^'+b[x] + " " + zz + ".* .*");
@@ -3454,13 +3458,18 @@ var dash10N = dash10N
 ee=j*10
 ei=j+1
 
+//This object takes the input with the morphemes already parsed out and removes dashes and other non-IPA characters (in code6) and then compares it against y22 (the user input) in the next if statement, if there isn't a match, the root wasn't found in the dictionary.
+var code5 = IPA_noun+IPA_nominal+IPA_nominalX1+IPA_nominalX2+IPA_nominalX3+IPA_nominalX4+IPA_nominalX5+IPA_nominalX6+IPA_nominalX7+IPA_nominalX8+IPA_nominalX9;
+var code6 = code5.replace(/(\(|\)|-|_|h|\.|,|;|¿|!|\?|'|"|\"|¡|\[|\]|\n)/gi, "");
+console.log(code6+" code6")
+console.log(y22+" y22")
 //If statement to get the data into the HTML file.
 //If the 'word root' object dedicated to nouns is empty or the last noun morpheme is full (something that doesn't happen naturally, meaning it was a parsing error since the user input was not a noun) it must be a verb, so add the verb to object for data output 
-if (word_root_noun === "" || y8_morph_nounX9.length>0) {
-parsed_data[j] = "<b style='color:#a1290'>"+IPA_verb+"</b>" + dash1 + IPA_verbal + dash2 + IPA_verbalX1 + dash3 + IPA_verbalX2 + dash4 + IPA_verbalX3 + dash5 + IPA_verbalX4 + dash6 + IPA_verbalX5 + dash7 + IPA_verbalX6 + dash8 + IPA_verbalX7 + dash9 + IPA_verbalX8 + dash10 + IPA_verbalX9 + " ";
-parsed_data_Es[j] = "<b style='color:#a1290'>"+Es_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
-parsed_data_Qui[j] = "<b style='color:#a1290'>"+Qui_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
-parsed_data_En[j] = "<b style='color:#a1290'>"+Eng_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
+if (y22 !== code6){// || y8_morph_nounX9.length>0) {
+parsed_data[j] = "<b style='color:#007500'>"+IPA_verb+"</b>" + dash1 + IPA_verbal + dash2 + IPA_verbalX1 + dash3 + IPA_verbalX2 + dash4 + IPA_verbalX3 + dash5 + IPA_verbalX4 + dash6 + IPA_verbalX5 + dash7 + IPA_verbalX6 + dash8 + IPA_verbalX7 + dash9 + IPA_verbalX8 + dash10 + IPA_verbalX9 + " ";
+parsed_data_Es[j] = "<b style='color:#007500'>"+Es_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
+parsed_data_Qui[j] = "<b style='color:#007500'>"+Qui_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
+parsed_data_En[j] = "<b style='color:#007500'>"+Eng_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
 //I'm no longer using the next 5 objects, but I'm keeping the here in case I need o reference them in the future. 
 //These objects compared a poriton of the input (that the same length of IPA_Verb) from y22 (the user input) against IPA_verb, If there is no match, it will go to the next IF statement with code3 !== code4 
 //var code = String(parsed_data[j])
