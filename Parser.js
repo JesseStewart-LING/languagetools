@@ -5521,7 +5521,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["choclo cau"],
 IPA : ["ʧokʒo kau"],
 IPA2 : ["ʧokʒo kau"],
 Spanish : ["choclo cau"],
@@ -5601,7 +5601,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{"Lexeme" : ["disfrazashca"],
+{"Lexeme" : ["choclo cau"],
 IPA : ["disfɾazaʃka"],
 IPA2 : ["disfɾazaʃka"],
 Spanish : ["disfrazado"],
@@ -5611,7 +5611,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["Gallo Pucyu"],
 IPA : ["gaʒo pogio"],
 IPA2 : ["gaʒo pogio"],
 Spanish : ["Gallo Pucyu"],
@@ -5631,7 +5631,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["Huayco Pungo"],
 IPA : ["waiko pongo"],
 IPA2 : ["waiko pongo"],
 Spanish : ["Huayco Pungo"],
@@ -5641,7 +5641,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["hierba luisa"],
 IPA : ["ieɾba luisa"],
 IPA2 : ["ieɾba luisa"],
 Spanish : ["hierba luisa"],
@@ -5731,7 +5731,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["paño muchijo"],
 IPA : ["paɲo muʧixo"],
 IPA2 : ["paɲo muʧixo"],
 Spanish : ["sombrero.de paño"],
@@ -5751,7 +5751,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["Semana Santa"],
 IPA : ["semana santa"],
 IPA2 : ["semana santa"],
 Spanish : ["Semana Santa"],
@@ -5771,7 +5771,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["tercera edad"],
 IPA : ["teɾseɾa edad"],
 IPA2 : ["teɾseɾa edad"],
 Spanish : ["tercera edad"],
@@ -5781,7 +5781,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["vichay singa"],
 IPA : ["biʧai singa"],
 IPA2 : ["biʧai singa"],
 Spanish : ["boca arriba"],
@@ -5851,7 +5851,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["todas formas"],
 IPA : ["todas foɾmas"],
 IPA2 : ["todas foɾmas"],
 Spanish : ["de.todas formas"],
@@ -5861,7 +5861,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["Gallo Pokyo"],
 IPA : ["gaʒo pukʒu"],
 IPA2 : ["gaʒo pukʒu"],
 Spanish : ["Fuente de.Gallo"],
@@ -5931,7 +5931,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["Huayco Pungo"],
 IPA : ["waiko pongo"],
 IPA2 : ["waiko pongo"],
 Spanish : ["Huayco Pungo"],
@@ -5941,7 +5941,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["Huaycu Pungu"],
 IPA : ["waiku pungu"],
 IPA2 : ["waiku pungu"],
 Spanish : ["Huayco Pungo"],
@@ -5971,7 +5971,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["por lo menos"],
 IPA : ["poɾ lo menos"],
 IPA2 : ["poɾ lo menos"],
 Spanish : ["por lo menos"],
@@ -6081,7 +6081,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["blanco pelo"],
 IPA : ["blanko pelo"],
 IPA2 : ["blanko pelo"],
 Spanish : ["> canas"],
@@ -6221,7 +6221,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["mm mm"],
 IPA : ["mm mm"],
 IPA2 : ["mː mː"],
 Spanish : ["mm hmm"],
@@ -6391,7 +6391,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["disco mobil"],
 IPA : ["disko mobil"],
 IPA2 : ["disko mobil"],
 Spanish : ["disco móvil"],
@@ -6441,7 +6441,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["hasta luego"],
 IPA : ["asta luego"],
 IPA2 : ["asta luego"],
 Spanish : ["hasta luego"],
@@ -6471,7 +6471,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["huevo claro"],
 IPA : ["xuebo klaɾo"],
 IPA2 : ["xuebo klaɾo"],
 Spanish : ["clara de.huevo"],
@@ -6591,7 +6591,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["jabas calpu"],
 IPA : ["xabas kalpu"],
 IPA2 : ["xabas kalpu"],
 Spanish : ["habas.tostadas y.cocinadas"],
@@ -6611,7 +6611,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["mala guerba"],
 IPA : ["mala weɾba"],
 IPA2 : ["mala weɾba"],
 Spanish : ["mala hierba"],
@@ -6621,7 +6621,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["mala suerte"],
 IPA : ["mala sueɾte"],
 IPA2 : ["mala sueɾte"],
 Spanish : ["mala suerte"],
@@ -6641,7 +6641,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["mas o menos"],
 IPA : ["mas o menos"],
 IPA2 : ["mas o menos"],
 Spanish : ["más o menos"],
@@ -6771,7 +6771,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["San Agustin"],
 IPA : ["san agustin"],
 IPA2 : ["san agustin"],
 Spanish : ["San Agustín"],
@@ -6791,7 +6791,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["sumak pacha"],
 IPA : ["sumak paʧa"],
 IPA2 : ["sumak paʧa"],
 Spanish : ["Sumak Pacha"],
@@ -7584,7 +7584,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["en que"],
 IPA : ["en ke"],
 IPA2 : ["en ke"],
 Spanish : ["en qué"],
