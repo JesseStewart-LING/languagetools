@@ -451,6 +451,7 @@ var word_root = b[j].substring(0, len_max)
 //This for loop allows us to collect additional information about the root. If the root is found in the dictionary, collect the IPA, English, Quichua, and Spanish translations from the same entry.
 for (let i = 0; i < verbs.length; i++) {
 	if (verbs[i].RootIPA[0] === word_root) {
+		var IPA1_verb = verbs[i].IPA[0];
 		var IPA_verb = verbs[i].IPA2[0];
 		var Eng_verb = verbs[i].English[0];
 		var Qui_verb = verbs[i].Quichua[0];
@@ -713,6 +714,7 @@ var word_root_noun = b[j].substring(0, len_noun_max)
 //This for loop allows us to collect additional information about the non-verb root. If the root is found in the noun dictionary, collect the IPA, English, Quichua, and Spanish translations from the same entry.
 for (let i = 0; i < nouns.length; i++) {
 	if (nouns[i].IPA[0] === word_root_noun) {
+		var IPA1_noun = nouns[i].IPA[0];
 		var IPA_noun = nouns[i].IPA2[0];
 		var Eng_noun = nouns[i].English[0];
 		var Qui_noun = nouns[i].Quichua[0];
@@ -3459,13 +3461,14 @@ ee=j*10
 ei=j+1
 
 //This object takes the input with the morphemes already parsed out and removes dashes and other non-IPA characters (in code6) and then compares it against y22 in the first if statement.
-var code5 = IPA_noun+IPA_nominal+IPA_nominalX1+IPA_nominalX2+IPA_nominalX3+IPA_nominalX4+IPA_nominalX5+IPA_nominalX6+IPA_nominalX7+IPA_nominalX8+IPA_nominalX9;
+var code5 = IPA1_noun+IPA_nominal+IPA_nominalX1+IPA_nominalX2+IPA_nominalX3+IPA_nominalX4+IPA_nominalX5+IPA_nominalX6+IPA_nominalX7+IPA_nominalX8+IPA_nominalX9;
 var code6 = code5.replace(/(\(|\)|-|_|h|\.|,|;|¿|!|\?|'|"|\"|¡|\[|\]|\n)/gi, "");
+
 console.log(code6+" code6")
 console.log(y22+" y22")
 //If statement to get the data into the HTML file.
 //If the 'word root' object dedicated to nouns is empty or the last noun morpheme is full (something that doesn't happen naturally, meaning it was a parsing error since the user input was not a noun) it must be a verb, so add the verb to object for data output 
-if (y22 !== code6){// || y8_morph_nounX9.length>0) {
+if (y22 !== code6){//word_root_noun==="" || y8_morph_nounX9.length>0){
 parsed_data[j] = "<b style='color:#007500'>"+IPA_verb+"</b>" + dash1 + IPA_verbal + dash2 + IPA_verbalX1 + dash3 + IPA_verbalX2 + dash4 + IPA_verbalX3 + dash5 + IPA_verbalX4 + dash6 + IPA_verbalX5 + dash7 + IPA_verbalX6 + dash8 + IPA_verbalX7 + dash9 + IPA_verbalX8 + dash10 + IPA_verbalX9 + " ";
 parsed_data_Es[j] = "<b style='color:#007500'>"+Es_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
 parsed_data_Qui[j] = "<b style='color:#007500'>"+Qui_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
@@ -3479,7 +3482,7 @@ parsed_data_En[j] = "<b style='color:#007500'>"+Eng_verb+"</b>" + dash1 + Gloss_
 //var code4 = code.substring(0,24)+y22.substring(0,String(IPA_verb).length)
 
 //This object takes the input with the morphemes already parsed out and removes dashes and other non-IPA characters (in code6) and then compares it against y22 (the user input) in the next if statement, if there isn't a match, the root wasn't found in the dictionary.
-var code5 = IPA_verb+IPA_verbal+IPA_verbalX1+IPA_verbalX2+IPA_verbalX3+IPA_verbalX4+IPA_verbalX5+IPA_verbalX6+IPA_verbalX7+IPA_verbalX8+IPA_verbalX9;
+var code5 = IPA1_verb+IPA_verbal+IPA_verbalX1+IPA_verbalX2+IPA_verbalX3+IPA_verbalX4+IPA_verbalX5+IPA_verbalX6+IPA_verbalX7+IPA_verbalX8+IPA_verbalX9;
 var code6 = code5.replace(/(\(|\)|-|_|h|\.|,|;|¿|!|\?|'|"|\"|¡|\[|\]|\n)/gi, "");
 
 //This portion provides information about user input that is not found in the dictionary
@@ -6668,16 +6671,6 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{"Lexeme" : ["pasachihuay"],
-IPA : ["pasaʧiwai"],
-IPA2 : ["pasa<span style='font-weight:normal'>-ʧi-wa-i</span>"],
-Spanish : ["Exp: permiso de entrar<span style='font-weight:normal'>-CAU-1.OBJ-IMP</span>"],
-Quichua : ["minga<span style='font-weight:normal'>-CAU-1.OBJ-IMP</span>"],
-English : ["Exp: can I come ver<span style='font-weight:normal'>-CAU-1.OBJ-IMP</span>"],
-Root : ["NA"],
-Origin : ["ML"],
-Dict : ["SPG"]},
-
 {"Lexeme" : ["pensamiento"],
 IPA : ["pensamiento"],
 IPA2 : ["pensamiento"],
@@ -6748,7 +6741,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["randi randi"],
 IPA : ["ʐandi ʐandi"],
 IPA2 : ["ʐandi ʐandi"],
 Spanish : ["dar.y tomar"],
@@ -6758,7 +6751,7 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{
+{"Lexeme" : ["reloj solar"],
 IPA : ["ʐelox solaɾ"],
 IPA2 : ["ʐelox solaɾʃ"],
 Spanish : ["reloj solar"],
@@ -7000,7 +6993,7 @@ Origin : ["ML"],
 Dict : ["SPG"]},
 
 {"Lexeme" : ["mejoranga"],
-IPA : ["mexoɾangapa"],
+IPA : ["mexoɾanga"],
 IPA2 : ["mexoɾa<span style='font-weight:normal'>-nga</span>"],
 Spanish : ["mejorar<span style='font-weight:normal'>-3.FUT</span>"],
 Quichua : ["alichina<span style='font-weight:normal'>-3.FUT</span>"],
@@ -9634,7 +9627,7 @@ Dict : ["SPG"]},
 
 {"Lexeme" : ["diayer"],
 IPA : ["diajeɾ"],
-IPA2 : ["diajeɾʃ"],
+IPA2 : ["diajeɾ"],
 Spanish : ["el.día.de.ayer"],
 Quichua : ["cayandi"],
 English : ["yesterday"],
@@ -36531,8 +36524,8 @@ Origin : ["ML"],
 Dict : ["SPG"]},
 
 {"Lexeme" : ["pocyo"],
-IPA : ["pocjo"],
-IPA2 : ["pocjo"],
+IPA : ["pokjo"],
+IPA2 : ["pokjo"],
 Spanish : ["vertiente"],
 Quichua : ["pucyu"],
 English : ["slope"],
@@ -68842,16 +68835,6 @@ IPA2 : ["pobɾi"],
 Spanish : ["pobre"],
 Quichua : ["pobri"],
 English : ["poor"],
-Root : ["NA"],
-Origin : ["Q"],
-Dict : ["SPG"]},
-
-{"Lexeme" : ["poder"],
-IPA : ["podeɾ"],
-IPA2 : ["podeɾʃ"],
-Spanish : ["poder"],
-Quichua : ["poder"],
-English : ["power.of.attorney"],
 Root : ["NA"],
 Origin : ["Q"],
 Dict : ["SPG"]},
