@@ -451,7 +451,7 @@ var word_root = b[j].substring(0, len_max)
 //This for loop allows us to collect additional information about the root. If the root is found in the dictionary, collect the IPA, English, Quichua, and Spanish translations from the same entry.
 for (let i = 0; i < verbs.length; i++) {
 	if (verbs[i].RootIPA[0] === word_root) {
-		var IPA1_verb = verbs[i].IPA[0];
+		var IPA1_verb = verbs[i].RootIPA[0];
 		var IPA_verb = verbs[i].IPA2[0];
 		var Eng_verb = verbs[i].English[0];
 		var Qui_verb = verbs[i].Quichua[0];
@@ -3464,8 +3464,8 @@ ei=j+1
 var code5 = IPA1_noun+IPA_nominal+IPA_nominalX1+IPA_nominalX2+IPA_nominalX3+IPA_nominalX4+IPA_nominalX5+IPA_nominalX6+IPA_nominalX7+IPA_nominalX8+IPA_nominalX9;
 var code6 = code5.replace(/(\(|\)|-|_|h|\.|,|;|¿|!|\?|'|"|\"|¡|\[|\]|\n)/gi, "");
 
-console.log(code6+" code6")
-console.log(y22+" y22")
+//console.log(code6+" code6")
+//console.log(y22+" y22")
 //If statement to get the data into the HTML file.
 //If the 'word root' object dedicated to nouns is empty or the last noun morpheme is full (something that doesn't happen naturally, meaning it was a parsing error since the user input was not a noun) it must be a verb, so add the verb to object for data output 
 if (y22 !== code6){//word_root_noun==="" || y8_morph_nounX9.length>0){
