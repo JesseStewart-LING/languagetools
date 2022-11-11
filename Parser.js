@@ -723,208 +723,6 @@ for (let i = 0; i < nouns.length; i++) {
 var morph_verb = b[j].substring(len_max)
 var morph_noun = b[j].substring(len_noun_max)
 
-///PREDICTOR CODE
-bb = y22
-
-//creating objects set to "". Without these, on the next loop information from the previous loop will remain here.
-Root_W="";
-morph_verb_pred="";
-morph_noun_pred="";
-predict_1a="";
-predict_1b="";
-predict_1c="";
-predict_1d="";
-predict_1e="";
-predict_1f="";
-predict_1g="";
-predict_1h="";
-predict_1i="";
-predict_1j="";
-predict_1k="";
-predict_1l="";
-predict_1m="";
-predict_1n="";
-predict_1o="";
-
-//This for loop takes the user input in bb, then removes n (starting with 15 - this needs to be changed if a longer cluster is found) characters off the input and compares it to the combined morpheme library.
-for (let i = 0; i < Pred_VN.length; i++) {
-	if (Pred_VN[i].IPA[0] === bb.substr(bb.length-15)) {
-		var predict_1a = Pred_VN[i].IPA[0]
-	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-14)) {
-		var predict_1b = Pred_VN[i].IPA[0]
-	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-13)) {
-		var predict_1c = Pred_VN[i].IPA[0]
-	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-12)) {
-		var predict_1d = Pred_VN[i].IPA[0]
-	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-11)) {
-		var predict_1e = Pred_VN[i].IPA[0]
-	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-10)) {
-		var predict_1f = Pred_VN[i].IPA[0]
-	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-9)) {
-		var predict_1g = Pred_VN[i].IPA[0]
-	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-8)) {
-		var predict_1h = Pred_VN[i].IPA[0]
-	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-7)) {
-		var predict_1i = Pred_VN[i].IPA[0]
-	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-6)) {
-		var predict_1j = Pred_VN[i].IPA[0]
-	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-5)) {
-		var predict_1k = Pred_VN[i].IPA[0]
-	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-4)) {
-		var predict_1l = Pred_VN[i].IPA[0]
-	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-3)) {
-		var predict_1m = Pred_VN[i].IPA[0]
-	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-2)) {
-		var predict_1n = Pred_VN[i].IPA[0]
-	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-1)) {
-		var predict_1o = Pred_VN[i].IPA[0]}}
-	
-//These if statements make 'undefined' values into something countable. Since ʘ isn't found in ML or Q it can be used to show a length of 1 without risking accidently comparing it to something like 'k'.
-if (predict_1a === undefined) {
-var predict_1a = "ʘ";
-}else{
-var predict_1a = predict_1a;
-}
-
-if (predict_1b === undefined) {
-var predict_1b = "ʘ";
-}else{
-var predict_1b = predict_1b;
-}
-
-if (predict_1c === undefined) {
-var predict_1c = "ʘ";
-}else{
-var predict_1c = predict_1c;
-}
-
-if (predict_1d === undefined) {
-var predict_1d = "ʘ";
-}else{
-var predict_1d = predict_1d;
-}
-
-if (predict_1e === undefined) {
-var predict_1e = "ʘ";
-}else{
-var predict_1e = predict_1e;
-}
-
-if (predict_1f === undefined) {
-var predict_1f = "ʘ";
-}else{
-var predict_1f = predict_1f;
-}
-
-if (predict_1g === undefined) {
-var predict_1g = "ʘ";
-}else{
-var predict_1g = predict_1g;
-}
-
-if (predict_1h === undefined) {
-var predict_1h = "ʘ";
-}else{
-var predict_1h = predict_1h;
-}
-
-if (predict_1i === undefined) {
-var predict_1i = "ʘ";
-}else{
-var predict_1i = predict_1i;
-}
-
-if (predict_1j === undefined) {
-var predict_1j = "ʘ";
-}else{
-var predict_1j = predict_1j;
-}
-
-if (predict_1k === undefined) {
-var predict_1k = "ʘ";
-}else{
-var predict_1k = predict_1k;
-}
-
-if (predict_1l === undefined) {
-var predict_1l = "ʘ";
-}else{
-var predict_1l = predict_1l;
-}
-
-if (predict_1m === undefined) {
-var predict_1m = "ʘ";
-}else{
-var predict_1m = predict_1m;
-}
-
-if (predict_1n === undefined) {
-var predict_1n = "ʘ";
-}else{
-var predict_1n = predict_1n;
-}
-
-if (predict_1o === undefined) {
-var predict_1o = "ʘ";
-}else{
-var predict_1o = predict_1o;
-}
-
-//Now comparing lengths to get the longest morpheme combination.
-var Pred_morph = "ʘ"
-if (predict_1a.length > predict_1b.length) {
-	var Pred_morph = predict_1a;}
-
-if (predict_1b.length > Pred_morph.length) {
-	var Pred_morph = predict_1b;}
-
-if (predict_1c.length > Pred_morph.length) {
-	var Pred_morph = predict_1c;}
-	
-if (predict_1d.length > Pred_morph.length) {
-	var Pred_morph = predict_1d;}
-
-if (predict_1e.length > Pred_morph.length) {
-	var Pred_morph = predict_1e;}
-
-if (predict_1f.length > Pred_morph.length) {
-	var Pred_morph = predict_1f;}
-	
-if (predict_1g.length > Pred_morph.length) {
-	var Pred_morph = predict_1g;}
-	
-if (predict_1h.length > Pred_morph.length) {
-	var Pred_morph = predict_1h;}
-
-if (predict_1i.length > Pred_morph.length) {
-	var Pred_morph = predict_1i;}
-	
-if (predict_1j.length > Pred_morph.length) {
-	var Pred_morph = predict_1j;}
-	
-if (predict_1k.length > Pred_morph.length) {
-	var Pred_morph = predict_1k;}
-
-if (predict_1l.length > Pred_morph.length) {
-	var Pred_morph = predict_1l;}
-
-if (predict_1m.length > Pred_morph.length) {
-	var Pred_morph = predict_1m;}
-
-if (predict_1n.length > Pred_morph.length) {
-	var Pred_morph = predict_1n;}
-	
-if (predict_1o.length > Pred_morph.length) {
-	var Pred_morph = predict_1o;}
-
-//boom!
-var Root_W = bb.slice(0,bb.length-Pred_morph.length);
-
-var morph_verb_pred = Pred_morph
-var morph_noun_pred = Pred_morph
-
-////END OF PREDICTOR CODE
-
 //Morpheme 1
 //
 
@@ -3455,10 +3253,212 @@ var IPA_nominalX9 = IPA_nominalX9;
 var dash10N = dash10N
 }
 
+///PREDICTOR CODE
+bb = y22
+
+//creating objects set to "". Without these, on the next loop information from the previous loop will remain here.
+Root_W="";
+morph_verb_pred="";
+morph_noun_pred="";
+predict_1a="";
+predict_1b="";
+predict_1c="";
+predict_1d="";
+predict_1e="";
+predict_1f="";
+predict_1g="";
+predict_1h="";
+predict_1i="";
+predict_1j="";
+predict_1k="";
+predict_1l="";
+predict_1m="";
+predict_1n="";
+predict_1o="";
+
+//This for loop takes the user input in bb, then removes n (starting with 15 - this needs to be changed if a longer cluster is found) characters off the input and compares it to the combined morpheme library.
+for (let i = 0; i < Pred_VN.length; i++) {
+	if (Pred_VN[i].IPA[0] === bb.substr(bb.length-15)) {
+		var predict_1a = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-14)) {
+		var predict_1b = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-13)) {
+		var predict_1c = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-12)) {
+		var predict_1d = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-11)) {
+		var predict_1e = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-10)) {
+		var predict_1f = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-9)) {
+		var predict_1g = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-8)) {
+		var predict_1h = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-7)) {
+		var predict_1i = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-6)) {
+		var predict_1j = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-5)) {
+		var predict_1k = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-4)) {
+		var predict_1l = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-3)) {
+		var predict_1m = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-2)) {
+		var predict_1n = Pred_VN[i].IPA[0]
+	}else if (Pred_VN[i].IPA[0] === bb.substr(bb.length-1)) {
+		var predict_1o = Pred_VN[i].IPA[0]}}
+	
+//These if statements make 'undefined' values into something countable. Since ʘ isn't found in ML or Q it can be used to show a length of 1 without risking accidently comparing it to something like 'k'.
+if (predict_1a === undefined) {
+var predict_1a = "ʘ";
+}else{
+var predict_1a = predict_1a;
+}
+
+if (predict_1b === undefined) {
+var predict_1b = "ʘ";
+}else{
+var predict_1b = predict_1b;
+}
+
+if (predict_1c === undefined) {
+var predict_1c = "ʘ";
+}else{
+var predict_1c = predict_1c;
+}
+
+if (predict_1d === undefined) {
+var predict_1d = "ʘ";
+}else{
+var predict_1d = predict_1d;
+}
+
+if (predict_1e === undefined) {
+var predict_1e = "ʘ";
+}else{
+var predict_1e = predict_1e;
+}
+
+if (predict_1f === undefined) {
+var predict_1f = "ʘ";
+}else{
+var predict_1f = predict_1f;
+}
+
+if (predict_1g === undefined) {
+var predict_1g = "ʘ";
+}else{
+var predict_1g = predict_1g;
+}
+
+if (predict_1h === undefined) {
+var predict_1h = "ʘ";
+}else{
+var predict_1h = predict_1h;
+}
+
+if (predict_1i === undefined) {
+var predict_1i = "ʘ";
+}else{
+var predict_1i = predict_1i;
+}
+
+if (predict_1j === undefined) {
+var predict_1j = "ʘ";
+}else{
+var predict_1j = predict_1j;
+}
+
+if (predict_1k === undefined) {
+var predict_1k = "ʘ";
+}else{
+var predict_1k = predict_1k;
+}
+
+if (predict_1l === undefined) {
+var predict_1l = "ʘ";
+}else{
+var predict_1l = predict_1l;
+}
+
+if (predict_1m === undefined) {
+var predict_1m = "ʘ";
+}else{
+var predict_1m = predict_1m;
+}
+
+if (predict_1n === undefined) {
+var predict_1n = "ʘ";
+}else{
+var predict_1n = predict_1n;
+}
+
+if (predict_1o === undefined) {
+var predict_1o = "ʘ";
+}else{
+var predict_1o = predict_1o;
+}
+
+//Now comparing lengths to get the longest morpheme combination.
+var Pred_morph = "ʘ"
+if (predict_1a.length > predict_1b.length) {
+	var Pred_morph = predict_1a;}
+
+if (predict_1b.length > Pred_morph.length) {
+	var Pred_morph = predict_1b;}
+
+if (predict_1c.length > Pred_morph.length) {
+	var Pred_morph = predict_1c;}
+	
+if (predict_1d.length > Pred_morph.length) {
+	var Pred_morph = predict_1d;}
+
+if (predict_1e.length > Pred_morph.length) {
+	var Pred_morph = predict_1e;}
+
+if (predict_1f.length > Pred_morph.length) {
+	var Pred_morph = predict_1f;}
+	
+if (predict_1g.length > Pred_morph.length) {
+	var Pred_morph = predict_1g;}
+	
+if (predict_1h.length > Pred_morph.length) {
+	var Pred_morph = predict_1h;}
+
+if (predict_1i.length > Pred_morph.length) {
+	var Pred_morph = predict_1i;}
+	
+if (predict_1j.length > Pred_morph.length) {
+	var Pred_morph = predict_1j;}
+	
+if (predict_1k.length > Pred_morph.length) {
+	var Pred_morph = predict_1k;}
+
+if (predict_1l.length > Pred_morph.length) {
+	var Pred_morph = predict_1l;}
+
+if (predict_1m.length > Pred_morph.length) {
+	var Pred_morph = predict_1m;}
+
+if (predict_1n.length > Pred_morph.length) {
+	var Pred_morph = predict_1n;}
+	
+if (predict_1o.length > Pred_morph.length) {
+	var Pred_morph = predict_1o;}
+
+//boom!
+var Root_W = bb.slice(0,bb.length-Pred_morph.length);
+
+var morph_verb_pred = Pred_morph
+var morph_noun_pred = Pred_morph
+
+////END OF PREDICTOR CODE
+
 ee=j*10
 ei=j+1
 
-//This object takes the input with the morphemes already parsed out and removes dashes and other non-IPA characters (in code6) and then compares it against y22 (the user input) in the next if statement, if there isn't a match, the root wasn't found in the dictionary.
+//This object takes the input with the morphemes already parsed out and removes dashes and other non-IPA characters (in code6) and then compares it against y22 in the first if statement.
 var code5 = IPA_noun+IPA_nominal+IPA_nominalX1+IPA_nominalX2+IPA_nominalX3+IPA_nominalX4+IPA_nominalX5+IPA_nominalX6+IPA_nominalX7+IPA_nominalX8+IPA_nominalX9;
 var code6 = code5.replace(/(\(|\)|-|_|h|\.|,|;|¿|!|\?|'|"|\"|¡|\[|\]|\n)/gi, "");
 console.log(code6+" code6")
