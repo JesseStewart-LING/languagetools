@@ -705,7 +705,7 @@ var len_noun_a22=0;
 var len_noun_a22=aNoun22.length;
 }
 
-//Now we get the 'a' object with the longest character length.
+//Now we get the 'aNoun' object with the longest character length.
 var len_noun_max = Math.max(len_noun_a, len_noun_a2, len_noun_a3, len_noun_a4, len_noun_a5, len_noun_a6, len_noun_a7, len_noun_a8, len_noun_a9, len_noun_a10, len_noun_a11, len_noun_a12, len_noun_a13, len_noun_a14, len_noun_a15, len_noun_a16, len_noun_a17, len_noun_a18, len_noun_a19, len_noun_a20, len_noun_a21, len_noun_a22)
 
 //Now we take the length of the non-verb root, collected in 'len_noun_max' above, and with 'substring' we remove that length from the left and place it in its own object (establishing the root).  
@@ -938,14 +938,16 @@ var morph_verbal_1 = morph_verb.substring(0, len_verbal_max)
 
 for (let i = 0; i < nominal.length; i++) {
 	if (nominal[i].IPA[0] === morph_nominal_1) {
-		var IPA_nominal = nominal[i].IPA2[0];
+		var IPA2_nominal = nominal[i].IPA2[0];
+		var IPA_nominal = nominal[i].IPA[0];		
 		var Morp_nominal = nominal[i].Morpheme[0];
 		var Gloss_nominal = nominal[i].Gloss[0];
 }}
 
 for (let i = 0; i < verbal.length; i++) {
 	if (verbal[i].IPA[0] === morph_verbal_1) {
-		var IPA_verbal = verbal[i].IPA2[0];
+		var IPA2_verbal = verbal[i].IPA2[0];
+		var IPA_verbal = verbal[i].IPA[0];
 		var Morp_verbal = verbal[i].Morpheme[0];
 		var Gloss_verbal = verbal[i].Gloss[0];
 }}
@@ -1166,14 +1168,16 @@ var morph_verbalX1_1 = morph_verbX1.substring(0, len_verbalX1_max)
 
 for (let i = 0; i < nominal.length; i++) {
 	if (nominal[i].IPA[0] === morph_nominalX1_1) {
-		var IPA_nominalX1 = nominal[i].IPA2[0];
+		var IPA2_nominalX1 = nominal[i].IPA2[0];
+		var IPA_nominalX1 = nominal[i].IPA[0];
 		var Morp_nominalX1 = nominal[i].Morpheme[0];
 		var Gloss_nominalX1 = nominal[i].Gloss[0];
 }}
 
 for (let i = 0; i < verbal.length; i++) {
 	if (verbal[i].IPA[0] === morph_verbalX1_1) {
-		var IPA_verbalX1 = verbal[i].IPA2[0];
+		var IPA2_verbalX1 = verbal[i].IPA2[0];
+		var IPA_verbalX1 = verbal[i].IPA[0];
 		var Morp_verbalX1 = verbal[i].Morpheme[0];
 		var Gloss_verbalX1 = verbal[i].Gloss[0];
 }}
@@ -1394,14 +1398,16 @@ var morph_verbalX2_2 = morph_verbX2.substring(0, len_verbalX2_max)
 
 for (let i = 0; i < nominal.length; i++) {
 	if (nominal[i].IPA[0] === morph_nominalX2_2) {
-		var IPA_nominalX2 = nominal[i].IPA2[0];
+		var IPA2_nominalX2 = nominal[i].IPA2[0];
+		var IPA_nominalX2 = nominal[i].IPA[0];
 		var Morp_nominalX2 = nominal[i].Morpheme[0];
 		var Gloss_nominalX2 = nominal[i].Gloss[0];
 }}
 
 for (let i = 0; i < verbal.length; i++) {
 	if (verbal[i].IPA[0] === morph_verbalX2_2) {
-		var IPA_verbalX2 = verbal[i].IPA2[0];
+		var IPA2_verbalX2 = verbal[i].IPA2[0];
+		var IPA_verbalX2 = verbal[i].IPA[0];
 		var Morp_verbalX2 = verbal[i].Morpheme[0];
 		var Gloss_verbalX2 = verbal[i].Gloss[0];
 }}
@@ -1620,14 +1626,16 @@ var morph_verbalX3_3 = morph_verbX3.substring(0, len_verbalX3_max)
 
 for (let i = 0; i < nominal.length; i++) {
 	if (nominal[i].IPA[0] === morph_nominalX3_3) {
-		var IPA_nominalX3 = nominal[i].IPA2[0];
+		var IPA2_nominalX3 = nominal[i].IPA2[0];
+		var IPA_nominalX3 = nominal[i].IPA[0];
 		var Morp_nominalX3 = nominal[i].Morpheme[0];
 		var Gloss_nominalX3 = nominal[i].Gloss[0];
 }}
 
 for (let i = 0; i < verbal.length; i++) {
 	if (verbal[i].IPA[0] === morph_verbalX3_3) {
-		var IPA_verbalX3 = verbal[i].IPA2[0];
+		var IPA2_verbalX3 = verbal[i].IPA2[0];
+		var IPA_verbalX3 = verbal[i].IPA[0];
 		var Morp_verbalX3 = verbal[i].Morpheme[0];
 		var Gloss_verbalX3 = verbal[i].Gloss[0];
 }}
@@ -1847,14 +1855,16 @@ var morph_verbalX4_4 = morph_verbX4.substring(0, len_verbalX4_max)
 
 for (let i = 0; i < nominal.length; i++) {
 	if (nominal[i].IPA[0] === morph_nominalX4_4) {
-		var IPA_nominalX4 = nominal[i].IPA2[0];
+		var IPA_nominalX4 = nominal[i].IPA[0];
+		var IPA2_nominalX4 = nominal[i].IPA2[0];
 		var Morp_nominalX4 = nominal[i].Morpheme[0];
 		var Gloss_nominalX4 = nominal[i].Gloss[0];
 }}
 
 for (let i = 0; i < verbal.length; i++) {
 	if (verbal[i].IPA[0] === morph_verbalX4_4) {
-		var IPA_verbalX4 = verbal[i].IPA2[0];
+		var IPA_verbalX4 = verbal[i].IPA[0];
+		var IPA2_verbalX4 = verbal[i].IPA2[0];
 		var Morp_verbalX4 = verbal[i].Morpheme[0];
 		var Gloss_verbalX4 = verbal[i].Gloss[0];
 }}
@@ -2073,14 +2083,16 @@ var morph_verbalX5_5 = morph_verbX5.substring(0, len_verbalX5_max)
 
 for (let i = 0; i < nominal.length; i++) {
 	if (nominal[i].IPA[0] === morph_nominalX5_5) {
-		var IPA_nominalX5 = nominal[i].IPA2[0];
+		var IPA_nominalX5 = nominal[i].IPA[0];
+		var IPA2_nominalX5 = nominal[i].IPA2[0];
 		var Morp_nominalX5 = nominal[i].Morpheme[0];
 		var Gloss_nominalX5 = nominal[i].Gloss[0];
 }}
 
 for (let i = 0; i < verbal.length; i++) {
 	if (verbal[i].IPA[0] === morph_verbalX5_5) {
-		var IPA_verbalX5 = verbal[i].IPA2[0];
+		var IPA2_verbalX5 = verbal[i].IPA2[0];
+		var IPA_verbalX5 = verbal[i].IPA[0];
 		var Morp_verbalX5 = verbal[i].Morpheme[0];
 		var Gloss_verbalX5 = verbal[i].Gloss[0];
 }}
@@ -2299,14 +2311,16 @@ var morph_verbalX6_6 = morph_verbX6.substring(0, len_verbalX6_max)
 
 for (let i = 0; i < nominal.length; i++) {
 	if (nominal[i].IPA[0] === morph_nominalX6_6) {
-		var IPA_nominalX6 = nominal[i].IPA2[0];
+		var IPA_nominalX6 = nominal[i].IPA[0];
+		var IPA2_nominalX6 = nominal[i].IPA2[0];
 		var Morp_nominalX6 = nominal[i].Morpheme[0];
 		var Gloss_nominalX6 = nominal[i].Gloss[0];
 }}
 
 for (let i = 0; i < verbal.length; i++) {
 	if (verbal[i].IPA[0] === morph_verbalX6_6) {
-		var IPA_verbalX6 = verbal[i].IPA2[0];
+		var IPA_verbalX6 = verbal[i].IPA[0];
+		var IPA2_verbalX6 = verbal[i].IPA2[0];
 		var Morp_verbalX6 = verbal[i].Morpheme[0];
 		var Gloss_verbalX6 = verbal[i].Gloss[0];
 }}
@@ -2525,14 +2539,16 @@ var morph_verbalX7_7 = morph_verbX7.substring(0, len_verbalX7_max)
 
 for (let i = 0; i < nominal.length; i++) {
 	if (nominal[i].IPA[0] === morph_nominalX7_7) {
-		var IPA_nominalX7 = nominal[i].IPA2[0];
+		var IPA_nominalX7 = nominal[i].IPA[0];
+		var IPA2_nominalX7 = nominal[i].IPA2[0];
 		var Morp_nominalX7 = nominal[i].Morpheme[0];
 		var Gloss_nominalX7 = nominal[i].Gloss[0];
 }}
 
 for (let i = 0; i < verbal.length; i++) {
 	if (verbal[i].IPA[0] === morph_verbalX7_7) {
-		var IPA_verbalX7 = verbal[i].IPA2[0];
+		var IPA_verbalX7 = verbal[i].IPA[0];
+		var IPA2_verbalX7 = verbal[i].IPA2[0];
 		var Morp_verbalX7 = verbal[i].Morpheme[0];
 		var Gloss_verbalX7 = verbal[i].Gloss[0];
 }}
@@ -2751,14 +2767,16 @@ var morph_verbalX8_8 = morph_verbX8.substring(0, len_verbalX8_max)
 
 for (let i = 0; i < nominal.length; i++) {
 	if (nominal[i].IPA[0] === morph_nominalX8_8) {
-		var IPA_nominalX8 = nominal[i].IPA2[0];
+		var IPA_nominalX8 = nominal[i].IPA[0];
+		var IPA2_nominalX8 = nominal[i].IPA2[0];
 		var Morp_nominalX8 = nominal[i].Morpheme[0];
 		var Gloss_nominalX8 = nominal[i].Gloss[0];
 }}
 
 for (let i = 0; i < verbal.length; i++) {
 	if (verbal[i].IPA[0] === morph_verbalX8_8) {
-		var IPA_verbalX8 = verbal[i].IPA2[0];
+		var IPA_verbalX8 = verbal[i].IPA[0];
+		var IPA2_verbalX8 = verbal[i].IPA2[0];
 		var Morp_verbalX8 = verbal[i].Morpheme[0];
 		var Gloss_verbalX8 = verbal[i].Gloss[0];
 }}
@@ -2977,14 +2995,16 @@ var morph_verbalX9_9 = morph_verbX9.substring(0, len_verbalX9_max)
 
 for (let i = 0; i < nominal.length; i++) {
 	if (nominal[i].IPA[0] === morph_nominalX9_9) {
-		var IPA_nominalX9 = nominal[i].IPA2[0];
+		var IPA_nominalX9 = nominal[i].IPA[0];
+		var IPA2_nominalX9 = nominal[i].IPA2[0];
 		var Morp_nominalX9 = nominal[i].Morpheme[0];
 		var Gloss_nominalX9 = nominal[i].Gloss[0];
 }}
 
 for (let i = 0; i < verbal.length; i++) {
 	if (verbal[i].IPA[0] === morph_verbalX9_9) {
-		var IPA_verbalX9 = verbal[i].IPA2[0];
+		var IPA_verbalX9 = verbal[i].IPA[0];
+		var IPA2_verbalX9 = verbal[i].IPA2[0];
 		var Morp_verbalX9 = verbal[i].Morpheme[0];
 		var Gloss_verbalX9 = verbal[i].Gloss[0];
 }}
@@ -3019,11 +3039,13 @@ if (morph_verbal_1 === "") {
 morph_verbal_1 = "";
 var Gloss_verbal = "";
 var IPA_verbal = "";
+var IPA2_verbal = "";
 var dash1 = "";
 }else{
 var morph_verbal_1 = morph_verbal_1;
 var Gloss_verbal = Gloss_verbal;
 var IPA_verbal = IPA_verbal;
+var IPA2_verbal = IPA2_verbal;
 var dash1 = dash1
 }
 
@@ -3031,11 +3053,13 @@ if (morph_verbalX1_1 === "") {
 morph_verbalX1_1 = "";
 var Gloss_verbalX1 = "";
 var IPA_verbalX1 = "";
+var IPA2_verbalX1 = "";
 var dash2 = "";
 }else{
 var morph_verbalX1_1 = morph_verbalX1_1;
 var Gloss_verbalX1 = Gloss_verbalX1;
 var IPA_verbalX1 = IPA_verbalX1;
+var IPA2_verbalX1 = IPA2_verbalX1;
 var dash2 = dash2
 }
 
@@ -3043,11 +3067,13 @@ if (morph_verbalX2_2 === "") {
 morph_verbalX2_2 = "";
 var Gloss_verbalX2 = "";
 var IPA_verbalX2 = "";
+var IPA2_verbalX2 = "";
 var dash3 = "";
 }else{
 var morph_verbalX2_2 = morph_verbalX2_2;
 var Gloss_verbalX2 = Gloss_verbalX2;
 var IPA_verbalX2 = IPA_verbalX2;
+var IPA2_verbalX2 = IPA2_verbalX2;
 var dash3 = dash3
 }
 
@@ -3055,11 +3081,13 @@ if (morph_verbalX3_3 === "") {
 morph_verbalX3_3 = "";
 var Gloss_verbalX3 = "";
 var IPA_verbalX3 = "";
+var IPA2_verbalX3 = "";
 var dash4 = "";
 }else{
 var morph_verbalX3_3 = morph_verbalX3_3;
 var Gloss_verbalX3 = Gloss_verbalX3;
 var IPA_verbalX3 = IPA_verbalX3;
+var IPA2_verbalX3 = IPA2_verbalX3;
 var dash4 = dash4
 }
 
@@ -3067,11 +3095,13 @@ if (morph_verbalX4_4 === "") {
 morph_verbalX4_4 = "";
 var Gloss_verbalX4 = "";
 var IPA_verbalX4 = "";
+var IPA2_verbalX4 = "";
 var dash5 = "";
 }else{
 var morph_verbalX4_4 = morph_verbalX4_4;
 var Gloss_verbalX4 = Gloss_verbalX4;
 var IPA_verbalX4 = IPA_verbalX4;
+var IPA2_verbalX4 = IPA2_verbalX4;
 var dash5 = dash5
 }
 
@@ -3079,11 +3109,13 @@ if (morph_verbalX5_5 === "") {
 morph_verbalX5_5 = "";
 var Gloss_verbalX5 = "";
 var IPA_verbalX5 = "";
+var IPA2_verbalX5 = "";
 var dash6 = "";
 }else{
 var morph_verbalX5_5 = morph_verbalX5_5;
 var Gloss_verbalX5 = Gloss_verbalX5;
 var IPA_verbalX5 = IPA_verbalX5;
+var IPA2_verbalX5 = IPA2_verbalX5;
 var dash6 = dash6
 }
 
@@ -3091,11 +3123,13 @@ if (morph_verbalX6_6 === "") {
 morph_verbalX6_6 = "";
 var Gloss_verbalX6 = "";
 var IPA_verbalX6 = "";
+var IPA2_verbalX6 = "";
 var dash7 = "";
 }else{
 var morph_verbalX6_6 = morph_verbalX6_6;
 var Gloss_verbalX6 = Gloss_verbalX6;
 var IPA_verbalX6 = IPA_verbalX6;
+var IPA2_verbalX6 = IPA2_verbalX6;
 var dash7 = dash7
 }
 
@@ -3103,11 +3137,13 @@ if (morph_verbalX7_7 === "") {
 morph_verbalX7_7 = "";
 var Gloss_verbalX7 = "";
 var IPA_verbalX7 = "";
+var IPA2_verbalX7 = "";
 var dash8 = "";
 }else{
 var morph_verbalX7_7 = morph_verbalX7_7;
 var Gloss_verbalX7 = Gloss_verbalX7;
 var IPA_verbalX7 = IPA_verbalX7;
+var IPA2_verbalX7 = IPA2_verbalX7;
 var dash8 = dash8
 }
 
@@ -3115,11 +3151,13 @@ if (morph_verbalX8_8 === "") {
 morph_verbalX8_8 = "";
 var Gloss_verbalX8 = "";
 var IPA_verbalX8 = "";
+var IPA2_verbalX8 = "";
 var dash9 = "";
 }else{
 var morph_verbalX8_8 = morph_verbalX8_8;
 var Gloss_verbalX8 = Gloss_verbalX8;
 var IPA_verbalX8 = IPA_verbalX8;
+var IPA2_verbalX8 = IPA2_verbalX8;
 var dash9 = dash9
 }
 
@@ -3127,11 +3165,13 @@ if (morph_verbalX9_9 === "") {
 morph_verbalX9_9 = "";
 var Gloss_verbalX9 = "";
 var IPA_verbalX9 = "";
+var IPA2_verbalX9 = "";
 var dash10 = "";
 }else{
 var morph_verbalX9_9 = morph_verbalX9_9;
 var Gloss_verbalX9 = Gloss_verbalX9;
 var IPA_verbalX9 = IPA_verbalX9;
+var IPA2_verbalX9 = IPA2_verbalX9;
 var dash10 = dash10
 }
 
@@ -3139,11 +3179,13 @@ if (morph_nominal_1 === "") {
 morph_nominal_1 = "";
 var Gloss_nominal = "";
 var IPA_nominal = "";
+var IPA2_nominal = "";
 var dash1N = "";
 }else{
 var morph_nominal_1 = morph_nominal_1;
 var Gloss_nominal = Gloss_nominal;
 var IPA_nominal = IPA_nominal;
+var IPA2_nominal = IPA2_nominal;
 var dash1N = dash1N
 }
 
@@ -3151,11 +3193,13 @@ if (morph_nominalX1_1 === "") {
 morph_nominalX1_1 = "";
 var Gloss_nominalX1 = "";
 var IPA_nominalX1 = "";
+var IPA2_nominalX1 = "";
 var dash2N = "";
 }else{
 var morph_nominalX1_1 = morph_nominalX1_1;
 var Gloss_nominalX1 = Gloss_nominalX1;
 var IPA_nominalX1 = IPA_nominalX1;
+var IPA2_nominalX1 = IPA2_nominalX1;
 var dash2N = dash2N
 }
 
@@ -3163,11 +3207,13 @@ if (morph_nominalX2_2 === "") {
 morph_nominalX2_2 = "";
 var Gloss_nominalX2 = "";
 var IPA_nominalX2 = "";
+var IPA2_nominalX2 = "";
 var dash3N = "";
 }else{
 var morph_nominalX2_2 = morph_nominalX2_2;
 var Gloss_nominalX2 = Gloss_nominalX2;
 var IPA_nominalX2 = IPA_nominalX2;
+var IPA2_nominalX2 = IPA2_nominalX2;
 var dash3N = dash3N
 }
 
@@ -3175,11 +3221,13 @@ if (morph_nominalX3_3 === "") {
 morph_nominalX3_3 = "";
 var Gloss_nominalX3 = "";
 var IPA_nominalX3 = "";
+var IPA2_nominalX3 = "";
 var dash4N = "";
 }else{
 var morph_nominalX3_3 = morph_nominalX3_3;
 var Gloss_nominalX3 = Gloss_nominalX3;
 var IPA_nominalX3 = IPA_nominalX3;
+var IPA2_nominalX3 = IPA2_nominalX3;
 var dash4N = dash4N
 }
 
@@ -3187,11 +3235,13 @@ if (morph_nominalX4_4 === "") {
 morph_nominalX4_4 = "";
 var Gloss_nominalX4 = "";
 var IPA_nominalX4 = "";
+var IPA2_nominalX4 = "";
 var dash5N = "";
 }else{
 var morph_nominalX4_4 = morph_nominalX4_4;
 var Gloss_nominalX4 = Gloss_nominalX4;
 var IPA_nominalX4 = IPA_nominalX4;
+var IPA2_nominalX4 = IPA2_nominalX4;
 var dash5N = dash5N
 }
 
@@ -3199,11 +3249,13 @@ if (morph_nominalX5_5 === "") {
 morph_nominalX5_5 = "";
 var Gloss_nominalX5 = "";
 var IPA_nominalX5 = "";
+var IPA2_nominalX5 = "";
 var dash6N = "";
 }else{
 var morph_nominalX5_5 = morph_nominalX5_5;
 var Gloss_nominalX5 = Gloss_nominalX5;
 var IPA_nominalX5 = IPA_nominalX5;
+var IPA2_nominalX5 = IPA2_nominalX5;
 var dash6N = dash6N
 }
 
@@ -3211,11 +3263,13 @@ if (morph_nominalX6_6 === "") {
 morph_nominalX6_6 = "";
 var Gloss_nominalX6 = "";
 var IPA_nominalX6 = "";
+var IPA2_nominalX6 = "";
 var dash7N = "";
 }else{
 var morph_nominalX6_6 = morph_nominalX6_6;
 var Gloss_nominalX6 = Gloss_nominalX6;
 var IPA_nominalX6 = IPA_nominalX6;
+var IPA2_nominalX6 = IPA2_nominalX6;
 var dash7N = dash7N
 }
 
@@ -3223,11 +3277,13 @@ if (morph_nominalX7_7 === "") {
 morph_nominalX7_7 = "";
 var Gloss_nominalX7 = "";
 var IPA_nominalX7 = "";
+var IPA2_nominalX7 = "";
 var dash8N = "";
 }else{
 var morph_nominalX7_7 = morph_nominalX7_7;
 var Gloss_nominalX7 = Gloss_nominalX7;
 var IPA_nominalX7 = IPA_nominalX7;
+var IPA2_nominalX7 = IPA2_nominalX7;
 var dash8N = dash8N
 }
 
@@ -3235,11 +3291,13 @@ if (morph_nominalX8_8 === "") {
 morph_nominalX8_8 = "";
 var Gloss_nominalX8 = "";
 var IPA_nominalX8 = "";
+var IPA2_nominalX8 = "";
 var dash9N = "";
 }else{
 var morph_nominalX8_8 = morph_nominalX8_8;
 var Gloss_nominalX8 = Gloss_nominalX8;
 var IPA_nominalX8 = IPA_nominalX8;
+var IPA2_nominalX8 = IPA2_nominalX8;
 var dash9N = dash9N
 }
 
@@ -3247,11 +3305,13 @@ if (morph_nominalX9_9 === "") {
 morph_nominalX9_9 = "";
 var Gloss_nominalX9 = "";
 var IPA_nominalX9 = "";
+var IPA2_nominalX9 = "";
 var dash10N = "";
 }else{
 var morph_nominalX9_9 = morph_nominalX9_9;
 var Gloss_nominalX9 = Gloss_nominalX9;
 var IPA_nominalX9 = IPA_nominalX9;
+var IPA2_nominalX9 = IPA2_nominalX9;
 var dash10N = dash10N
 }
 
@@ -3464,12 +3524,10 @@ ei=j+1
 var code5 = IPA1_noun+IPA_nominal+IPA_nominalX1+IPA_nominalX2+IPA_nominalX3+IPA_nominalX4+IPA_nominalX5+IPA_nominalX6+IPA_nominalX7+IPA_nominalX8+IPA_nominalX9;
 var code6 = code5.replace(/(\(|\)|-|_|h|\.|,|;|¿|!|\?|'|"|\"|¡|\[|\]|\n)/gi, "");
 
-//console.log(code6+" code6")
-//console.log(y22+" y22")
 //If statement to get the data into the HTML file.
 //If the 'word root' object dedicated to nouns is empty or the last noun morpheme is full (something that doesn't happen naturally, meaning it was a parsing error since the user input was not a noun) it must be a verb, so add the verb to object for data output 
 if (y22 !== code6){//word_root_noun==="" || y8_morph_nounX9.length>0){
-parsed_data[j] = "<b style='color:#007500'>"+IPA_verb+"</b>" + dash1 + IPA_verbal + dash2 + IPA_verbalX1 + dash3 + IPA_verbalX2 + dash4 + IPA_verbalX3 + dash5 + IPA_verbalX4 + dash6 + IPA_verbalX5 + dash7 + IPA_verbalX6 + dash8 + IPA_verbalX7 + dash9 + IPA_verbalX8 + dash10 + IPA_verbalX9 + " ";
+parsed_data[j] = "<b style='color:#007500'>"+IPA_verb+"</b>" + dash1 + IPA2_verbal + dash2 + IPA2_verbalX1 + dash3 + IPA2_verbalX2 + dash4 + IPA2_verbalX3 + dash5 + IPA2_verbalX4 + dash6 + IPA2_verbalX5 + dash7 + IPA2_verbalX6 + dash8 + IPA2_verbalX7 + dash9 + IPA2_verbalX8 + dash10 + IPA2_verbalX9 + " ";
 parsed_data_Es[j] = "<b style='color:#007500'>"+Es_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
 parsed_data_Qui[j] = "<b style='color:#007500'>"+Qui_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
 parsed_data_En[j] = "<b style='color:#007500'>"+Eng_verb+"</b>" + dash1 + Gloss_verbal + dash2 + Gloss_verbalX1 + dash3 + Gloss_verbalX2 + dash4 + Gloss_verbalX3 + dash5 + Gloss_verbalX4 + dash6 + Gloss_verbalX5 + dash7 + Gloss_verbalX6 + dash8 + Gloss_verbalX7 + dash9 + Gloss_verbalX8 + dash10 + Gloss_verbalX9 + " ";
@@ -6431,16 +6489,6 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
-{"Lexeme" : ["experiencia"],
-IPA : ["expeɾiensia"],
-IPA2 : ["expeɾiensia"],
-Spanish : ["experiencia"],
-Quichua : ["experiencia"],
-English : ["experience"],
-Root : ["NA"],
-Origin : ["ML"],
-Dict : ["SPG"]},
-
 {"Lexeme" : ["hasta luego"],
 IPA : ["asta luego"],
 IPA2 : ["asta luego"],
@@ -8265,7 +8313,7 @@ Origin : ["ML"],
 Dict : ["SPG"]},
 
 {"Lexeme" : ["extranjera"],
-IPA : ["extɾanxeɾa"],
+IPA : ["ekstɾanxeɾa"],
 IPA2 : ["extɾanxeɾa"],
 Spanish : ["extranjera"],
 Quichua : ["ixtranjera"],
@@ -8275,21 +8323,11 @@ Origin : ["ML"],
 Dict : ["SPG"]},
 
 {"Lexeme" : ["extranjero"],
-IPA : ["extɾanxeɾo"],
+IPA : ["ekstɾanxeɾo"],
 IPA2 : ["extɾanxeɾo"],
 Spanish : ["extranjero"],
 Quichua : ["ixtranjeru"],
 English : ["foreigner"],
-Root : ["NA"],
-Origin : ["ML"],
-Dict : ["SPG"]},
-
-{"Lexeme" : ["extranjero"],
-IPA : ["extɾanxeɾo"],
-IPA2 : ["extɾanxeɾo"],
-Spanish : ["extranjero"],
-Quichua : ["ixtranjeru"],
-English : ["foreign"],
 Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
@@ -9375,7 +9413,7 @@ Origin : ["ML"],
 Dict : ["SPG"]},
 
 {"Lexeme" : ["extrangero"],
-IPA : ["extɾangeɾo"],
+IPA : ["ekstɾangeɾo"],
 IPA2 : ["extɾangeɾo"],
 Spanish : ["extranjero"],
 Quichua : ["ixtranjeru"],
@@ -10356,7 +10394,7 @@ Origin : ["ML"],
 Dict : ["SPG"]},
 
 {"Lexeme" : ["excelente"],
-IPA : ["exselente"],
+IPA : ["eksselente"],
 IPA2 : ["exselente"],
 Spanish : ["excelente"],
 Quichua : ["ashta.alipacha"],
@@ -11301,16 +11339,6 @@ IPA2 : ["solamente"],
 Spanish : ["solamente"],
 Quichua : ["shinalla"],
 English : ["only"],
-Root : ["NA"],
-Origin : ["ML"],
-Dict : ["SPG"]},
-
-{"Lexeme" : ["Supermaxi"],
-IPA : ["supeɾmaxi"],
-IPA2 : ["supeɾmaxi"],
-Spanish : ["Supermaxi"],
-Quichua : ["Supermaxi"],
-English : ["Supermaxi"],
 Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
@@ -20301,7 +20329,7 @@ Origin : ["ML"],
 Dict : ["SPG"]},
 
 {"Lexeme" : ["proximo"],
-IPA : ["pɾoximo"],
+IPA : ["pɾoksimo"],
 IPA2 : ["pɾoximo"],
 Spanish : ["próximo"],
 Quichua : ["shamuc"],
@@ -25891,7 +25919,7 @@ Origin : ["ML"],
 Dict : ["SPG"]},
 
 {"Lexeme" : ["examen"],
-IPA : ["examen"],
+IPA : ["eksamen"],
 IPA2 : ["examen"],
 Spanish : ["examen"],
 Quichua : ["examen"],
@@ -34983,6 +35011,16 @@ Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
 
+{"Lexeme" : ["ambi"],
+IPA : ["ambi"],
+IPA2 : ["ambi"],
+Spanish : ["cura//remedio"],
+Quichua : ["ambi"],
+English : ["cure"],
+Root : ["NA"],
+Origin : ["ML"],
+Dict : ["SPG"]},
+
 {"Lexeme" : ["jambi"],
 IPA : ["xambi"],
 IPA2 : ["xambi"],
@@ -37060,6 +37098,16 @@ IPA2 : ["sesgo"],
 Spanish : ["sesgo//torcido//chueco"],
 Quichua : ["bishto//sesgu"],
 English : ["slanted.lines"],
+Root : ["NA"],
+Origin : ["ML"],
+Dict : ["SPG"]},
+
+{"Lexeme" : ["facebook"],
+IPA : ["fasebook"],
+IPA2 : ["fasbuk"],
+Spanish : ["face"],
+Quichua : ["fas"],
+English : ["facebook"],
 Root : ["NA"],
 Origin : ["ML"],
 Dict : ["SPG"]},
@@ -39986,7 +40034,7 @@ Origin : ["ML"],
 Dict : ["SPG"]},
 
 {"Lexeme" : ["xuapo"],
-IPA : ["xuapo"],
+IPA : ["ksuapo"],
 IPA2 : ["xuapo"],
 Spanish : ["rico//bueno"],
 Quichua : ["mishqui//ali"],
@@ -44856,7 +44904,7 @@ Origin : ["ML"],
 Dict : ["SPG"]},
 
 {"Lexeme" : ["taxo"],
-IPA : ["taxo"],
+IPA : ["takso"],
 IPA2 : ["taxo"],
 Spanish : ["taxo"],
 Quichua : ["taxu"],
@@ -45786,7 +45834,7 @@ Origin : ["ML"],
 Dict : ["SPG"]},
 
 {"Lexeme" : ["pixi"],
-IPA : ["pixi"],
+IPA : ["piksi"],
 IPA2 : ["pixi"],
 Spanish : ["pescado"],
 Quichua : ["piji"],
@@ -51025,16 +51073,6 @@ Root : ["NA"],
 Origin : ["Q"],
 Dict : ["SPG"]},
 
-{"Lexeme" : ["experiencia"],
-IPA : ["expeɾiensia"],
-IPA2 : ["expeɾiensia"],
-Spanish : ["experiencia"],
-Quichua : ["experiencia"],
-English : ["experience"],
-Root : ["NA"],
-Origin : ["Q"],
-Dict : ["SPG"]},
-
 {"Lexeme" : ["Gallo Pucyu"],
 IPA : ["gaʒo pucju"],
 IPA2 : ["gaʒo pucju"],
@@ -52236,7 +52274,7 @@ Origin : ["Q"],
 Dict : ["SPG"]},
 
 {"Lexeme" : ["ixtranjera"],
-IPA : ["ixtɾanxeɾa"],
+IPA : ["ikstɾanxeɾa"],
 IPA2 : ["ixtɾanxeɾa"],
 Spanish : ["extranjera"],
 Quichua : ["ixtranjera"],
@@ -52246,7 +52284,7 @@ Origin : ["Q"],
 Dict : ["SPG"]},
 
 {"Lexeme" : ["ixtranjeru"],
-IPA : ["ixtɾanxeɾu"],
+IPA : ["ikstɾanxeɾu"],
 IPA2 : ["ixtɾanxeɾu"],
 Spanish : ["extranjero"],
 Quichua : ["ixtranjeru"],
@@ -52256,7 +52294,7 @@ Origin : ["Q"],
 Dict : ["SPG"]},
 
 {"Lexeme" : ["ixtranjeru"],
-IPA : ["ixtɾanxeɾu"],
+IPA : ["ikstɾanxeɾu"],
 IPA2 : ["ixtɾanxeɾu"],
 Spanish : ["extranjero"],
 Quichua : ["ixtranjeru"],
@@ -54725,16 +54763,6 @@ Root : ["NA"],
 Origin : ["Q"],
 Dict : ["SPG"]},
 
-{"Lexeme" : ["Supermaxi"],
-IPA : ["supeɾmaxi"],
-IPA2 : ["supeɾmaxi"],
-Spanish : ["Supermaxi"],
-Quichua : ["Supermaxi"],
-English : ["Supermaxi"],
-Root : ["NA"],
-Origin : ["Q"],
-Dict : ["SPG"]},
-
 {"Lexeme" : ["Tabacundu"],
 IPA : ["tabakundu"],
 IPA2 : ["tabakundu"],
@@ -55691,16 +55719,6 @@ IPA2 : ["koʐedoɾʃ"],
 Spanish : ["corredor"],
 Quichua : ["corredor"],
 English : ["hallway"],
-Root : ["NA"],
-Origin : ["Q"],
-Dict : ["SPG"]},
-
-{"Lexeme" : ["Cotopaxi"],
-IPA : ["kotopaxi"],
-IPA2 : ["kotopaxi"],
-Spanish : ["Cotopaxi"],
-Quichua : ["Cotopaxi"],
-English : ["Cotopaxi"],
 Root : ["NA"],
 Origin : ["Q"],
 Dict : ["SPG"]},
@@ -62537,7 +62555,7 @@ Origin : ["Q"],
 Dict : ["SPG"]},
 
 {"Lexeme" : ["examen"],
-IPA : ["examen"],
+IPA : ["eksamen"],
 IPA2 : ["examen"],
 Spanish : ["examen"],
 Quichua : ["examen"],
@@ -69310,7 +69328,7 @@ Origin : ["Q"],
 Dict : ["SPG"]},
 
 {"Lexeme" : ["sextu"],
-IPA : ["sextu"],
+IPA : ["sekstu"],
 IPA2 : ["sextu"],
 Spanish : ["sexto"],
 Quichua : ["sextu"],
@@ -72090,7 +72108,7 @@ Origin : ["Q"],
 Dict : ["SPG"]},
 
 {"Lexeme" : ["taxu"],
-IPA : ["taxu"],
+IPA : ["taksu"],
 IPA2 : ["taxu"],
 Spanish : ["taxo"],
 Quichua : ["taxu"],
@@ -77097,7 +77115,7 @@ Origin : ["ML"],
 Dict : ["SPG"]},
 
 {"Lexeme" : ["trabaxana"],
-IPA : ["tɾabaxana"],
+IPA : ["tɾabaksana"],
 IPA2 : ["tɾabaxa"],
 Spanish : ["trabajar"],
 Quichua : ["trabajana//llancana"],
@@ -80541,7 +80559,7 @@ Origin : ["ML"],
 Dict : ["SPG"]},
 
 {"Lexeme" : ["exijina"],
-IPA : ["exixina"],
+IPA : ["eksixina"],
 IPA2 : ["exixi"],
 Spanish : ["exigir"],
 Quichua : ["mañana"],
@@ -91549,6 +91567,17 @@ Quichua : ["jalmana"],
 English : ["weed"],
 Root : ["jalma"],
 RootIPA : ["xalma"],
+Origin : ["Q"],
+Dict : ["SPG"]},
+
+{"Lexeme" : ["ambina"],
+IPA : ["ambina"],
+IPA2 : ["ambi"],
+Spanish : ["curar"],
+Quichua : ["jambina"],
+English : ["cure"],
+Root : ["ambi"],
+RootIPA : ["ambi"],
 Origin : ["Q"],
 Dict : ["SPG"]},
 
