@@ -3552,7 +3552,7 @@ var code6 = code5.replace(/(\(|\)|-|_|h|\.|,|;|¿|!|\?|'|"|\"|¡|\[|\]|\n)/gi, "
 	parsed_data_Es[j] = "<b style='color:#FF0000'>"+Root_W+"-"+morph_noun_pred+"</b>";
 	parsed_data_Qui[j] = "<b style='color:#FF0000'>"+Root_W+"-"+morph_noun_pred+"</b>";
 	parsed_data_En[j] = "<b style='color:#FF0000'>"+Root_W+"-"+morph_noun_pred+"</b>";
-	document.getElementById("Warning").innerHTML = "Aviso: <i><span style='color:red'>Las palabras en color rojo no se encuentran en el diccionario y las divisiones morfológicas solo son aproximaciones.</span></i>";}
+	document.getElementById("Warning").innerHTML = "Aviso: <i><span style='color:red'>Las palabras en color rojo no se encuentran en el diccionario y las divisiones morfológicas solo son aproximaciones. Si usted no está de acuerdo con el resultado, puede contactar a los programadores a http://www.jessestewart.net/participantes.html para que añadan palabras o corrijan los errores.</span></i>";}
 
 //If the result is not a verb, display the noun output.
 } else {
@@ -89559,17 +89559,6 @@ var verbs =
 "Origin" : ["ML"],
 "Dict" : ["SPG"]},
 
-{"Lexeme" : ["payayana"],
-"IPA" : ["paiaiana"],
-"IPA2" : ["paiaia"],
-"Spanish" : ["envejecer"],
-"Quichua" : ["payayana"],
-"English" : ["get.old"],
-"Root" : ["payaya"],
-"RootIPA" : ["paiaia"],
-"Origin" : ["ML"],
-"Dict" : ["SPG"]},
-
 {"Lexeme" : ["plantana"],
 "IPA" : ["plantana"],
 "IPA2" : ["planta"],
@@ -103313,7 +103302,7 @@ var verbs =
 
 {"Lexeme" : ["payayana"],
 "IPA" : ["paiaiana"],
-"IPA2" : ["paiaia"],
+"IPA2" : ["pajaja"],
 "Spanish" : ["envejecer"],
 "Quichua" : ["payayana"],
 "English" : ["become.old"],
