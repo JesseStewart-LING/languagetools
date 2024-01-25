@@ -3552,7 +3552,7 @@ var code6 = code5.replace(/(\(|\)|-|_|h|\.|,|;|¿|!|\?|'|"|\"|¡|\[|\]|\n)/gi, "
 	parsed_data_Es[j] = "<b style='color:#FF0000'>"+Root_W+"-"+morph_noun_pred+"</b>";
 	parsed_data_Qui[j] = "<b style='color:#FF0000'>"+Root_W+"-"+morph_noun_pred+"</b>";
 	parsed_data_En[j] = "<b style='color:#FF0000'>"+Root_W+"-"+morph_noun_pred+"</b>";
-	document.getElementById("Warning").innerHTML = "Aviso: <i><span style='color:red'>Las palabras en color rojo no se encuentran en el diccionario y las divisiones morfológicas solo son aproximaciones. Si usted no está de acuerdo con el resultado, puede contactar a los programadores a http://www.jessestewart.net/participantes.html para que añadan palabras o corrijan los errores.</span></i>";}
+	document.getElementById("Warning").innerHTML = "Aviso: <i><span style='color:red'>Las palabras en color rojo no se encuentran en el diccionario y las divisiones morfológicas solo son aproximaciones. Si usted no está de acuerdo con el resultado, puede contactar a los programadores a <span style='color:blue'><a href='http://www.jessestewart.net/participantes.html'>http://www.jessestewart.net/participantes.html</a><span style='color:red'> para que añadan palabras o corrijan los errores.</span></i>";}
 
 //If the result is not a verb, display the noun output.
 } else {
