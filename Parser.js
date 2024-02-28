@@ -108,6 +108,7 @@ var y = document.getElementById("inputText").value;
 	var b = b.replace (/g/gi, "g");
 	var b = b.replace (/weɾba/gi, "geɾba");
 	var b = b.replace (/wiɾba/gi, "giɾba");
+	var b = b.replace (/sw/gi, "ʃu");
 //	var b = b.replace (/ /gi, "");
 	var b = b.replace (/(\(|\)|-|_|h|\.|,|;|¿|!|\?|'|"|\"|¡|“|”|\[|\]|\n)/gi, "");
 	var b = b.replace (/\s{2}/gi, " ");
@@ -4521,6 +4522,16 @@ var verbal =
 "IPA2" : ["k-ka"],
 "Gloss" : ["NOM-TOP"]},
 
+{"Morpheme" : ["ica"],
+"IPA" : ["ika"],
+"IPA2" : ["ika"],
+"Gloss" : ["NOM=TOP"]},
+
+{"Morpheme" : ["yca"],
+"IPA" : ["jka"],
+"IPA2" : ["ika"],
+"Gloss" : ["NOM=TOP"]},
+
 {"Morpheme" : ["y"],
 "IPA" : ["j"],
 "IPA2" : ["i"],
@@ -6207,7 +6218,7 @@ var nouns =
 
 {"Lexeme" : ["rededor"],
 "IPA" : ["ʐededoɾ"],
-"IPA2" : ["ʐededoɾ"],
+"IPA2" : ["ʐededoɾʂ"],
 "Spanish" : ["alrededor"],
 "Quichua" : ["muyunde"],
 "English" : ["around"],
@@ -6577,7 +6588,7 @@ var nouns =
 
 {"Lexeme" : ["kashatrawar"],
 "IPA" : ["kaʃatɾawaɾ"],
-"IPA2" : ["kaʃatɾawaɾ"],
+"IPA2" : ["kaʃatɾawaɾʂ"],
 "Spanish" : ["penco"],
 "Quichua" : ["chaguar"],
 "English" : ["agave"],
@@ -6587,7 +6598,7 @@ var nouns =
 
 {"Lexeme" : ["cashachahuar"],
 "IPA" : ["kaʃaʧawaɾ"],
-"IPA2" : ["kaʃaʧawaɾʃ"],
+"IPA2" : ["kaʃaʧawaɾʂ"],
 "Spanish" : ["penco"],
 "Quichua" : ["chaguar"],
 "English" : ["agave"],
@@ -6757,7 +6768,7 @@ var nouns =
 
 {"Lexeme" : ["hierba luisa"],
 "IPA" : ["ieɾba luisa"],
-"IPA2" : ["ieɾba luisa"],
+"IPA2" : ["jieɾba luisa"],
 "Spanish" : ["hierba luisa"],
 "Quichua" : ["hierba luisa"],
 "English" : ["> lemongrass"],
@@ -7157,7 +7168,7 @@ var nouns =
 
 {"Lexeme" : ["lider"],
 "IPA" : ["lideɾ"],
-"IPA2" : ["lideɾ"],
+"IPA2" : ["lideɾʂ"],
 "Spanish" : ["líder"],
 "Quichua" : ["ñaupador"],
 "English" : ["leader"],
@@ -7167,7 +7178,7 @@ var nouns =
 
 {"Lexeme" : ["adelantador"],
 "IPA" : ["adelantadoɾ"],
-"IPA2" : ["adelantadoɾʃ"],
+"IPA2" : ["adelantadoɾʂ"],
 "Spanish" : ["adelantador//creyente"],
 "Quichua" : ["ñaupador"],
 "English" : ["follower//believer"],
@@ -7657,7 +7668,7 @@ var nouns =
 
 {"Lexeme" : ["constructor"],
 "IPA" : ["konstɾuktoɾ"],
-"IPA2" : ["konstɾuktoɾʃ"],
+"IPA2" : ["konstɾuktoɾʂ"],
 "Spanish" : ["constructor"],
 "Quichua" : ["maystro"],
 "English" : ["construction.worker"],
@@ -8157,7 +8168,7 @@ var nouns =
 
 {"Lexeme" : ["reloj solar"],
 "IPA" : ["ʐelox solaɾ"],
-"IPA2" : ["ʐelox solaɾʃ"],
+"IPA2" : ["ʐelox solaɾʂ"],
 "Spanish" : ["reloj solar"],
 "Quichua" : ["reloj solar"],
 "English" : ["> sundial"],
@@ -8348,7 +8359,7 @@ var nouns =
 
 {"Lexeme" : ["tomar"],
 "IPA" : ["tomaɾ"],
-"IPA2" : ["tomaɾ"],
+"IPA2" : ["tomaɾʂ"],
 "Spanish" : ["tomar"],
 "Quichua" : ["ufiana"],
 "English" : ["drink"],
@@ -8358,7 +8369,7 @@ var nouns =
 
 {"Lexeme" : ["enteder"],
 "IPA" : ["entedeɾ"],
-"IPA2" : ["entedeɾʃ"],
+"IPA2" : ["entedeɾʂ"],
 "Spanish" : ["entender"],
 "Quichua" : ["intindina"],
 "English" : ["undersand"],
@@ -8368,7 +8379,7 @@ var nouns =
 
 {"Lexeme" : ["morir"],
 "IPA" : ["moɾiɾ"],
-"IPA2" : ["moɾiɾ"],
+"IPA2" : ["moɾiɾʂ"],
 "Spanish" : ["morir"],
 "Quichua" : ["huañuna"],
 "English" : ["die"],
@@ -8498,7 +8509,7 @@ var nouns =
 
 {"Lexeme" : ["sembrar"],
 "IPA" : ["sembɾaɾ"],
-"IPA2" : ["sembɾaɾ"],
+"IPA2" : ["sembɾaɾʂ"],
 "Spanish" : ["sembrar"],
 "Quichua" : ["tarpuna"],
 "English" : ["plant"],
@@ -8518,7 +8529,7 @@ var nouns =
 
 {"Lexeme" : ["dezir"],
 "IPA" : ["deziɾ"],
-"IPA2" : ["deziɾ"],
+"IPA2" : ["deziɾʂ"],
 "Spanish" : ["decir"],
 "Quichua" : ["nina"],
 "English" : ["say"],
@@ -8528,7 +8539,7 @@ var nouns =
 
 {"Lexeme" : ["tocar"],
 "IPA" : ["tokaɾ"],
-"IPA2" : ["tokaɾ"],
+"IPA2" : ["tokaɾʂ"],
 "Spanish" : ["tocar"],
 "Quichua" : ["tupana"],
 "English" : ["touch"],
@@ -8568,7 +8579,7 @@ var nouns =
 
 {"Lexeme" : ["medir"],
 "IPA" : ["mediɾ"],
-"IPA2" : ["mediɾ"],
+"IPA2" : ["mediɾʂ"],
 "Spanish" : ["medir"],
 "Quichua" : ["tupuna"],
 "English" : ["measure"],
@@ -8688,7 +8699,7 @@ var nouns =
 
 {"Lexeme" : ["dar"],
 "IPA" : ["daɾ"],
-"IPA2" : ["daɾ"],
+"IPA2" : ["daɾʂ"],
 "Spanish" : ["dar"],
 "Quichua" : ["cuna"],
 "English" : ["give"],
@@ -8708,7 +8719,7 @@ var nouns =
 
 {"Lexeme" : ["dejar"],
 "IPA" : ["dexaɾ"],
-"IPA2" : ["dexaɾ"],
+"IPA2" : ["dexaɾʂ"],
 "Spanish" : ["dejar"],
 "Quichua" : ["saquina"],
 "English" : ["leaving"],
@@ -8748,7 +8759,7 @@ var nouns =
 
 {"Lexeme" : ["poner"],
 "IPA" : ["poneɾ"],
-"IPA2" : ["poneɾ"],
+"IPA2" : ["poneɾʂ"],
 "Spanish" : ["poner"],
 "Quichua" : ["churana"],
 "English" : ["put"],
@@ -8768,7 +8779,7 @@ var nouns =
 
 {"Lexeme" : ["blanquiar"],
 "IPA" : ["blankiaɾ"],
-"IPA2" : ["blankiaɾ"],
+"IPA2" : ["blankiaɾʂ"],
 "Spanish" : ["blanquear"],
 "Quichua" : ["yurana"],
 "English" : ["whiten"],
@@ -8778,7 +8789,7 @@ var nouns =
 
 {"Lexeme" : ["pelar"],
 "IPA" : ["pelaɾ"],
-"IPA2" : ["pelaɾ"],
+"IPA2" : ["pelaɾʂ"],
 "Spanish" : ["pelar"],
 "Quichua" : ["lluctina"],
 "English" : ["shave"],
@@ -8788,7 +8799,7 @@ var nouns =
 
 {"Lexeme" : ["resembrar"],
 "IPA" : ["ʐesembɾaɾ"],
-"IPA2" : ["ʐesembɾaɾ"],
+"IPA2" : ["ʐesembɾaɾʂ"],
 "Spanish" : ["resembrar"],
 "Quichua" : ["cutin.tarpuna"],
 "English" : ["replant"],
@@ -8798,7 +8809,7 @@ var nouns =
 
 {"Lexeme" : ["curar"],
 "IPA" : ["kuɾaɾ"],
-"IPA2" : ["kuɾaɾ"],
+"IPA2" : ["kuɾaɾʂ"],
 "Spanish" : ["curar"],
 "Quichua" : ["jambina"],
 "English" : ["remedy"],
@@ -8828,7 +8839,7 @@ var nouns =
 
 {"Lexeme" : ["comprar"],
 "IPA" : ["kompɾaɾ"],
-"IPA2" : ["kompɾaɾ"],
+"IPA2" : ["kompɾaɾʂ"],
 "Spanish" : ["comprar"],
 "Quichua" : ["randina"],
 "English" : ["buy"],
@@ -8858,7 +8869,7 @@ var nouns =
 
 {"Lexeme" : ["aretear"],
 "IPA" : ["aɾeteaɾ"],
-"IPA2" : ["aɾeteaɾ"],
+"IPA2" : ["aɾeteaɾʂ"],
 "Spanish" : ["aretear"],
 "Quichua" : ["aritiana"],
 "English" : ["tag"],
@@ -8878,7 +8889,7 @@ var nouns =
 
 {"Lexeme" : ["ir"],
 "IPA" : ["iɾ"],
-"IPA2" : ["iɾ"],
+"IPA2" : ["iɾʂ"],
 "Spanish" : ["go"],
 "Quichua" : ["rina"],
 "English" : ["go"],
@@ -8888,7 +8899,7 @@ var nouns =
 
 {"Lexeme" : ["madrugar"],
 "IPA" : ["madɾugaɾ"],
-"IPA2" : ["madɾugaɾ"],
+"IPA2" : ["madɾugaɾʂ"],
 "Spanish" : ["madrugar"],
 "Quichua" : ["madrugana"],
 "English" : ["get.up.early"],
@@ -9078,7 +9089,7 @@ var nouns =
 
 {"Lexeme" : ["vender"],
 "IPA" : ["bendeɾ"],
-"IPA2" : ["bendeɾ"],
+"IPA2" : ["bendeɾʂ"],
 "Spanish" : ["vender"],
 "Quichua" : ["jatuna"],
 "English" : ["sell"],
@@ -9118,7 +9129,7 @@ var nouns =
 
 {"Lexeme" : ["escabador"],
 "IPA" : ["eskabadoɾ"],
-"IPA2" : ["eskabadoɾ"],
+"IPA2" : ["eskabadoɾʂ"],
 "Spanish" : ["escabador"],
 "Quichua" : ["escabador"],
 "English" : ["excavator"],
@@ -9188,7 +9199,7 @@ var nouns =
 
 {"Lexeme" : ["mesquinar"],
 "IPA" : ["meskinaɾ"],
-"IPA2" : ["meskinaɾ"],
+"IPA2" : ["meskinaɾʂ"],
 "Spanish" : ["mezquinar"],
 "Quichua" : ["mesquina"],
 "English" : ["be.stingy.with"],
@@ -9198,7 +9209,7 @@ var nouns =
 
 {"Lexeme" : ["amolestar"],
 "IPA" : ["amolestaɾ"],
-"IPA2" : ["amolestaɾ"],
+"IPA2" : ["amolestaɾʂ"],
 "Spanish" : ["molestar"],
 "Quichua" : ["molestana"],
 "English" : ["bother"],
@@ -9469,7 +9480,7 @@ var nouns =
 
 {"Lexeme" : ["lavar"],
 "IPA" : ["laβaɾ"],
-"IPA2" : ["laβaɾ"],
+"IPA2" : ["laβaɾʂ"],
 "Spanish" : ["lavar"],
 "Quichua" : ["tacshana"],
 "English" : ["wash"],
@@ -9479,7 +9490,7 @@ var nouns =
 
 {"Lexeme" : ["venir"],
 "IPA" : ["beniɾ"],
-"IPA2" : ["beniɾ"],
+"IPA2" : ["beniɾʂ"],
 "Spanish" : ["venir"],
 "Quichua" : ["shamuna"],
 "English" : ["come"],
@@ -9499,7 +9510,7 @@ var nouns =
 
 {"Lexeme" : ["arrimarir"],
 "IPA" : ["aʐimaɾiɾ"],
-"IPA2" : ["aʐimaɾiɾ"],
+"IPA2" : ["aʐimaɾiɾʂ"],
 "Spanish" : ["arrimarse"],
 "Quichua" : ["marcarina"],
 "English" : ["lean.against"],
@@ -9509,7 +9520,7 @@ var nouns =
 
 {"Lexeme" : ["dormigrir"],
 "IPA" : ["doɾmigɾiɾ"],
-"IPA2" : ["doɾmigɾiɾ"],
+"IPA2" : ["doɾmigɾiɾʂ"],
 "Spanish" : ["va.a.dormir"],
 "Quichua" : ["puñugrina"],
 "English" : ["go.to.sleep"],
@@ -9519,7 +9530,7 @@ var nouns =
 
 {"Lexeme" : ["dormir"],
 "IPA" : ["doɾmiɾ"],
-"IPA2" : ["doɾmiɾ"],
+"IPA2" : ["doɾmiɾʂ"],
 "Spanish" : ["dormir"],
 "Quichua" : ["puñuna"],
 "English" : ["sleep"],
@@ -9529,7 +9540,7 @@ var nouns =
 
 {"Lexeme" : ["salir"],
 "IPA" : ["saliɾ"],
-"IPA2" : ["saliɾ"],
+"IPA2" : ["saliɾʂ"],
 "Spanish" : ["salir"],
 "Quichua" : ["llucshina"],
 "English" : ["leave"],
@@ -9539,7 +9550,7 @@ var nouns =
 
 {"Lexeme" : ["llegar"],
 "IPA" : ["ʒegaɾ"],
-"IPA2" : ["ʒegaɾ"],
+"IPA2" : ["ʒegaɾʂ"],
 "Spanish" : ["llegar"],
 "Quichua" : ["chayana"],
 "English" : ["arrive"],
@@ -9549,7 +9560,7 @@ var nouns =
 
 {"Lexeme" : ["cortar"],
 "IPA" : ["koɾtaɾ"],
-"IPA2" : ["koɾtaɾ"],
+"IPA2" : ["koɾtaɾʂ"],
 "Spanish" : ["cortar"],
 "Quichua" : ["cuchuna"],
 "English" : ["cut"],
@@ -9581,7 +9592,7 @@ var nouns =
 "IPA" : ["paladaʐ"],
 "IPA2" : ["paladaʐ"],
 "Spanish" : ["paladar"],
-"Quichua" : ["palagaɾ"],
+"Quichua" : ["palagar"],
 "English" : ["palate"],
 "Root" : ["NA"],
 "Origin" : ["ML"],
@@ -9589,9 +9600,9 @@ var nouns =
 
 {"Lexeme" : ["paladar"],
 "IPA" : ["paladaɾ"],
-"IPA2" : ["paladaɾ"],
+"IPA2" : ["paladaɾʂ"],
 "Spanish" : ["paladar"],
-"Quichua" : ["palagaɾ"],
+"Quichua" : ["palagar"],
 "English" : ["palate"],
 "Root" : ["NA"],
 "Origin" : ["ML"],
@@ -9601,7 +9612,7 @@ var nouns =
 "IPA" : ["palagaʐ"],
 "IPA2" : ["palagaʐ"],
 "Spanish" : ["paladar"],
-"Quichua" : ["palagaɾ"],
+"Quichua" : ["palagar"],
 "English" : ["palate"],
 "Root" : ["NA"],
 "Origin" : ["ML"],
@@ -9609,9 +9620,9 @@ var nouns =
 
 {"Lexeme" : ["palagar"],
 "IPA" : ["palagaɾ"],
-"IPA2" : ["palagaɾ"],
+"IPA2" : ["palagaɾʂ"],
 "Spanish" : ["paladar"],
-"Quichua" : ["palagaɾ"],
+"Quichua" : ["palagar"],
 "English" : ["palate"],
 "Root" : ["NA"],
 "Origin" : ["ML"],
@@ -9619,7 +9630,7 @@ var nouns =
 
 {"Lexeme" : ["teger"],
 "IPA" : ["tegeɾ"],
-"IPA2" : ["tegeɾ"],
+"IPA2" : ["tegeɾʂ"],
 "Spanish" : ["tejer"],
 "Quichua" : ["ahuana"],
 "English" : ["knit"],
@@ -9629,7 +9640,7 @@ var nouns =
 
 {"Lexeme" : ["tejer"],
 "IPA" : ["texeɾ"],
-"IPA2" : ["texeɾ"],
+"IPA2" : ["texeɾʂ"],
 "Spanish" : ["tejer"],
 "Quichua" : ["ahuana"],
 "English" : ["knit"],
@@ -9929,7 +9940,7 @@ var nouns =
 
 {"Lexeme" : ["perdechir"],
 "IPA" : ["peɾdeʧiɾ"],
-"IPA2" : ["peɾdeʧiɾ"],
+"IPA2" : ["peɾdeʧiɾʂ"],
 "Spanish" : ["hacer.perder"],
 "Quichua" : ["chingachina"],
 "English" : ["make.loose"],
@@ -10029,7 +10040,7 @@ var nouns =
 
 {"Lexeme" : ["encontrar"],
 "IPA" : ["enkontɾaɾ"],
-"IPA2" : ["enkontɾaɾ"],
+"IPA2" : ["enkontɾaɾʂ"],
 "Spanish" : ["encontrar"],
 "Quichua" : ["tuparina"],
 "English" : ["find"],
@@ -10039,7 +10050,7 @@ var nouns =
 
 {"Lexeme" : ["encuentrar"],
 "IPA" : ["enkuentɾaɾ"],
-"IPA2" : ["enkuentɾaɾ"],
+"IPA2" : ["enkuentɾaɾʂ"],
 "Spanish" : ["encontrar"],
 "Quichua" : ["tuparina"],
 "English" : ["find"],
@@ -10091,7 +10102,7 @@ var nouns =
 
 {"Lexeme" : ["abrir"],
 "IPA" : ["abɾiɾ"],
-"IPA2" : ["abɾiɾ"],
+"IPA2" : ["abɾiɾʂ"],
 "Spanish" : ["abrir"],
 "Quichua" : ["pascana"],
 "English" : ["open"],
@@ -10221,7 +10232,7 @@ var nouns =
 
 {"Lexeme" : ["comer"],
 "IPA" : ["komeɾ"],
-"IPA2" : ["komeɾ"],
+"IPA2" : ["komeɾʂ"],
 "Spanish" : ["comer"],
 "Quichua" : ["micuna"],
 "English" : ["eat"],
@@ -10241,7 +10252,7 @@ var nouns =
 
 {"Lexeme" : ["bailar"],
 "IPA" : ["bailaɾ"],
-"IPA2" : ["bailaɾ"],
+"IPA2" : ["bailaɾʂ"],
 "Spanish" : ["bailar"],
 "Quichua" : ["tushuna"],
 "English" : ["dance"],
@@ -10251,7 +10262,7 @@ var nouns =
 
 {"Lexeme" : ["seguir"],
 "IPA" : ["segiɾ"],
-"IPA2" : ["segiɾ"],
+"IPA2" : ["segiɾʂ"],
 "Spanish" : ["seguir"],
 "Quichua" : ["catina"],
 "English" : ["follow"],
@@ -10271,7 +10282,7 @@ var nouns =
 
 {"Lexeme" : ["trabajar"],
 "IPA" : ["tɾabaxaɾ"],
-"IPA2" : ["tɾabaxaɾ"],
+"IPA2" : ["tɾabaxaɾʂ"],
 "Spanish" : ["trabajar"],
 "Quichua" : ["llancana"],
 "English" : ["work"],
@@ -10643,7 +10654,7 @@ var nouns =
 
 {"Lexeme" : ["solucionar"],
 "IPA" : ["solusionaɾ"],
-"IPA2" : ["solusionaɾ"],
+"IPA2" : ["solusionaɾʂ"],
 "Spanish" : ["solucionar"],
 "Quichua" : ["arreglana"],
 "English" : ["solve"],
@@ -10683,7 +10694,7 @@ var nouns =
 
 {"Lexeme" : ["haber"],
 "IPA" : ["abeɾ"],
-"IPA2" : ["abeɾ"],
+"IPA2" : ["abeɾʂ"],
 "Spanish" : ["a.ver//haber"],
 "Quichua" : ["jala"],
 "English" : ["let's.see//there's"],
@@ -10693,7 +10704,7 @@ var nouns =
 
 {"Lexeme" : ["estar"],
 "IPA" : ["estaɾ"],
-"IPA2" : ["estaɾ"],
+"IPA2" : ["estaɾʂ"],
 "Spanish" : ["estar"],
 "Quichua" : ["cana"],
 "English" : ["be"],
@@ -10703,7 +10714,7 @@ var nouns =
 
 {"Lexeme" : ["enfermarr"],
 "IPA" : ["enfeɾmaʐ"],
-"IPA2" : ["enfeɾmaʐ"],
+"IPA2" : ["enfeɾmaɾʂ"],
 "Spanish" : ["dar.a.luz//enfermar"],
 "Quichua" : ["unguna"],
 "English" : ["give.birth//get.sick"],
@@ -10713,7 +10724,7 @@ var nouns =
 
 {"Lexeme" : ["enfermar"],
 "IPA" : ["emfeɾmaɾ"],
-"IPA2" : ["emfeɾmaɾ"],
+"IPA2" : ["emfeɾmaɾʂ"],
 "Spanish" : ["dar.a.luz//enfermar"],
 "Quichua" : ["unguna"],
 "English" : ["give.birth//get.sick"],
@@ -10723,7 +10734,7 @@ var nouns =
 
 {"Lexeme" : ["pasar"],
 "IPA" : ["pasaɾ"],
-"IPA2" : ["pasaɾ"],
+"IPA2" : ["pasaɾʂ"],
 "Spanish" : ["pasar"],
 "Quichua" : ["yalina"],
 "English" : ["pass.by"],
@@ -10803,7 +10814,7 @@ var nouns =
 
 {"Lexeme" : ["hacer"],
 "IPA" : ["aseɾ"],
-"IPA2" : ["aseɾ"],
+"IPA2" : ["aseɾʂ"],
 "Spanish" : ["hacer"],
 "Quichua" : ["rurana"],
 "English" : ["do"],
@@ -10813,7 +10824,7 @@ var nouns =
 
 {"Lexeme" : ["alcansar"],
 "IPA" : ["alkansaɾ"],
-"IPA2" : ["alkansaɾ"],
+"IPA2" : ["alkansaɾʂ"],
 "Spanish" : ["alcanzar"],
 "Quichua" : ["pactana"],
 "English" : ["attain"],
@@ -10823,7 +10834,7 @@ var nouns =
 
 {"Lexeme" : ["alcansar"],
 "IPA" : ["alkansaɾ"],
-"IPA2" : ["alkansaɾ"],
+"IPA2" : ["alkansaɾʂ"],
 "Spanish" : ["alcanzar"],
 "Quichua" : ["pactana"],
 "English" : ["attain"],
@@ -10833,7 +10844,7 @@ var nouns =
 
 {"Lexeme" : ["alcanzar"],
 "IPA" : ["alkanzaɾ"],
-"IPA2" : ["alkanzaɾ"],
+"IPA2" : ["alkanzaɾʂ"],
 "Spanish" : ["alcanzar"],
 "Quichua" : ["pactana"],
 "English" : ["attain"],
@@ -10843,7 +10854,7 @@ var nouns =
 
 {"Lexeme" : ["manejar"],
 "IPA" : ["manexaɾ"],
-"IPA2" : ["manexaɾ"],
+"IPA2" : ["manexaɾʂ"],
 "Spanish" : ["manejar"],
 "Quichua" : ["manejana"],
 "English" : ["drive"],
@@ -10853,7 +10864,7 @@ var nouns =
 
 {"Lexeme" : ["conoser"],
 "IPA" : ["konoseɾ"],
-"IPA2" : ["konoseɾ"],
+"IPA2" : ["konoseɾʂ"],
 "Spanish" : ["conocer"],
 "Quichua" : ["ricsina"],
 "English" : ["known"],
@@ -11053,7 +11064,7 @@ var nouns =
 
 {"Lexeme" : ["trabajadorr"],
 "IPA" : ["tɾabaxadoʐ"],
-"IPA2" : ["tɾabaxadoʐ"],
+"IPA2" : ["tɾabaxadoɾʂ"],
 "Spanish" : ["trabajador"],
 "Quichua" : ["trabajador"],
 "English" : ["worker"],
@@ -11263,7 +11274,7 @@ var nouns =
 
 {"Lexeme" : ["agricultor"],
 "IPA" : ["agɾikultoɾ"],
-"IPA2" : ["agɾikultoɾʃ"],
+"IPA2" : ["agɾikultoɾʂ"],
 "Spanish" : ["agricultor"],
 "Quichua" : ["alpallancadur"],
 "English" : ["farmer"],
@@ -11333,7 +11344,7 @@ var nouns =
 
 {"Lexeme" : ["arrendador"],
 "IPA" : ["aʐendadoɾ"],
-"IPA2" : ["aʐendadoɾʃ"],
+"IPA2" : ["aʐendadoɾʂ"],
 "Spanish" : ["arrendador"],
 "Quichua" : ["arrendador"],
 "English" : ["lessor"],
@@ -12163,7 +12174,7 @@ var nouns =
 
 {"Lexeme" : ["particular"],
 "IPA" : ["paɾtikulaɾ"],
-"IPA2" : ["paɾtikulaɾʃ"],
+"IPA2" : ["paɾtikulaɾʂ"],
 "Spanish" : ["separado//particular"],
 "Quichua" : ["shican"],
 "English" : ["private"],
@@ -12393,7 +12404,7 @@ var nouns =
 
 {"Lexeme" : ["sembrador"],
 "IPA" : ["sembɾadoɾ"],
-"IPA2" : ["sembɾadoɾ"],
+"IPA2" : ["sembɾadoɾʂ"],
 "Spanish" : ["sembrador"],
 "Quichua" : ["tarpu"],
 "English" : ["farmer"],
@@ -12543,7 +12554,7 @@ var nouns =
 
 {"Lexeme" : ["trabajador"],
 "IPA" : ["tɾabaxadoɾ"],
-"IPA2" : ["tɾabaxadoɾʃ"],
+"IPA2" : ["tɾabaxadoɾʂ"],
 "Spanish" : ["trabajador//agricultor"],
 "Quichua" : ["trabajador//llancadur"],
 "English" : ["worker//farmer"],
@@ -12703,7 +12714,7 @@ var nouns =
 
 {"Lexeme" : ["ante ayerr"],
 "IPA" : ["anteajeʐ"],
-"IPA2" : ["anteajeʐ"],
+"IPA2" : ["anteajeɾʂ"],
 "Spanish" : ["> anteayer"],
 "Quichua" : ["> cayandi"],
 "English" : ["day.before yesterday"],
@@ -13224,7 +13235,7 @@ var nouns =
 
 {"Lexeme" : ["abentador"],
 "IPA" : ["abentadoɾ"],
-"IPA2" : ["abentadoɾʃ"],
+"IPA2" : ["abentadoɾʂ"],
 "Spanish" : ["aventador"],
 "Quichua" : ["abentador"],
 "English" : ["fan.for.fire"],
@@ -13334,7 +13345,7 @@ var nouns =
 
 {"Lexeme" : ["diayer"],
 "IPA" : ["diajeɾ"],
-"IPA2" : ["diajeɾ"],
+"IPA2" : ["diajeɾʂ"],
 "Spanish" : ["el.día.de.ayer"],
 "Quichua" : ["cayandi"],
 "English" : ["yesterday"],
@@ -13344,7 +13355,7 @@ var nouns =
 
 {"Lexeme" : ["ante ayer"],
 "IPA" : ["anteajeɾ"],
-"IPA2" : ["anteajeɾʃ"],
+"IPA2" : ["anteajeɾʂ"],
 "Spanish" : ["ante ayer"],
 "Quichua" : ["> cayandi"],
 "English" : ["the.day.before yesterday"],
@@ -13714,7 +13725,7 @@ var nouns =
 
 {"Lexeme" : ["comprador"],
 "IPA" : ["kompɾadoɾ"],
-"IPA2" : ["kompɾadoɾʃ"],
+"IPA2" : ["kompɾadoɾʂ"],
 "Spanish" : ["comprador"],
 "Quichua" : ["randidor"],
 "English" : ["buyer"],
@@ -13824,7 +13835,7 @@ var nouns =
 
 {"Lexeme" : ["cualquier"],
 "IPA" : ["kualkieɾ"],
-"IPA2" : ["kualkieɾʃ"],
+"IPA2" : ["kualkieɾʂ"],
 "Spanish" : ["cualquier"],
 "Quichua" : ["maijanpash"],
 "English" : ["whichever"],
@@ -14304,7 +14315,7 @@ var nouns =
 
 {"Lexeme" : ["huachadur"],
 "IPA" : ["waʧaduɾ"],
-"IPA2" : ["waʧaduɾʃ"],
+"IPA2" : ["waʧaduɾʂ"],
 "Spanish" : ["huachador"],
 "Quichua" : ["huachuju"],
 "English" : ["furrow.maker"],
@@ -14514,7 +14525,7 @@ var nouns =
 
 {"Lexeme" : ["mayoria"],
 "IPA" : ["maioɾia"],
-"IPA2" : ["maioɾia"],
+"IPA2" : ["majoɾia"],
 "Spanish" : ["mayoría"],
 "Quichua" : ["ashta.tucuilla"],
 "English" : ["majority"],
@@ -14524,7 +14535,7 @@ var nouns =
 
 {"Lexeme" : ["lamayoria"],
 "IPA" : ["lamaioɾia"],
-"IPA2" : ["lamaioɾia"],
+"IPA2" : ["lamajoɾia"],
 "Spanish" : ["la.mayoría"],
 "Quichua" : ["ashta.tucuilla"],
 "English" : ["the.majority"],
@@ -15074,7 +15085,7 @@ var nouns =
 
 {"Lexeme" : ["prendedor"],
 "IPA" : ["pɾendedoɾ"],
-"IPA2" : ["pɾendedoɾʃ"],
+"IPA2" : ["pɾendedoɾʂ"],
 "Spanish" : ["prendedor"],
 "Quichua" : ["prendedor"],
 "English" : ["brooch"],
@@ -15574,7 +15585,7 @@ var nouns =
 
 {"Lexeme" : ["anteriorr"],
 "IPA" : ["anteɾioʐ"],
-"IPA2" : ["anteɾioʐ"],
+"IPA2" : ["anteɾioɾʂ"],
 "Spanish" : ["anterior"],
 "Quichua" : ["cayna"],
 "English" : ["previous"],
@@ -15614,7 +15625,7 @@ var nouns =
 
 {"Lexeme" : ["ayudador"],
 "IPA" : ["aiudadoɾ"],
-"IPA2" : ["ajudadoɾʃ"],
+"IPA2" : ["ajudadoɾʂ"],
 "Spanish" : ["ayudante"],
 "Quichua" : ["ayudador"],
 "English" : ["helper"],
@@ -15624,7 +15635,7 @@ var nouns =
 
 {"Lexeme" : ["ayudadorr"],
 "IPA" : ["aiudadoʐ"],
-"IPA2" : ["ajudadoʐ"],
+"IPA2" : ["ajudadoɾʂ"],
 "Spanish" : ["ayudante"],
 "Quichua" : ["ayudador"],
 "English" : ["helper"],
@@ -15704,7 +15715,7 @@ var nouns =
 
 {"Lexeme" : ["corredorr"],
 "IPA" : ["koʐedoʐ"],
-"IPA2" : ["koʐedoʐ"],
+"IPA2" : ["koʐedoɾʂ"],
 "Spanish" : ["corredor"],
 "Quichua" : ["corredor"],
 "English" : ["hallway"],
@@ -15784,7 +15795,7 @@ var nouns =
 
 {"Lexeme" : ["habladorr"],
 "IPA" : ["abladoʐ"],
-"IPA2" : ["abladoʐ"],
+"IPA2" : ["abladoɾʂ"],
 "Spanish" : ["hablador"],
 "Quichua" : ["pletodor"],
 "English" : ["gossiper"],
@@ -15894,7 +15905,7 @@ var nouns =
 
 {"Lexeme" : ["enseñachidor"],
 "IPA" : ["enseɲaʧidoɾ"],
-"IPA2" : ["enseɲaʧidoɾ"],
+"IPA2" : ["enseɲaʧidoɾʂ"],
 "Spanish" : ["profesor"],
 "Quichua" : ["yachachic"],
 "English" : ["teacher"],
@@ -15904,7 +15915,7 @@ var nouns =
 
 {"Lexeme" : ["profesorr"],
 "IPA" : ["pɾofesoʐ"],
-"IPA2" : ["pɾofesoʐ"],
+"IPA2" : ["pɾofesoɾʂ"],
 "Spanish" : ["profesor"],
 "Quichua" : ["yachachic"],
 "English" : ["teacher"],
@@ -16214,7 +16225,7 @@ var nouns =
 
 {"Lexeme" : ["huachudur"],
 "IPA" : ["waʧuduɾ"],
-"IPA2" : ["waʧuduɾʃ"],
+"IPA2" : ["waʧuduɾʂ"],
 "Spanish" : ["huachador"],
 "Quichua" : ["huachuju"],
 "English" : ["furrow.maker"],
@@ -16324,7 +16335,7 @@ var nouns =
 
 {"Lexeme" : ["rrondador"],
 "IPA" : ["ʐondadoɾ"],
-"IPA2" : ["ʐondadoɾʃ"],
+"IPA2" : ["ʐondadoɾʂ"],
 "Spanish" : ["rondador"],
 "Quichua" : ["rondador"],
 "English" : ["pan.flute"],
@@ -16754,7 +16765,7 @@ var nouns =
 
 {"Lexeme" : ["anterior"],
 "IPA" : ["anteɾioɾ"],
-"IPA2" : ["anteɾioɾʃ"],
+"IPA2" : ["anteɾioɾʂ"],
 "Spanish" : ["anterior"],
 "Quichua" : ["cayna"],
 "English" : ["previous"],
@@ -16774,7 +16785,7 @@ var nouns =
 
 {"Lexeme" : ["ponerr"],
 "IPA" : ["poneʐ"],
-"IPA2" : ["poneʐ"],
+"IPA2" : ["poneɾʂ"],
 "Spanish" : ["poner"],
 "Quichua" : ["churana"],
 "English" : ["put"],
@@ -16874,7 +16885,7 @@ var nouns =
 
 {"Lexeme" : ["ayudador"],
 "IPA" : ["ajudadoɾ"],
-"IPA2" : ["ajudadoɾʃ"],
+"IPA2" : ["ajudadoɾʂ"],
 "Spanish" : ["ayudante"],
 "Quichua" : ["ayudador"],
 "English" : ["helper"],
@@ -16904,7 +16915,7 @@ var nouns =
 
 {"Lexeme" : ["bailador"],
 "IPA" : ["bailadoɾ"],
-"IPA2" : ["bailadoɾʃ"],
+"IPA2" : ["bailadoɾʂ"],
 "Spanish" : ["bailador"],
 "Quichua" : ["tushudor"],
 "English" : ["dancer"],
@@ -17134,7 +17145,7 @@ var nouns =
 
 {"Lexeme" : ["cargador"],
 "IPA" : ["kaɾgadoɾ"],
-"IPA2" : ["kaɾgadoɾʃ"],
+"IPA2" : ["kaɾgadoɾʂ"],
 "Spanish" : ["cargador"],
 "Quichua" : ["aparidor"],
 "English" : ["loader"],
@@ -17324,7 +17335,7 @@ var nouns =
 
 {"Lexeme" : ["coliflor"],
 "IPA" : ["kolifloɾ"],
-"IPA2" : ["kolifloɾʃ"],
+"IPA2" : ["kolifloɾʂ"],
 "Spanish" : ["coliflor"],
 "Quichua" : ["coliflor"],
 "English" : ["cauliflower"],
@@ -17504,7 +17515,7 @@ var nouns =
 
 {"Lexeme" : ["corredor"],
 "IPA" : ["koʐedoɾ"],
-"IPA2" : ["koʐedoɾʃ"],
+"IPA2" : ["koʐedoɾʂ"],
 "Spanish" : ["corredor"],
 "Quichua" : ["corredor"],
 "English" : ["hallway"],
@@ -17604,7 +17615,7 @@ var nouns =
 
 {"Lexeme" : ["cuydador"],
 "IPA" : ["kujdadoɾ"],
-"IPA2" : ["kujdadoɾʃ"],
+"IPA2" : ["kujdadoɾʂ"],
 "Spanish" : ["cuidador"],
 "Quichua" : ["cuidador"],
 "English" : ["caretaker//carer"],
@@ -18194,7 +18205,7 @@ var nouns =
 
 {"Lexeme" : ["hablador"],
 "IPA" : ["abladoɾ"],
-"IPA2" : ["abladoɾʃ"],
+"IPA2" : ["abladoɾʂ"],
 "Spanish" : ["hablador"],
 "Quichua" : ["pletodor"],
 "English" : ["gossiper//bigmouth"],
@@ -19154,7 +19165,7 @@ var nouns =
 
 {"Lexeme" : ["perrdedor"],
 "IPA" : ["peʐdedoɾ"],
-"IPA2" : ["peɾdedoɾʃ"],
+"IPA2" : ["peɾdedoɾʂ"],
 "Spanish" : ["perdedor"],
 "Quichua" : ["chingadur"],
 "English" : ["loser"],
@@ -19164,7 +19175,7 @@ var nouns =
 
 {"Lexeme" : ["perdedor"],
 "IPA" : ["peɾdedoɾ"],
-"IPA2" : ["peɾdedoɾʃ"],
+"IPA2" : ["peɾdedoɾʂ"],
 "Spanish" : ["perdedor"],
 "Quichua" : ["chingadur"],
 "English" : ["loser"],
@@ -19234,7 +19245,7 @@ var nouns =
 
 {"Lexeme" : ["picaflor"],
 "IPA" : ["pikafloɾ"],
-"IPA2" : ["pikafloɾʃ"],
+"IPA2" : ["pikafloɾʂ"],
 "Spanish" : ["picaflor"],
 "Quichua" : ["quindi"],
 "English" : ["hummingbird"],
@@ -19414,7 +19425,7 @@ var nouns =
 
 {"Lexeme" : ["profesor"],
 "IPA" : ["pɾofesoɾ"],
-"IPA2" : ["pɾofesoɾʃ"],
+"IPA2" : ["pɾofesoɾʂ"],
 "Spanish" : ["profesor"],
 "Quichua" : ["yachachic"],
 "English" : ["teacher"],
@@ -19554,7 +19565,7 @@ var nouns =
 
 {"Lexeme" : ["rondador"],
 "IPA" : ["ʐondadoɾ"],
-"IPA2" : ["ʐondadoɾʃ"],
+"IPA2" : ["ʐondadoɾʂ"],
 "Spanish" : ["rondador"],
 "Quichua" : ["rondador"],
 "English" : ["rondador"],
@@ -19665,7 +19676,17 @@ var nouns =
 
 {"Lexeme" : ["shuashca"],
 "IPA" : ["swaʃka"],
-"IPA2" : ["swaʃka"],
+"IPA2" : ["sʃuaʃka"],
+"Spanish" : ["robado"],
+"Quichua" : ["shaushca"],
+"English" : ["robbed"],
+"Root" : ["NA"],
+"Origin" : ["ML"],
+"Dict" : ["SPG"]},
+
+{"Lexeme" : ["shuashca"],
+"IPA" : ["ʃuaʃka"],
+"IPA2" : ["sʃuaʃka"],
 "Spanish" : ["robado"],
 "Quichua" : ["shaushca"],
 "English" : ["robbed"],
@@ -19916,7 +19937,7 @@ var nouns =
 
 {"Lexeme" : ["vendedor"],
 "IPA" : ["bendedoɾ"],
-"IPA2" : ["bendedoɾʃ"],
+"IPA2" : ["bendedoɾʂ"],
 "Spanish" : ["vendedor"],
 "Quichua" : ["jatudur"],
 "English" : ["seller"],
@@ -20256,7 +20277,7 @@ var nouns =
 
 {"Lexeme" : ["Ecuadorr"],
 "IPA" : ["ekuadoʐ"],
-"IPA2" : ["ekuadoʐ"],
+"IPA2" : ["ekuadoɾʂ"],
 "Spanish" : ["Ecuador"],
 "Quichua" : ["Ecuador"],
 "English" : ["Ecuador"],
@@ -20376,7 +20397,7 @@ var nouns =
 
 {"Lexeme" : ["mayoriya"],
 "IPA" : ["maioɾija"],
-"IPA2" : ["maioɾija"],
+"IPA2" : ["majoɾija"],
 "Spanish" : ["mayoría"],
 "Quichua" : ["ashtatucuilla"],
 "English" : ["majority"],
@@ -20606,7 +20627,7 @@ var nouns =
 
 {"Lexeme" : ["tracctor"],
 "IPA" : ["tɾakstoɾ"],
-"IPA2" : ["tɾakstoɾ"],
+"IPA2" : ["tɾakstoɾʂ"],
 "Spanish" : ["tractor"],
 "Quichua" : ["chactor"],
 "English" : ["tractor"],
@@ -20616,7 +20637,7 @@ var nouns =
 
 {"Lexeme" : ["tractorr"],
 "IPA" : ["tɾaktoʐ"],
-"IPA2" : ["tɾaktoʐ"],
+"IPA2" : ["tɾaktoɾʂ"],
 "Spanish" : ["tractor"],
 "Quichua" : ["chactor"],
 "English" : ["tractor"],
@@ -21206,7 +21227,7 @@ var nouns =
 
 {"Lexeme" : ["wachadur"],
 "IPA" : ["waʧaduɾ"],
-"IPA2" : ["waʧaduɾʃ"],
+"IPA2" : ["waʧaduɾʂ"],
 "Spanish" : ["huachador"],
 "Quichua" : ["huachuju"],
 "English" : ["furrow.maker"],
@@ -21567,7 +21588,7 @@ var nouns =
 
 {"Lexeme" : ["rundador"],
 "IPA" : ["ʐundadoɾ"],
-"IPA2" : ["ʐundadoɾʃ"],
+"IPA2" : ["ʐundadoɾʂ"],
 "Spanish" : ["rondador"],
 "Quichua" : ["rondador"],
 "English" : ["rondador//panpipes"],
@@ -21767,7 +21788,7 @@ var nouns =
 
 {"Lexeme" : ["rezador"],
 "IPA" : ["ʐezadoɾ"],
-"IPA2" : ["ʐezadoɾʃ"],
+"IPA2" : ["ʐezadoɾʂ"],
 "Spanish" : ["rezador//cura"],
 "Quichua" : ["resador"],
 "English" : ["priest.who.conducts.a.funeral.service"],
@@ -21777,7 +21798,7 @@ var nouns =
 
 {"Lexeme" : ["rezador"],
 "IPA" : ["ʐezadoɾ"],
-"IPA2" : ["ʐezadoɾʃ"],
+"IPA2" : ["ʐezadoɾʂ"],
 "Spanish" : ["mendigo"],
 "Quichua" : ["mañacuc"],
 "English" : ["beggar"],
@@ -22620,7 +22641,7 @@ var nouns =
 
 {"Lexeme" : ["celularr"],
 "IPA" : ["selulaʐ"],
-"IPA2" : ["selulaɾʃ"],
+"IPA2" : ["selulaɾʂ"],
 "Spanish" : ["celular"],
 "Quichua" : ["celular"],
 "English" : ["cell.phone"],
@@ -22630,7 +22651,7 @@ var nouns =
 
 {"Lexeme" : ["celular"],
 "IPA" : ["selulaɾ"],
-"IPA2" : ["selulaɾʃ"],
+"IPA2" : ["selulaɾʂ"],
 "Spanish" : ["celular"],
 "Quichua" : ["celular"],
 "English" : ["cell.phone"],
@@ -22910,7 +22931,7 @@ var nouns =
 
 {"Lexeme" : ["comedor"],
 "IPA" : ["komedoɾ"],
-"IPA2" : ["komedoɾʃ"],
+"IPA2" : ["komedoɾʂ"],
 "Spanish" : ["comedor"],
 "Quichua" : ["micuna.urcu"],
 "English" : ["dining.room"],
@@ -23291,7 +23312,7 @@ var nouns =
 
 {"Lexeme" : ["Ecuador"],
 "IPA" : ["ekuadoɾ"],
-"IPA2" : ["ekuadoɾʃ"],
+"IPA2" : ["ekuadoɾʂ"],
 "Spanish" : ["Ecuador"],
 "Quichua" : ["Ecuador"],
 "English" : ["Ecuador"],
@@ -23681,7 +23702,7 @@ var nouns =
 
 {"Lexeme" : ["ganador"],
 "IPA" : ["ganadoɾ"],
-"IPA2" : ["ganadoɾʃ"],
+"IPA2" : ["ganadoɾʂ"],
 "Spanish" : ["ganador"],
 "Quichua" : ["ganador"],
 "English" : ["winner"],
@@ -24661,7 +24682,7 @@ var nouns =
 
 {"Lexeme" : ["mayoral"],
 "IPA" : ["maioɾal"],
-"IPA2" : ["maioɾal"],
+"IPA2" : ["majoɾal"],
 "Spanish" : ["mayoral"],
 "Quichua" : ["mayoral"],
 "English" : ["foreman"],
@@ -24691,7 +24712,7 @@ var nouns =
 
 {"Lexeme" : ["medidor"],
 "IPA" : ["medidoɾ"],
-"IPA2" : ["medidoɾʃ"],
+"IPA2" : ["medidoɾʂ"],
 "Spanish" : ["medidor"],
 "Quichua" : ["medidor"],
 "English" : ["meter//gauge"],
@@ -25431,7 +25452,7 @@ var nouns =
 
 {"Lexeme" : ["ponedor"],
 "IPA" : ["ponedoɾ"],
-"IPA2" : ["ponedoɾʃ"],
+"IPA2" : ["ponedoɾʂ"],
 "Spanish" : ["ponedor"],
 "Quichua" : ["churador"],
 "English" : ["user"],
@@ -25541,7 +25562,7 @@ var nouns =
 
 {"Lexeme" : ["premer"],
 "IPA" : ["pɾemeɾ"],
-"IPA2" : ["pɾemeɾ"],
+"IPA2" : ["pɾemeɾʂ"],
 "Spanish" : ["primer"],
 "Quichua" : ["punta//ñaupa"],
 "English" : ["first"],
@@ -25551,7 +25572,7 @@ var nouns =
 
 {"Lexeme" : ["primer"],
 "IPA" : ["pɾimeɾ"],
-"IPA2" : ["pɾimeɾ"],
+"IPA2" : ["pɾimeɾʂ"],
 "Spanish" : ["primer"],
 "Quichua" : ["punta//ñaupa"],
 "English" : ["first"],
@@ -26211,7 +26232,7 @@ var nouns =
 
 {"Lexeme" : ["temblor"],
 "IPA" : ["tembloɾ"],
-"IPA2" : ["tembloɾ"],
+"IPA2" : ["tembloɾʂ"],
 "Spanish" : ["temblor"],
 "Quichua" : ["alpamama.cuyu"],
 "English" : ["tremor"],
@@ -26221,7 +26242,7 @@ var nouns =
 
 {"Lexeme" : ["tenedor"],
 "IPA" : ["tenedoɾ"],
-"IPA2" : ["tenedoɾʃ"],
+"IPA2" : ["tenedoɾʂ"],
 "Spanish" : ["tenedor"],
 "Quichua" : ["tenedor"],
 "English" : ["fork"],
@@ -26381,7 +26402,7 @@ var nouns =
 
 {"Lexeme" : ["cosinar"],
 "IPA" : ["kosinaɾ"],
-"IPA2" : ["kosinaɾ"],
+"IPA2" : ["kosinaɾʂ"],
 "Spanish" : ["cook"],
 "Quichua" : ["yanuna"],
 "English" : ["cook"],
@@ -26481,7 +26502,7 @@ var nouns =
 
 {"Lexeme" : ["tractor"],
 "IPA" : ["tɾaktoɾ"],
-"IPA2" : ["tɾaktoɾʃ"],
+"IPA2" : ["tɾaktoɾʂ"],
 "Spanish" : ["tractor"],
 "Quichua" : ["chactor"],
 "English" : ["tractor"],
@@ -26922,7 +26943,7 @@ var nouns =
 
 {"Lexeme" : ["selular"],
 "IPA" : ["selulaɾ"],
-"IPA2" : ["selulaɾʃ"],
+"IPA2" : ["selulaɾʂ"],
 "Spanish" : ["celular"],
 "Quichua" : ["celular"],
 "English" : ["cell.phone//cellular"],
@@ -27592,7 +27613,7 @@ var nouns =
 
 {"Lexeme" : ["resador"],
 "IPA" : ["ʐesadoɾ"],
-"IPA2" : ["ʐesadoɾʃ"],
+"IPA2" : ["ʐesadoɾʂ"],
 "Spanish" : ["mendigo"],
 "Quichua" : ["mañacuc"],
 "English" : ["beggar"],
@@ -27891,8 +27912,8 @@ var nouns =
 "Dict" : ["SPG"]},
 
 {"Lexeme" : ["harshta"],
-"IPA" : ["aɾʃta"],
-"IPA2" : ["aɾʃta"],
+"IPA" : ["aɾʂta"],
+"IPA2" : ["aɾʂta"],
 "Spanish" : ["bastante"],
 "Quichua" : ["achia"],
 "English" : ["a.lot"],
@@ -28041,8 +28062,8 @@ var nouns =
 "Dict" : ["SPG"]},
 
 {"Lexeme" : ["calorsh"],
-"IPA" : ["kaloɾʃ"],
-"IPA2" : ["kaloɾʃ"],
+"IPA" : ["kaloɾʂ"],
+"IPA2" : ["kaloɾʂ"],
 "Spanish" : ["calor"],
 "Quichua" : ["cunuj"],
 "English" : ["heat"],
@@ -29012,7 +29033,7 @@ var nouns =
 
 {"Lexeme" : ["tanborr"],
 "IPA" : ["tanboʐ"],
-"IPA2" : ["tanboʐ"],
+"IPA2" : ["tanboɾʂ"],
 "Spanish" : ["tambor"],
 "Quichua" : ["tamburr//bombo"],
 "English" : ["drum"],
@@ -29681,8 +29702,8 @@ var nouns =
 "Dict" : ["SPG"]},
 
 {"Lexeme" : ["arshta"],
-"IPA" : ["aɾʃta"],
-"IPA2" : ["aɾʃta"],
+"IPA" : ["aɾʂta"],
+"IPA2" : ["aɾʂta"],
 "Spanish" : ["bastante"],
 "Quichua" : ["achia"],
 "English" : ["a.lot"],
@@ -29741,8 +29762,8 @@ var nouns =
 "Dict" : ["SPG"]},
 
 {"Lexeme" : ["arshtote"],
-"IPA" : ["aɾʃtote"],
-"IPA2" : ["aɾʃtote"],
+"IPA" : ["aɾʂtote"],
+"IPA2" : ["aɾʂtote"],
 "Spanish" : ["muchísimo"],
 "Quichua" : ["achia"],
 "English" : ["a.lot"],
@@ -29751,8 +29772,8 @@ var nouns =
 "Dict" : ["SPG"]},
 
 {"Lexeme" : ["arshto"],
-"IPA" : ["aɾʃto"],
-"IPA2" : ["aɾʃto"],
+"IPA" : ["aɾʂto"],
+"IPA2" : ["aɾʂto"],
 "Spanish" : ["mucho"],
 "Quichua" : ["achia"],
 "English" : ["a.lot"],
@@ -29882,7 +29903,7 @@ var nouns =
 
 {"Lexeme" : ["azucar"],
 "IPA" : ["azukaɾ"],
-"IPA2" : ["azukaɾʃ"],
+"IPA2" : ["azukaɾʂ"],
 "Spanish" : ["azúcar"],
 "Quichua" : ["mishqui"],
 "English" : ["sugar"],
@@ -30192,7 +30213,7 @@ var nouns =
 
 {"Lexeme" : ["cancer"],
 "IPA" : ["kanseɾ"],
-"IPA2" : ["kanseɾʃ"],
+"IPA2" : ["kanseɾʂ"],
 "Spanish" : ["cáncer"],
 "Quichua" : ["cancer.unguy"],
 "English" : ["cancer"],
@@ -30602,7 +30623,7 @@ var nouns =
 
 {"Lexeme" : ["chofer"],
 "IPA" : ["ʧofeɾ"],
-"IPA2" : ["ʧofeɾʃ"],
+"IPA2" : ["ʧofeɾʂ"],
 "Spanish" : ["chofer"],
 "Quichua" : ["chofer"],
 "English" : ["driver"],
@@ -30842,7 +30863,7 @@ var nouns =
 
 {"Lexeme" : ["pucllador"],
 "IPA" : ["pukʒadoɾ"],
-"IPA2" : ["pukʒadoɾ"],
+"IPA2" : ["pukʒadoɾʂ"],
 "Spanish" : ["jugador"],
 "Quichua" : ["pucllador"],
 "English" : ["player"],
@@ -30852,7 +30873,7 @@ var nouns =
 
 {"Lexeme" : ["jugador"],
 "IPA" : ["xugadoɾ"],
-"IPA2" : ["xugadoɾ"],
+"IPA2" : ["xugadoɾʂ"],
 "Spanish" : ["jugador"],
 "Quichua" : ["pucllador"],
 "English" : ["player"],
@@ -31022,7 +31043,7 @@ var nouns =
 
 {"Lexeme" : ["condor"],
 "IPA" : ["kondoɾ"],
-"IPA2" : ["kondoɾʃ"],
+"IPA2" : ["kondoɾʂ"],
 "Spanish" : ["cóndor"],
 "Quichua" : ["cundur"],
 "English" : ["condor"],
@@ -31612,7 +31633,7 @@ var nouns =
 
 {"Lexeme" : ["dotor"],
 "IPA" : ["dotoɾ"],
-"IPA2" : ["dotoɾʃ"],
+"IPA2" : ["dotoɾʂ"],
 "Spanish" : ["doctor"],
 "Quichua" : ["jambic.taita"],
 "English" : ["doctor"],
@@ -31622,7 +31643,7 @@ var nouns =
 
 {"Lexeme" : ["doctor"],
 "IPA" : ["doktoɾ"],
-"IPA2" : ["doktoɾʃ"],
+"IPA2" : ["doktoɾʂ"],
 "Spanish" : ["doctor"],
 "Quichua" : ["jambic.taita"],
 "English" : ["doctor"],
@@ -32432,7 +32453,7 @@ var nouns =
 
 {"Lexeme" : ["hieba"],
 "IPA" : ["ieba"],
-"IPA2" : ["ierba"],
+"IPA2" : ["jeɾba"],
 "Spanish" : ["hierba"],
 "Quichua" : ["jihua"],
 "English" : ["herb"],
@@ -33943,7 +33964,7 @@ var nouns =
 
 {"Lexeme" : ["pagador"],
 "IPA" : ["pagadoɾ"],
-"IPA2" : ["pagadoɾ"],
+"IPA2" : ["pagadoɾʂ"],
 "Spanish" : ["pagador"],
 "Quichua" : ["pagador"],
 "English" : ["payer"],
@@ -34173,7 +34194,7 @@ var nouns =
 
 {"Lexeme" : ["pastorr"],
 "IPA" : ["pastoʐ"],
-"IPA2" : ["pastoʐ"],
+"IPA2" : ["pastoɾʂ"],
 "Spanish" : ["pastor"],
 "Quichua" : ["michidurr"],
 "English" : ["shepherd"],
@@ -34183,7 +34204,7 @@ var nouns =
 
 {"Lexeme" : ["pastor"],
 "IPA" : ["pastoɾ"],
-"IPA2" : ["pastoɾ"],
+"IPA2" : ["pastoɾʂ"],
 "Spanish" : ["pastor"],
 "Quichua" : ["michidurr"],
 "English" : ["shepherd"],
@@ -34303,7 +34324,7 @@ var nouns =
 
 {"Lexeme" : ["pintor"],
 "IPA" : ["pintoɾ"],
-"IPA2" : ["pintoɾ"],
+"IPA2" : ["pintoɾʂ"],
 "Spanish" : ["pintor"],
 "Quichua" : ["pintor"],
 "English" : ["painter"],
@@ -34433,7 +34454,7 @@ var nouns =
 
 {"Lexeme" : ["primer"],
 "IPA" : ["pɾimeɾ"],
-"IPA2" : ["pɾimeɾ"],
+"IPA2" : ["pɾimeɾʂ"],
 "Spanish" : ["primer"],
 "Quichua" : ["ñaupa"],
 "English" : ["first"],
@@ -34953,7 +34974,7 @@ var nouns =
 
 {"Lexeme" : ["sector"],
 "IPA" : ["sektoɾ"],
-"IPA2" : ["sektoɾ"],
+"IPA2" : ["sektoɾʂ"],
 "Spanish" : ["sector"],
 "Quichua" : ["sector"],
 "English" : ["sector"],
@@ -35253,7 +35274,7 @@ var nouns =
 
 {"Lexeme" : ["tabajo"],
 "IPA" : ["tabaxo"],
-"IPA2" : ["tabaxo"],
+"IPA2" : ["tɾabaxo"],
 "Spanish" : ["trabajo"],
 "Quichua" : ["llancay"],
 "English" : ["work"],
@@ -35283,7 +35304,7 @@ var nouns =
 
 {"Lexeme" : ["tanbor"],
 "IPA" : ["tanboɾ"],
-"IPA2" : ["tanboɾ"],
+"IPA2" : ["tanboɾʂ"],
 "Spanish" : ["tambor"],
 "Quichua" : ["tamburr//bombo"],
 "English" : ["drum"],
@@ -35363,7 +35384,7 @@ var nouns =
 
 {"Lexeme" : ["tercer"],
 "IPA" : ["teɾseɾ"],
-"IPA2" : ["teɾseɾ"],
+"IPA2" : ["teɾseɾʂ"],
 "Spanish" : ["tercer"],
 "Quichua" : ["quimsa"],
 "English" : ["third"],
@@ -35563,7 +35584,7 @@ var nouns =
 
 {"Lexeme" : ["trecer"],
 "IPA" : ["tɾeseɾ"],
-"IPA2" : ["tɾeseɾ"],
+"IPA2" : ["tɾeseɾʂ"],
 "Spanish" : ["tercer"],
 "Quichua" : ["treser//quimsa"],
 "English" : ["third"],
@@ -35993,7 +36014,7 @@ var nouns =
 
 {"Lexeme" : ["yahuar"],
 "IPA" : ["jawaɾ"],
-"IPA2" : ["jawaɾ"],
+"IPA2" : ["jawaɾʂ"],
 "Spanish" : ["sangre"],
 "Quichua" : ["yahuar"],
 "English" : ["blood"],
@@ -36143,7 +36164,7 @@ var nouns =
 
 {"Lexeme" : ["asucar"],
 "IPA" : ["asukaɾ"],
-"IPA2" : ["asukaɾ"],
+"IPA2" : ["asukaɾʂ"],
 "Spanish" : ["azúcar"],
 "Quichua" : ["mishqui"],
 "English" : ["sugar"],
@@ -36602,8 +36623,8 @@ var nouns =
 "Dict" : ["SPG"]},
 
 {"Lexeme" : ["jarsho"],
-"IPA" : ["xaɾʃo"],
-"IPA2" : ["xaɾʃo"],
+"IPA" : ["xaɾʂo"],
+"IPA2" : ["xaɾʂo"],
 "Spanish" : ["jarro"],
 "Quichua" : ["jarro"],
 "English" : ["mug//cup"],
@@ -36763,7 +36784,7 @@ var nouns =
 
 {"Lexeme" : ["lugarr"],
 "IPA" : ["lugaʐ"],
-"IPA2" : ["lugaʐ"],
+"IPA2" : ["lugaɾʂ"],
 "Spanish" : ["lugar"],
 "Quichua" : ["lugar"],
 "English" : ["place"],
@@ -36794,7 +36815,7 @@ var nouns =
 
 {"Lexeme" : ["mayorr"],
 "IPA" : ["maioʐ"],
-"IPA2" : ["maioʐ"],
+"IPA2" : ["majoɾʂ"],
 "Spanish" : ["mayor"],
 "Quichua" : ["jatun"],
 "English" : ["olde//elder"],
@@ -36814,7 +36835,7 @@ var nouns =
 
 {"Lexeme" : ["menorr"],
 "IPA" : ["menoʐ"],
-"IPA2" : ["menoʐ"],
+"IPA2" : ["menoɾʂ"],
 "Spanish" : ["menor"],
 "Quichua" : ["uchila"],
 "English" : ["younger//little"],
@@ -37014,7 +37035,7 @@ var nouns =
 
 {"Lexeme" : ["pastor"],
 "IPA" : ["pastoɾ"],
-"IPA2" : ["pastoɾ"],
+"IPA2" : ["pastoɾʂ"],
 "Spanish" : ["pastor"],
 "Quichua" : ["michidurr"],
 "English" : ["shepherd"],
@@ -37044,7 +37065,7 @@ var nouns =
 
 {"Lexeme" : ["pintur"],
 "IPA" : ["pintuɾ"],
-"IPA2" : ["pintuɾ"],
+"IPA2" : ["pintuɾʂ"],
 "Spanish" : ["pintor"],
 "Quichua" : ["pintor"],
 "English" : ["painter"],
@@ -37244,7 +37265,7 @@ var nouns =
 
 {"Lexeme" : ["saborr"],
 "IPA" : ["saboʐ"],
-"IPA2" : ["saboʐ"],
+"IPA2" : ["saboɾʂ"],
 "Spanish" : ["sabor"],
 "Quichua" : ["mishqui"],
 "English" : ["taste"],
@@ -37623,8 +37644,8 @@ var nouns =
 "Dict" : ["SPG"]},
 
 {"Lexeme" : ["arshos"],
-"IPA" : ["aɾʃos"],
-"IPA2" : ["aɾʃos"],
+"IPA" : ["aɾʂos"],
+"IPA2" : ["aɾʂos"],
 "Spanish" : ["arroz"],
 "Quichua" : ["arros"],
 "English" : ["rice"],
@@ -37884,7 +37905,7 @@ var nouns =
 
 {"Lexeme" : ["calorr"],
 "IPA" : ["kaloʐ"],
-"IPA2" : ["kaloʐ"],
+"IPA2" : ["kaloɾʂ"],
 "Spanish" : ["calor"],
 "Quichua" : ["cunuj"],
 "English" : ["heat"],
@@ -38104,7 +38125,7 @@ var nouns =
 
 {"Lexeme" : ["deberr"],
 "IPA" : ["debeʐ"],
-"IPA2" : ["debeʐ"],
+"IPA2" : ["debeɾʂ"],
 "Spanish" : ["deberes"],
 "Quichua" : ["deberes"],
 "English" : ["homework"],
@@ -38284,7 +38305,7 @@ var nouns =
 
 {"Lexeme" : ["hierba"],
 "IPA" : ["ieɾba"],
-"IPA2" : ["ieɾba"],
+"IPA2" : ["jeɾba"],
 "Spanish" : ["hierba"],
 "Quichua" : ["jihua"],
 "English" : ["herb"],
@@ -38304,7 +38325,7 @@ var nouns =
 
 {"Lexeme" : ["guerva"],
 "IPA" : ["weɾβa"],
-"IPA2" : ["weɾβa"],
+"IPA2" : ["geɾβa"],
 "Spanish" : ["hierba"],
 "Quichua" : ["jihua"],
 "English" : ["herb"],
@@ -38324,7 +38345,7 @@ var nouns =
 
 {"Lexeme" : ["hierva"],
 "IPA" : ["ieɾβa"],
-"IPA2" : ["ieɾβa"],
+"IPA2" : ["jeɾβa"],
 "Spanish" : ["hierba"],
 "Quichua" : ["jihua"],
 "English" : ["herb"],
@@ -38384,7 +38405,7 @@ var nouns =
 
 {"Lexeme" : ["guitar"],
 "IPA" : ["gitaɾ"],
-"IPA2" : ["gitaɾ"],
+"IPA2" : ["gitaɾʂ"],
 "Spanish" : ["guitarra"],
 "Quichua" : ["biguela"],
 "English" : ["guitar"],
@@ -38764,7 +38785,7 @@ var nouns =
 
 {"Lexeme" : ["Quijuar"],
 "IPA" : ["kixuaɾ"],
-"IPA2" : ["kixuaɾ"],
+"IPA2" : ["kixuaɾʂ"],
 "Spanish" : ["Quijuar"],
 "Quichua" : ["Quijuar"],
 "English" : ["Quijuar"],
@@ -39475,7 +39496,7 @@ var nouns =
 
 {"Lexeme" : ["tambor"],
 "IPA" : ["tamboɾ"],
-"IPA2" : ["tamboɾ"],
+"IPA2" : ["tamboɾʂ"],
 "Spanish" : ["tambor"],
 "Quichua" : ["tamburr//bombo"],
 "English" : ["drum"],
@@ -39755,7 +39776,7 @@ var nouns =
 
 {"Lexeme" : ["cazco"],
 "IPA" : ["kazko"],
-"IPA2" : ["kazko"],
+"IPA2" : ["kasko"],
 "Spanish" : ["pezuña//casco"],
 "Quichua" : ["sillo"],
 "English" : ["hoof"],
@@ -39785,7 +39806,7 @@ var nouns =
 
 {"Lexeme" : ["cazco"],
 "IPA" : ["kazko"],
-"IPA2" : ["kazko"],
+"IPA2" : ["kasko"],
 "Spanish" : ["casco"],
 "Quichua" : ["cazcu"],
 "English" : ["helmet"],
@@ -40105,7 +40126,7 @@ var nouns =
 
 {"Lexeme" : ["altar"],
 "IPA" : ["altaɾ"],
-"IPA2" : ["altaɾ"],
+"IPA2" : ["altaɾʂ"],
 "Spanish" : ["altar"],
 "Quichua" : ["altar"],
 "English" : ["altar"],
@@ -40845,7 +40866,7 @@ var nouns =
 
 {"Lexeme" : ["calor"],
 "IPA" : ["kaloɾ"],
-"IPA2" : ["kaloɾ"],
+"IPA2" : ["kaloɾʂ"],
 "Spanish" : ["calor"],
 "Quichua" : ["cunuj"],
 "English" : ["heat"],
@@ -41195,7 +41216,7 @@ var nouns =
 
 {"Lexeme" : ["color"],
 "IPA" : ["koloɾ"],
-"IPA2" : ["koloɾ"],
+"IPA2" : ["koloɾʂ"],
 "Spanish" : ["color"],
 "Quichua" : ["color"],
 "English" : ["color"],
@@ -41595,7 +41616,7 @@ var nouns =
 
 {"Lexeme" : ["dolar"],
 "IPA" : ["dolaɾ"],
-"IPA2" : ["dolaɾ"],
+"IPA2" : ["dolaɾʂ"],
 "Spanish" : ["dólar"],
 "Quichua" : ["dolar"],
 "English" : ["dollar"],
@@ -41615,7 +41636,7 @@ var nouns =
 
 {"Lexeme" : ["dolorr"],
 "IPA" : ["doloʐ"],
-"IPA2" : ["doloʐ"],
+"IPA2" : ["doloɾʂ"],
 "Spanish" : ["dolor"],
 "Quichua" : ["nanay"],
 "English" : ["pain"],
@@ -41625,7 +41646,7 @@ var nouns =
 
 {"Lexeme" : ["dolor"],
 "IPA" : ["doloɾ"],
-"IPA2" : ["doloɾ"],
+"IPA2" : ["doloɾʂ"],
 "Spanish" : ["dolor"],
 "Quichua" : ["nanay"],
 "English" : ["pain"],
@@ -41755,7 +41776,7 @@ var nouns =
 
 {"Lexeme" : ["error"],
 "IPA" : ["eʐoɾ"],
-"IPA2" : ["eʐoɾ"],
+"IPA2" : ["eʐoɾʂ"],
 "Spanish" : ["error"],
 "Quichua" : ["panday"],
 "English" : ["mistake//error"],
@@ -41785,7 +41806,7 @@ var nouns =
 
 {"Lexeme" : ["fabor"],
 "IPA" : ["faboɾ"],
-"IPA2" : ["faboɾ"],
+"IPA2" : ["faboɾʂ"],
 "Spanish" : ["favor"],
 "Quichua" : ["fabur"],
 "English" : ["favor"],
@@ -41855,7 +41876,7 @@ var nouns =
 
 {"Lexeme" : ["feliz"],
 "IPA" : ["feliz"],
-"IPA2" : ["feliz"],
+"IPA2" : ["felis"],
 "Spanish" : ["feliz"],
 "Quichua" : ["cushi"],
 "English" : ["happy"],
@@ -42955,7 +42976,7 @@ var nouns =
 
 {"Lexeme" : ["lugar"],
 "IPA" : ["lugaɾ"],
-"IPA2" : ["lugaɾ"],
+"IPA2" : ["lugaɾʂ"],
 "Spanish" : ["lugar//puesto"],
 "Quichua" : ["lugar//pushtu"],
 "English" : ["place//spo"],
@@ -43145,7 +43166,7 @@ var nouns =
 
 {"Lexeme" : ["mayor"],
 "IPA" : ["maioɾ"],
-"IPA2" : ["maioɾ"],
+"IPA2" : ["majoɾʂ"],
 "Spanish" : ["mayor"],
 "Quichua" : ["jatun"],
 "English" : ["older//elder"],
@@ -43185,7 +43206,7 @@ var nouns =
 
 {"Lexeme" : ["mejorr"],
 "IPA" : ["mexoʐ"],
-"IPA2" : ["mexoʐ"],
+"IPA2" : ["mexoɾʂ"],
 "Spanish" : ["mejor"],
 "Quichua" : ["ashtahuan"],
 "English" : ["better//best"],
@@ -43195,7 +43216,7 @@ var nouns =
 
 {"Lexeme" : ["mejor"],
 "IPA" : ["mexoɾ"],
-"IPA2" : ["mexoɾ"],
+"IPA2" : ["mexoɾʂ"],
 "Spanish" : ["mejor"],
 "Quichua" : ["ashtahuan"],
 "English" : ["better//best"],
@@ -43205,7 +43226,7 @@ var nouns =
 
 {"Lexeme" : ["menor"],
 "IPA" : ["menoɾ"],
-"IPA2" : ["menoɾ"],
+"IPA2" : ["menoɾʂ"],
 "Spanish" : ["menor"],
 "Quichua" : ["uchila"],
 "English" : ["younger//little"],
@@ -43515,7 +43536,7 @@ var nouns =
 
 {"Lexeme" : ["mujerr"],
 "IPA" : ["muxeʐ"],
-"IPA2" : ["muxeʐ"],
+"IPA2" : ["muxeɾʂ"],
 "Spanish" : ["mujer"],
 "Quichua" : ["huarmi"],
 "English" : ["woman"],
@@ -43525,7 +43546,7 @@ var nouns =
 
 {"Lexeme" : ["mujer"],
 "IPA" : ["muxeɾ"],
-"IPA2" : ["muxeɾ"],
+"IPA2" : ["muxeɾʂ"],
 "Spanish" : ["mujer"],
 "Quichua" : ["huarmi"],
 "English" : ["woman"],
@@ -44445,7 +44466,7 @@ var nouns =
 
 {"Lexeme" : ["poder"],
 "IPA" : ["podeɾ"],
-"IPA2" : ["podeɾ"],
+"IPA2" : ["podeɾʂ"],
 "Spanish" : ["poder"],
 "Quichua" : ["poder"],
 "English" : ["power.of.attorney"],
@@ -44806,7 +44827,7 @@ var nouns =
 
 {"Lexeme" : ["sabor"],
 "IPA" : ["saboɾ"],
-"IPA2" : ["saboɾ"],
+"IPA2" : ["saboɾʂ"],
 "Spanish" : ["sabor"],
 "Quichua" : ["mishqui"],
 "English" : ["taste"],
@@ -45006,7 +45027,7 @@ var nouns =
 
 {"Lexeme" : ["señor"],
 "IPA" : ["seɲoɾ"],
-"IPA2" : ["seɲoɾ"],
+"IPA2" : ["seɲoɾʂ"],
 "Spanish" : ["señor"],
 "Quichua" : ["mishu//tayta"],
 "English" : ["Mr."],
@@ -45326,7 +45347,7 @@ var nouns =
 
 {"Lexeme" : ["telar"],
 "IPA" : ["telaɾ"],
-"IPA2" : ["telaɾ"],
+"IPA2" : ["telaɾʂ"],
 "Spanish" : ["telar"],
 "Quichua" : ["ahuana.caspi//telar"],
 "English" : ["loom"],
@@ -45616,7 +45637,7 @@ var nouns =
 
 {"Lexeme" : ["tumor"],
 "IPA" : ["tumoɾ"],
-"IPA2" : ["tumoɾ"],
+"IPA2" : ["tumoɾʂ"],
 "Spanish" : ["tumor"],
 "Quichua" : ["tumor"],
 "English" : ["tumor"],
@@ -45676,7 +45697,7 @@ var nouns =
 
 {"Lexeme" : ["valor"],
 "IPA" : ["baloɾ"],
-"IPA2" : ["baloɾ"],
+"IPA2" : ["baloɾʂ"],
 "Spanish" : ["valor"],
 "Quichua" : ["valor"],
 "English" : ["price"],
@@ -46316,7 +46337,7 @@ var nouns =
 
 {"Lexeme" : ["igualllata"],
 "IPA" : ["iwaʒlata"],
-"IPA2" : ["iwal<span style='font-weight:normal'>-ʒata</span>"],
+"IPA2" : ["igual<span style='font-weight:normal'>-ʒata</span>"],
 "Spanish" : ["igual<span style='font-weight:normal'>-TOT</span>"],
 "Quichua" : ["shinallata"],
 "English" : ["equal<span style='font-weight:normal'>-TOT</span>"],
@@ -46336,7 +46357,7 @@ var nouns =
 
 {"Lexeme" : ["igual"],
 "IPA" : ["iwal"],
-"IPA2" : ["iwal"],
+"IPA2" : ["igual"],
 "Spanish" : ["igual"],
 "Quichua" : ["shinallata"],
 "English" : ["equal"],
@@ -46346,7 +46367,7 @@ var nouns =
 
 {"Lexeme" : ["favor"],
 "IPA" : ["faβoɾ"],
-"IPA2" : ["faβoɾ"],
+"IPA2" : ["faβoɾʂ"],
 "Spanish" : ["favor"],
 "Quichua" : ["fabur"],
 "English" : ["favor"],
@@ -47606,7 +47627,7 @@ var nouns =
 
 {"Lexeme" : ["ayerr"],
 "IPA" : ["ajeʐ"],
-"IPA2" : ["ajeʐ"],
+"IPA2" : ["ajeɾʂ"],
 "Spanish" : ["ayer"],
 "Quichua" : ["cayna"],
 "English" : ["yesterday"],
@@ -48016,7 +48037,7 @@ var nouns =
 
 {"Lexeme" : ["deber"],
 "IPA" : ["debeɾ"],
-"IPA2" : ["debeɾ"],
+"IPA2" : ["debeɾʂ"],
 "Spanish" : ["deberes"],
 "Quichua" : ["deberes"],
 "English" : ["homework"],
@@ -48176,7 +48197,7 @@ var nouns =
 
 {"Lexeme" : ["florr"],
 "IPA" : ["floʐ"],
-"IPA2" : ["floʐ"],
+"IPA2" : ["floɾʂ"],
 "Spanish" : ["flor"],
 "Quichua" : ["sisa"],
 "English" : ["flower"],
@@ -48336,7 +48357,7 @@ var nouns =
 
 {"Lexeme" : ["ierba"],
 "IPA" : ["ieɾba"],
-"IPA2" : ["ieɾba"],
+"IPA2" : ["jeɾba"],
 "Spanish" : ["hierba"],
 "Quichua" : ["jihua"],
 "English" : ["herb"],
@@ -48856,7 +48877,7 @@ var nouns =
 
 {"Lexeme" : ["muger"],
 "IPA" : ["mugeɾ"],
-"IPA2" : ["mugeɾ"],
+"IPA2" : ["mugeɾʂ"],
 "Spanish" : ["mujer"],
 "Quichua" : ["huarmi"],
 "English" : ["woman"],
@@ -48866,7 +48887,7 @@ var nouns =
 
 {"Lexeme" : ["mojer"],
 "IPA" : ["moxeɾ"],
-"IPA2" : ["moxeɾ"],
+"IPA2" : ["moxeɾʂ"],
 "Spanish" : ["mujer"],
 "Quichua" : ["huarmi"],
 "English" : ["woman"],
@@ -50777,7 +50798,7 @@ var nouns =
 
 {"Lexeme" : ["ayer"],
 "IPA" : ["ajeɾ"],
-"IPA2" : ["ajeɾʃ"],
+"IPA2" : ["ajeɾʂ"],
 "Spanish" : ["ayer"],
 "Quichua" : ["cayna"],
 "English" : ["yesterday"],
@@ -50797,7 +50818,7 @@ var nouns =
 
 {"Lexeme" : ["votar"],
 "IPA" : ["botaɾ"],
-"IPA2" : ["botaɾʃ"],
+"IPA2" : ["botaɾʂ"],
 "Spanish" : ["votar//botar"],
 "Quichua" : ["votana//saquina"],
 "English" : ["vote//throw"],
@@ -50807,7 +50828,7 @@ var nouns =
 
 {"Lexeme" : ["botar"],
 "IPA" : ["botaɾ"],
-"IPA2" : ["botaɾʃ"],
+"IPA2" : ["botaɾʂ"],
 "Spanish" : ["votar//botar"],
 "Quichua" : ["votana//saquina"],
 "English" : ["vote//throw"],
@@ -51667,7 +51688,7 @@ var nouns =
 
 {"Lexeme" : ["flor"],
 "IPA" : ["floɾ"],
-"IPA2" : ["floɾʃ"],
+"IPA2" : ["floɾʂ"],
 "Spanish" : ["flor"],
 "Quichua" : ["sisa"],
 "English" : ["flower"],
@@ -52557,7 +52578,7 @@ var nouns =
 
 {"Lexeme" : ["mayo"],
 "IPA" : ["maio"],
-"IPA2" : ["maio"],
+"IPA2" : ["majo"],
 "Spanish" : ["mayo"],
 "Quichua" : ["mayu"],
 "English" : ["May"],
@@ -52968,7 +52989,7 @@ var nouns =
 
 {"Lexeme" : ["olor"],
 "IPA" : ["oloɾ"],
-"IPA2" : ["oloɾʃ"],
+"IPA2" : ["oloɾʂ"],
 "Spanish" : ["olor"],
 "Quichua" : ["ashna"],
 "English" : ["smell"],
@@ -53258,7 +53279,7 @@ var nouns =
 
 {"Lexeme" : ["peor"],
 "IPA" : ["peoʐ"],
-"IPA2" : ["peoʐ"],
+"IPA2" : ["peoɾʂ"],
 "Spanish" : ["peor"],
 "Quichua" : ["astahua.nali"],
 "English" : ["worst"],
@@ -53268,7 +53289,7 @@ var nouns =
 
 {"Lexeme" : ["peor"],
 "IPA" : ["peoɾ"],
-"IPA2" : ["peoɾʃ"],
+"IPA2" : ["peoɾʂ"],
 "Spanish" : ["peor"],
 "Quichua" : ["astahua.nali"],
 "English" : ["worst"],
@@ -54408,7 +54429,7 @@ var nouns =
 
 {"Lexeme" : ["averr"],
 "IPA" : ["aβeʐ"],
-"IPA2" : ["aβeɾʃ"],
+"IPA2" : ["aβeɾʂ"],
 "Spanish" : ["a.ver//haber"],
 "Quichua" : ["jala"],
 "English" : ["let's.see//there.is"],
@@ -54418,7 +54439,7 @@ var nouns =
 
 {"Lexeme" : ["aver"],
 "IPA" : ["aβeɾ"],
-"IPA2" : ["aβeɾʃ"],
+"IPA2" : ["aβeɾʂ"],
 "Spanish" : ["a.ver//haber"],
 "Quichua" : ["jala"],
 "English" : ["let's.see//there.is"],
@@ -54838,7 +54859,7 @@ var nouns =
 
 {"Lexeme" : ["marr"],
 "IPA" : ["maʐ"],
-"IPA2" : ["maʐ"],
+"IPA2" : ["maɾ"],
 "Spanish" : ["mar//océano"],
 "Quichua" : ["jatun.yacu"],
 "English" : ["sea//ocean"],
@@ -56498,7 +56519,7 @@ var nouns =
 
 {"Lexeme" : ["bar"],
 "IPA" : ["baɾ"],
-"IPA2" : ["baɾʃ"],
+"IPA2" : ["baɾʂ"],
 "Spanish" : ["bar"],
 "Quichua" : ["ishtancu"],
 "English" : ["bar"],
@@ -56758,7 +56779,7 @@ var nouns =
 
 {"Lexeme" : ["mar"],
 "IPA" : ["maɾ"],
-"IPA2" : ["maɾʃ"],
+"IPA2" : ["maɾʂ"],
 "Spanish" : ["mar//océano"],
 "Quichua" : ["jatun.yacu"],
 "English" : ["sea//ocean"],
@@ -57038,7 +57059,7 @@ var nouns =
 
 {"Lexeme" : ["ser"],
 "IPA" : ["seɾ"],
-"IPA2" : ["seɾʃ"],
+"IPA2" : ["seɾʂ"],
 "Spanish" : ["ser"],
 "Quichua" : ["cana"],
 "English" : ["be"],
@@ -57068,7 +57089,7 @@ var nouns =
 
 {"Lexeme" : ["sur"],
 "IPA" : ["suɾ"],
-"IPA2" : ["suɾʃ"],
+"IPA2" : ["suɾʂ"],
 "Spanish" : ["sur"],
 "Quichua" : ["sur"],
 "English" : ["south"],
@@ -57328,7 +57349,7 @@ var nouns =
 
 {"Lexeme" : ["par"],
 "IPA" : ["paɾ"],
-"IPA2" : ["paɾʃ"],
+"IPA2" : ["paɾʂ"],
 "Spanish" : ["par"],
 "Quichua" : ["ishcay"],
 "English" : ["pair"],
@@ -58348,7 +58369,7 @@ var nouns =
 
 {"Lexeme" : ["huagrata jambidur"],
 "IPA" : ["wagɾata xambiduɾ"],
-"IPA2" : ["wagɾata xambiduɾʃ"],
+"IPA2" : ["wagɾata xambiduɾʂ"],
 "Spanish" : ["veterinario <"],
 "Quichua" : ["huagrata jambidur"],
 "English" : ["veterinary <"],
@@ -58358,7 +58379,7 @@ var nouns =
 
 {"Lexeme" : ["huihuata jambidur"],
 "IPA" : ["xuiwata xambiduɾ"],
-"IPA2" : ["xuiwata xambiduɾʃ"],
+"IPA2" : ["xuiwata xambiduɾʂ"],
 "Spanish" : ["veterinario <"],
 "Quichua" : ["huihuata jambidur"],
 "English" : ["veterinary <"],
@@ -58468,7 +58489,7 @@ var nouns =
 
 {"Lexeme" : ["punguta cuidador"],
 "IPA" : ["punguta kuidadoɾ"],
-"IPA2" : ["punguta kuidadoɾʃ"],
+"IPA2" : ["punguta kuidadoɾʂ"],
 "Spanish" : ["> guardia"],
 "Quichua" : ["punguta cuidador"],
 "English" : ["> guard"],
@@ -58608,7 +58629,7 @@ var nouns =
 
 {"Lexeme" : ["mishqui chaguar"],
 "IPA" : ["miʃki ʧawaɾ"],
-"IPA2" : ["miʃki ʧawaɾʃ"],
+"IPA2" : ["miʃki ʧawaɾʂ"],
 "Spanish" : ["chaguar mishqui"],
 "Quichua" : ["mishqui chaguar"],
 "English" : ["agave beverage"],
@@ -58848,7 +58869,7 @@ var nouns =
 
 {"Lexeme" : ["quirullancador"],
 "IPA" : ["kiɾuʒankadoɾ"],
-"IPA2" : ["kiɾuʒankadoɾʃ"],
+"IPA2" : ["kiɾuʒankadoɾʂ"],
 "Spanish" : ["carpintero"],
 "Quichua" : ["quirullancador"],
 "English" : ["carpenter"],
@@ -58958,7 +58979,7 @@ var nouns =
 
 {"Lexeme" : ["alpallancadur"],
 "IPA" : ["alpaʒankaduɾ"],
-"IPA2" : ["alpaʒankaduɾʃ"],
+"IPA2" : ["alpaʒankaduɾʂ"],
 "Spanish" : ["agricultor"],
 "Quichua" : ["alpallancadur"],
 "English" : ["farmer"],
@@ -59288,7 +59309,7 @@ var nouns =
 
 {"Lexeme" : ["mana igualchu"],
 "IPA" : ["mana iwalʧu"],
-"IPA2" : ["mana iwalʧu"],
+"IPA2" : ["mana igualʧu"],
 "Spanish" : ["> diferente"],
 "Quichua" : ["mana igualchu"],
 "English" : ["> different"],
@@ -59418,7 +59439,7 @@ var nouns =
 
 {"Lexeme" : ["tanda rurador"],
 "IPA" : ["tanda ʐuɾadoɾ"],
-"IPA2" : ["tanda ʐuɾadoɾʃ"],
+"IPA2" : ["tanda ʐuɾadoɾʂ"],
 "Spanish" : ["> panadero"],
 "Quichua" : ["tanda rurador"],
 "English" : ["bread maker"],
@@ -59698,7 +59719,7 @@ var nouns =
 
 {"Lexeme" : ["hierba luisa"],
 "IPA" : ["ieɾba luisa"],
-"IPA2" : ["ieɾba luisa"],
+"IPA2" : ["jieɾba luisa"],
 "Spanish" : ["hierba luisa"],
 "Quichua" : ["hierba luisa"],
 "English" : ["> lemongrass"],
@@ -60248,7 +60269,7 @@ var nouns =
 
 {"Lexeme" : ["ashta igual"],
 "IPA" : ["aʃta iwal"],
-"IPA2" : ["aʃta iwal"],
+"IPA2" : ["aʃta igual"],
 "Spanish" : ["con.las justas"],
 "Quichua" : ["ashta igual"],
 "English" : ["just barely//just enough"],
@@ -60918,7 +60939,7 @@ var nouns =
 
 {"Lexeme" : ["reloj solar"],
 "IPA" : ["ʐelox solaɾ"],
-"IPA2" : ["ʐelox solaɾʃ"],
+"IPA2" : ["ʐelox solaɾʂ"],
 "Spanish" : ["reloj solar"],
 "Quichua" : ["reloj solar"],
 "English" : ["> sundial"],
@@ -61218,7 +61239,7 @@ var nouns =
 
 {"Lexeme" : ["arrendador"],
 "IPA" : ["aʐendadoɾ"],
-"IPA2" : ["aʐendadoɾʃ"],
+"IPA2" : ["aʐendadoɾʂ"],
 "Spanish" : ["arrendador"],
 "Quichua" : ["arrendador"],
 "English" : ["landlord//lessor"],
@@ -62298,7 +62319,7 @@ var nouns =
 
 {"Lexeme" : ["trabajador"],
 "IPA" : ["tɾabaxadoɾ"],
-"IPA2" : ["tɾabaxadoɾʃ"],
+"IPA2" : ["tɾabaxadoɾʂ"],
 "Spanish" : ["trabajador"],
 "Quichua" : ["trabajador"],
 "English" : ["worker"],
@@ -62458,7 +62479,7 @@ var nouns =
 
 {"Lexeme" : ["abentador"],
 "IPA" : ["abentadoɾ"],
-"IPA2" : ["abentadoɾʃ"],
+"IPA2" : ["abentadoɾʂ"],
 "Spanish" : ["aventador"],
 "Quichua" : ["abentador"],
 "English" : ["fan"],
@@ -62858,7 +62879,7 @@ var nouns =
 
 {"Lexeme" : ["chingadur"],
 "IPA" : ["ʧingaduɾ"],
-"IPA2" : ["ʧingaduɾʃ"],
+"IPA2" : ["ʧingaduɾʂ"],
 "Spanish" : ["perdedor"],
 "Quichua" : ["chingadur"],
 "English" : ["loser"],
@@ -63548,7 +63569,7 @@ var nouns =
 
 {"Lexeme" : ["llancadur"],
 "IPA" : ["ʒankaduɾ"],
-"IPA2" : ["ʒankaduɾʃ"],
+"IPA2" : ["ʒankaduɾʂ"],
 "Spanish" : ["trabajador"],
 "Quichua" : ["llancadur"],
 "English" : ["worker"],
@@ -63678,7 +63699,7 @@ var nouns =
 
 {"Lexeme" : ["quijuar"],
 "IPA" : ["kixuaɾ"],
-"IPA2" : ["kixuaɾ"],
+"IPA2" : ["kixuaɾʂ"],
 "Spanish" : ["quishuar"],
 "Quichua" : ["quijuar"],
 "English" : ["Buddleja.incana"],
@@ -63688,7 +63709,7 @@ var nouns =
 
 {"Lexeme" : ["quijuarr"],
 "IPA" : ["kixuaʐ"],
-"IPA2" : ["kixuaʐ"],
+"IPA2" : ["kixuaɾʂ"],
 "Spanish" : ["quishuar"],
 "Quichua" : ["quijuar"],
 "English" : ["Buddleja.incana"],
@@ -63738,7 +63759,7 @@ var nouns =
 
 {"Lexeme" : ["taller"],
 "IPA" : ["taʒeɾ"],
-"IPA2" : ["taʒeɾ"],
+"IPA2" : ["taʒeɾʂ"],
 "Spanish" : ["taller"],
 "Quichua" : ["taller"],
 "English" : ["workshop"],
@@ -63798,7 +63819,7 @@ var nouns =
 
 {"Lexeme" : ["michidurr"],
 "IPA" : ["miʧiduʐ"],
-"IPA2" : ["miʧiduʐ"],
+"IPA2" : ["miʧiduɾʂ"],
 "Spanish" : ["pastor"],
 "Quichua" : ["michidurr"],
 "English" : ["shepherd"],
@@ -64118,7 +64139,7 @@ var nouns =
 
 {"Lexeme" : ["prendedor"],
 "IPA" : ["pɾendedoɾ"],
-"IPA2" : ["pɾendedoɾʃ"],
+"IPA2" : ["pɾendedoɾʂ"],
 "Spanish" : ["prendedor//broche"],
 "Quichua" : ["prendedor"],
 "English" : ["brooch"],
@@ -64748,7 +64769,7 @@ var nouns =
 
 {"Lexeme" : ["aparidor"],
 "IPA" : ["apaɾidoɾ"],
-"IPA2" : ["apaɾidoɾʃ"],
+"IPA2" : ["apaɾidoɾʂ"],
 "Spanish" : ["cargador"],
 "Quichua" : ["aparidor"],
 "English" : ["loader"],
@@ -64818,7 +64839,7 @@ var nouns =
 
 {"Lexeme" : ["ayudador"],
 "IPA" : ["ajudadoɾ"],
-"IPA2" : ["ajudadoɾʃ"],
+"IPA2" : ["ajudadoɾʂ"],
 "Spanish" : ["ayudante"],
 "Quichua" : ["ayudador"],
 "English" : ["helper"],
@@ -64838,7 +64859,7 @@ var nouns =
 
 {"Lexeme" : ["bailador"],
 "IPA" : ["bailadoɾ"],
-"IPA2" : ["bailadoɾʃ"],
+"IPA2" : ["bailadoɾʂ"],
 "Spanish" : ["bailador"],
 "Quichua" : ["bailador"],
 "English" : ["dancer"],
@@ -65168,7 +65189,7 @@ var nouns =
 
 {"Lexeme" : ["churador"],
 "IPA" : ["ʧuɾadoɾ"],
-"IPA2" : ["ʧuɾadoɾʃ"],
+"IPA2" : ["ʧuɾadoɾʂ"],
 "Spanish" : ["ponedor"],
 "Quichua" : ["churador"],
 "English" : ["user"],
@@ -65188,7 +65209,7 @@ var nouns =
 
 {"Lexeme" : ["coliflor"],
 "IPA" : ["kolifloɾ"],
-"IPA2" : ["kolifloɾʃ"],
+"IPA2" : ["kolifloɾʂ"],
 "Spanish" : ["coliflor"],
 "Quichua" : ["coliflor"],
 "English" : ["cauliflower"],
@@ -65258,7 +65279,7 @@ var nouns =
 
 {"Lexeme" : ["corredor"],
 "IPA" : ["koʐedoɾ"],
-"IPA2" : ["koʐedoɾʃ"],
+"IPA2" : ["koʐedoɾʂ"],
 "Spanish" : ["corredor"],
 "Quichua" : ["corredor"],
 "English" : ["hallway"],
@@ -65308,7 +65329,7 @@ var nouns =
 
 {"Lexeme" : ["cuidador"],
 "IPA" : ["kuidadoɾ"],
-"IPA2" : ["kuidadoɾʃ"],
+"IPA2" : ["kuidadoɾʂ"],
 "Spanish" : ["cuidador"],
 "Quichua" : ["cuidador"],
 "English" : ["caretaker//guard"],
@@ -65928,7 +65949,7 @@ var nouns =
 
 {"Lexeme" : ["jambidor"],
 "IPA" : ["xambidoɾ"],
-"IPA2" : ["xambidoɾʃ"],
+"IPA2" : ["xambidoɾʂ"],
 "Spanish" : ["curandero"],
 "Quichua" : ["jambidor"],
 "English" : ["healer"],
@@ -66469,7 +66490,7 @@ var nouns =
 
 {"Lexeme" : ["pletodor"],
 "IPA" : ["pletodoɾ"],
-"IPA2" : ["pletodoɾʃ"],
+"IPA2" : ["pletodoɾʂ"],
 "Spanish" : ["hablador"],
 "Quichua" : ["pletodor"],
 "English" : ["gossiper//bigmouth"],
@@ -66579,7 +66600,7 @@ var nouns =
 
 {"Lexeme" : ["randidor"],
 "IPA" : ["ʐandidoɾ"],
-"IPA2" : ["ʐandidoɾʃ"],
+"IPA2" : ["ʐandidoɾʂ"],
 "Spanish" : ["negociante//commprador"],
 "Quichua" : ["randidor"],
 "English" : ["bseller"],
@@ -66659,7 +66680,7 @@ var nouns =
 
 {"Lexeme" : ["rondador"],
 "IPA" : ["ʐondadoɾ"],
-"IPA2" : ["ʐondadoɾʃ"],
+"IPA2" : ["ʐondadoɾʂ"],
 "Spanish" : ["rondador"],
 "Quichua" : ["rondador"],
 "English" : ["rondador//panpipes"],
@@ -66970,7 +66991,7 @@ var nouns =
 
 {"Lexeme" : ["tushudor"],
 "IPA" : ["tuʃudoɾ"],
-"IPA2" : ["tuʃudoɾʃ"],
+"IPA2" : ["tuʃudoɾʂ"],
 "Spanish" : ["bailador"],
 "Quichua" : ["tushudor"],
 "English" : ["dancer"],
@@ -67920,7 +67941,7 @@ var nouns =
 
 {"Lexeme" : ["celular"],
 "IPA" : ["selulaɾ"],
-"IPA2" : ["selulaɾʃ"],
+"IPA2" : ["selulaɾʂ"],
 "Spanish" : ["celular"],
 "Quichua" : ["celular"],
 "English" : ["cell.phone"],
@@ -68040,7 +68061,7 @@ var nouns =
 
 {"Lexeme" : ["chactor"],
 "IPA" : ["ʧaktoɾ"],
-"IPA2" : ["ʧaktoɾ"],
+"IPA2" : ["ʧaktoɾʂ"],
 "Spanish" : ["tractor"],
 "Quichua" : ["chactor"],
 "English" : ["tractor"],
@@ -68050,7 +68071,7 @@ var nouns =
 
 {"Lexeme" : ["chaguar"],
 "IPA" : ["ʧawaɾ"],
-"IPA2" : ["ʧawaɾʃ"],
+"IPA2" : ["ʧawaɾʂ"],
 "Spanish" : ["penco"],
 "Quichua" : ["chaguar"],
 "English" : ["agave"],
@@ -68500,7 +68521,7 @@ var nouns =
 
 {"Lexeme" : ["Ecuador"],
 "IPA" : ["ekuadoɾ"],
-"IPA2" : ["ekuadoɾʃ"],
+"IPA2" : ["ekuadoɾʂ"],
 "Spanish" : ["Ecuador"],
 "Quichua" : ["Ecuador"],
 "English" : ["Ecuador"],
@@ -68700,7 +68721,7 @@ var nouns =
 
 {"Lexeme" : ["ganador"],
 "IPA" : ["ganadoɾ"],
-"IPA2" : ["ganadoɾʃ"],
+"IPA2" : ["ganadoɾʂ"],
 "Spanish" : ["ganador"],
 "Quichua" : ["ganador"],
 "English" : ["winner"],
@@ -69000,7 +69021,7 @@ var nouns =
 
 {"Lexeme" : ["jatudur"],
 "IPA" : ["xatuduɾ"],
-"IPA2" : ["xatuduɾʃ"],
+"IPA2" : ["xatuduɾʂ"],
 "Spanish" : ["vendedor"],
 "Quichua" : ["jatudur"],
 "English" : ["seller"],
@@ -69410,7 +69431,7 @@ var nouns =
 
 {"Lexeme" : ["mayoral"],
 "IPA" : ["maioɾal"],
-"IPA2" : ["maioɾal"],
+"IPA2" : ["majoɾal"],
 "Spanish" : ["mayoral"],
 "Quichua" : ["mayoral"],
 "English" : ["foreman"],
@@ -69440,7 +69461,7 @@ var nouns =
 
 {"Lexeme" : ["medidor"],
 "IPA" : ["medidoɾ"],
-"IPA2" : ["medidoɾʃ"],
+"IPA2" : ["medidoɾʂ"],
 "Spanish" : ["medidor"],
 "Quichua" : ["medidor"],
 "English" : ["meter"],
@@ -69580,7 +69601,7 @@ var nouns =
 
 {"Lexeme" : ["naigual"],
 "IPA" : ["naiwal"],
-"IPA2" : ["naiwal"],
+"IPA2" : ["naigual"],
 "Spanish" : ["desigual"],
 "Quichua" : ["naigual"],
 "English" : ["uneven"],
@@ -70100,7 +70121,7 @@ var nouns =
 
 {"Lexeme" : ["resador"],
 "IPA" : ["ʐesadoɾ"],
-"IPA2" : ["ʐesadoɾʃ"],
+"IPA2" : ["ʐesadoɾʂ"],
 "Spanish" : ["rezador//cura"],
 "Quichua" : ["resador"],
 "English" : ["priest.who.conducts.a.funeral.service"],
@@ -70550,7 +70571,7 @@ var nouns =
 
 {"Lexeme" : ["tamburr"],
 "IPA" : ["tambuʐ"],
-"IPA2" : ["tambuʐ"],
+"IPA2" : ["tambuɾʂ"],
 "Spanish" : ["tambor"],
 "Quichua" : ["tamburr"],
 "English" : ["drum"],
@@ -70570,7 +70591,7 @@ var nouns =
 
 {"Lexeme" : ["tenedor"],
 "IPA" : ["tenedoɾ"],
-"IPA2" : ["tenedoɾʃ"],
+"IPA2" : ["tenedoɾʂ"],
 "Spanish" : ["tenedor"],
 "Quichua" : ["tenedor"],
 "English" : ["fork"],
@@ -71429,8 +71450,8 @@ var nouns =
 "Dict" : ["SPG"]},
 
 {"Lexeme" : ["carsho"],
-"IPA" : ["kaɾʃo"],
-"IPA2" : ["kaɾʃo"],
+"IPA" : ["kaɾʂo"],
+"IPA2" : ["kaɾʂo"],
 "Spanish" : ["taxi"],
 "Quichua" : ["carsho"],
 "English" : ["taxi"],
@@ -71750,7 +71771,7 @@ var nouns =
 
 {"Lexeme" : ["chofer"],
 "IPA" : ["ʧofeɾ"],
-"IPA2" : ["ʧofeɾʃ"],
+"IPA2" : ["ʧofeɾʂ"],
 "Spanish" : ["chofer"],
 "Quichua" : ["chofer"],
 "English" : ["driver"],
@@ -72100,7 +72121,7 @@ var nouns =
 
 {"Lexeme" : ["cundur"],
 "IPA" : ["kunduɾ"],
-"IPA2" : ["kunduɾʃ"],
+"IPA2" : ["kunduɾʂ"],
 "Spanish" : ["cóndor"],
 "Quichua" : ["cundur"],
 "English" : ["condor"],
@@ -73922,7 +73943,7 @@ var nouns =
 
 {"Lexeme" : ["pintor"],
 "IPA" : ["pintoɾ"],
-"IPA2" : ["pintoɾʃ"],
+"IPA2" : ["pintoɾʂ"],
 "Spanish" : ["pintor"],
 "Quichua" : ["pintor"],
 "English" : ["painter"],
@@ -74513,7 +74534,7 @@ var nouns =
 
 {"Lexeme" : ["sector"],
 "IPA" : ["sektoɾ"],
-"IPA2" : ["sektoɾʃ"],
+"IPA2" : ["sektoɾʂ"],
 "Spanish" : ["sector"],
 "Quichua" : ["sector"],
 "English" : ["sector"],
@@ -74983,7 +75004,7 @@ var nouns =
 
 {"Lexeme" : ["treser"],
 "IPA" : ["tɾeseɾ"],
-"IPA2" : ["tɾeseɾʃ"],
+"IPA2" : ["tɾeseɾʂ"],
 "Spanish" : ["tercer"],
 "Quichua" : ["treser"],
 "English" : ["third"],
@@ -75323,7 +75344,7 @@ var nouns =
 
 {"Lexeme" : ["yahuar"],
 "IPA" : ["jawaɾ"],
-"IPA2" : ["jawaɾʃ"],
+"IPA2" : ["jawaɾʂ"],
 "Spanish" : ["sangre"],
 "Quichua" : ["yahuar"],
 "English" : ["blood"],
@@ -75533,7 +75554,7 @@ var nouns =
 
 {"Lexeme" : ["altar"],
 "IPA" : ["altaɾ"],
-"IPA2" : ["altaɾʃ"],
+"IPA2" : ["altaɾʂ"],
 "Spanish" : ["altar"],
 "Quichua" : ["altar"],
 "English" : ["altar"],
@@ -76373,7 +76394,7 @@ var nouns =
 
 {"Lexeme" : ["color"],
 "IPA" : ["koloɾ"],
-"IPA2" : ["koloɾʃ"],
+"IPA2" : ["koloɾʂ"],
 "Spanish" : ["color"],
 "Quichua" : ["color"],
 "English" : ["color"],
@@ -76574,7 +76595,7 @@ var nouns =
 {"Lexeme" : ["cushi"],
 "IPA" : ["kuʃi"],
 "IPA2" : ["kuʃi"],
-"Spanish" : ["feliz"],
+"Spanish" : ["felis"],
 "Quichua" : ["cushi"],
 "English" : ["happy"],
 "Root" : ["NA"],
@@ -76713,7 +76734,7 @@ var nouns =
 
 {"Lexeme" : ["dolar"],
 "IPA" : ["dolaɾ"],
-"IPA2" : ["dolaɾʃ"],
+"IPA2" : ["dolaɾʂ"],
 "Spanish" : ["dólar"],
 "Quichua" : ["dolar"],
 "English" : ["dollar"],
@@ -76763,7 +76784,7 @@ var nouns =
 
 {"Lexeme" : ["fabur"],
 "IPA" : ["fabuɾ"],
-"IPA2" : ["fabuɾʃ"],
+"IPA2" : ["fabuɾʂ"],
 "Spanish" : ["favor"],
 "Quichua" : ["fabur"],
 "English" : ["favor"],
@@ -76813,7 +76834,7 @@ var nouns =
 
 {"Lexeme" : ["feliz"],
 "IPA" : ["feliz"],
-"IPA2" : ["feliz"],
+"IPA2" : ["felis"],
 "Spanish" : ["feliz"],
 "Quichua" : ["feliz"],
 "English" : ["happy"],
@@ -77193,7 +77214,7 @@ var nouns =
 
 {"Lexeme" : ["igual"],
 "IPA" : ["iwal"],
-"IPA2" : ["iwal"],
+"IPA2" : ["igual"],
 "Spanish" : ["igual"],
 "Quichua" : ["igual"],
 "English" : ["together//equal"],
@@ -77833,7 +77854,7 @@ var nouns =
 
 {"Lexeme" : ["lugar"],
 "IPA" : ["lugaɾ"],
-"IPA2" : ["lugaɾʃ"],
+"IPA2" : ["lugaɾʂ"],
 "Spanish" : ["lugar//puesto"],
 "Quichua" : ["lugar"],
 "English" : ["place//spot"],
@@ -77983,7 +78004,7 @@ var nouns =
 
 {"Lexeme" : ["mayor"],
 "IPA" : ["maioɾ"],
-"IPA2" : ["maioɾʃ"],
+"IPA2" : ["majoɾʂ"],
 "Spanish" : ["viejo//mayor"],
 "Quichua" : ["mayor"],
 "English" : ["old.person//elder"],
@@ -79033,7 +79054,7 @@ var nouns =
 
 {"Lexeme" : ["sabor"],
 "IPA" : ["saboɾ"],
-"IPA2" : ["saboɾʃ"],
+"IPA2" : ["saboɾʂ"],
 "Spanish" : ["sabor"],
 "Quichua" : ["sabor"],
 "English" : ["taste"],
@@ -79413,7 +79434,7 @@ var nouns =
 
 {"Lexeme" : ["telar"],
 "IPA" : ["telaɾ"],
-"IPA2" : ["telaɾʃ"],
+"IPA2" : ["telaɾʂ"],
 "Spanish" : ["telar"],
 "Quichua" : ["telar"],
 "English" : ["loom"],
@@ -79533,7 +79554,7 @@ var nouns =
 
 {"Lexeme" : ["tumor"],
 "IPA" : ["tumoɾ"],
-"IPA2" : ["tumoɾʃ"],
+"IPA2" : ["tumoɾʂ"],
 "Spanish" : ["tumor"],
 "Quichua" : ["tumor"],
 "English" : ["tumor"],
@@ -79633,7 +79654,7 @@ var nouns =
 
 {"Lexeme" : ["valor"],
 "IPA" : ["baloɾ"],
-"IPA2" : ["baloɾʃ"],
+"IPA2" : ["baloɾʂ"],
 "Spanish" : ["valor"],
 "Quichua" : ["valor"],
 "English" : ["price"],
@@ -80913,7 +80934,7 @@ var nouns =
 
 {"Lexeme" : ["por"],
 "IPA" : ["poɾ"],
-"IPA2" : ["poɾ"],
+"IPA2" : ["poɾʂ"],
 "Spanish" : ["por"],
 "Quichua" : ["por"],
 "English" : ["for"],
@@ -82743,7 +82764,7 @@ var nouns =
 
 {"Lexeme" : ["sur"],
 "IPA" : ["suɾ"],
-"IPA2" : ["suɾʃ"],
+"IPA2" : ["suɾʂ"],
 "Spanish" : ["sur"],
 "Quichua" : ["sur"],
 "English" : ["south"],
@@ -85019,7 +85040,7 @@ var verbs =
 {"Lexeme" : ["resembrana"],
 "IPA" : ["ʐesembɾana"],
 "IPA2" : ["ʐesembɾa"],
-"Spanish" : ["resemblar"],
+"Spanish" : ["resembrar"],
 "Quichua" : ["cutin.tarpuna"],
 "English" : ["replant"],
 "Root" : ["resembra"],
@@ -87361,7 +87382,7 @@ var verbs =
 
 {"Lexeme" : ["despierta"],
 "IPA" : ["despieɾta"],
-"IPA2" : ["despieɾ"],
+"IPA2" : ["despieɾʂ"],
 "Spanish" : ["despertarse"],
 "Quichua" : ["richachina"],
 "English" : ["wake.up"],
@@ -89110,7 +89131,7 @@ var verbs =
 
 {"Lexeme" : ["igualana"],
 "IPA" : ["iwalana"],
-"IPA2" : ["iwala"],
+"IPA2" : ["iguala"],
 "Spanish" : ["igualar"],
 "Quichua" : ["igualana"],
 "English" : ["keep.even"],
@@ -95458,7 +95479,18 @@ var verbs =
 
 {"Lexeme" : ["shuana"],
 "IPA" : ["swana"],
-"IPA2" : ["swa"],
+"IPA2" : ["sʃua"],
+"Spanish" : ["robar"],
+"Quichua" : ["shuana"],
+"English" : ["rob//steal"],
+"Root" : ["shua"],
+"RootIPA" : ["swa"],
+"Origin" : ["ML"],
+"Dict" : ["SPG"]},
+
+{"Lexeme" : ["shuana"],
+"IPA" : ["sʃuana"],
+"IPA2" : ["sʃua"],
 "Spanish" : ["robar"],
 "Quichua" : ["shuana"],
 "English" : ["rob//steal"],
@@ -96559,6 +96591,17 @@ var verbs =
 {"Lexeme" : ["shuana"],
 "IPA" : ["swana"],
 "IPA2" : ["swa"],
+"Spanish" : ["robar"],
+"Quichua" : ["shuana"],
+"English" : ["rob//steal"],
+"Root" : ["shua"],
+"RootIPA" : ["swa"],
+"Origin" : ["ML"],
+"Dict" : ["SPG"]},
+
+{"Lexeme" : ["shuana"],
+"IPA" : ["sʃuana"],
+"IPA2" : ["sʃua"],
 "Spanish" : ["robar"],
 "Quichua" : ["shuana"],
 "English" : ["rob//steal"],
@@ -99308,7 +99351,7 @@ var verbs =
 
 {"Lexeme" : ["torse"],
 "IPA" : ["toɾse"],
-"IPA2" : ["toɾ"],
+"IPA2" : ["toɾʂ"],
 "Spanish" : ["torcer.lana"],
 "Quichua" : ["caupuna"],
 "English" : ["twist"],
@@ -100211,7 +100254,7 @@ var verbs =
 {"Lexeme" : ["cutin tarpuna"],
 "IPA" : ["kutin taɾpuna"],
 "IPA2" : ["kutin taɾpu"],
-"Spanish" : ["> resemblar//> sembrar"],
+"Spanish" : ["> resembrar//> sembrar"],
 "Quichua" : ["cutin tarpuna"],
 "English" : ["> replant"],
 "Root" : ["cutin tarpu"],
@@ -103016,7 +103059,7 @@ var verbs =
 
 {"Lexeme" : ["igualana"],
 "IPA" : ["iwalana"],
-"IPA2" : ["iwala"],
+"IPA2" : ["iguala"],
 "Spanish" : ["igualar"],
 "Quichua" : ["igualana"],
 "English" : ["match"],
@@ -106248,6 +106291,17 @@ var verbs =
 "Origin" : ["Q"],
 "Dict" : ["SPG"]},
 
+{"Lexeme" : ["shuana"],
+"IPA" : ["sʃuana"],
+"IPA2" : ["sʃua"],
+"Spanish" : ["robar"],
+"Quichua" : ["shuana"],
+"English" : ["rob//steal"],
+"Root" : ["shua"],
+"RootIPA" : ["swa"],
+"Origin" : ["Q"],
+"Dict" : ["SPG"]},
+
 {"Lexeme" : ["sicana"],
 "IPA" : ["sikana"],
 "IPA2" : ["sika"],
@@ -107582,7 +107636,7 @@ var Pred_VN =
 {"IPA" : ["iʃpa"]},
 {"IPA" : ["sapa"]},
 {"IPA" : ["ŋgik"]},
-{"IPA" : ["doɾʃ"]},
+{"IPA" : ["doɾʂ"]},
 {"IPA" : ["papi"]},
 {"IPA" : ["ipaʃ"]},
 {"IPA" : ["mapi"]},
