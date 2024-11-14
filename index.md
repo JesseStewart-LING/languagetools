@@ -1,8 +1,13 @@
+<!DOCTYPE html>
+
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" http-equiv="Content-Type" content="text,CSS,HTML, initial-scale=1.0">
-<body>
-<h1>Herramientas Lingüísticas • Language Tools</h1>
-<a href="MediaLengua.html"><img src="ML_banner.jpg" width="75%" height="125" align="left" border="0"></a>
-</body>
+<style></style>
+<br><br><br><br><br>
+<div style="text-align: center;">
+<a href="MediaLengua.html"><img src="BannerNew.jpg" width="65%" height="65%" border="0"></a>
+</div>
+</body></html>
+
