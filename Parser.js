@@ -27967,7 +27967,7 @@ var nouns =
 "Dict" : ["SPG"]},
 
 {"Lexeme" : ["harshta"],
-"IPA" : ["aɾʂta"],
+"IPA" : ["aɾʃta"],
 "IPA2" : ["aɾʂta"],
 "Spanish" : ["bastante"],
 "Quichua" : ["achia"],
@@ -29757,7 +29757,7 @@ var nouns =
 "Dict" : ["SPG"]},
 
 {"Lexeme" : ["arshta"],
-"IPA" : ["aɾʂta"],
+"IPA" : ["aɾʃta"],
 "IPA2" : ["aɾʂta"],
 "Spanish" : ["bastante"],
 "Quichua" : ["achia"],
@@ -29817,7 +29817,7 @@ var nouns =
 "Dict" : ["SPG"]},
 
 {"Lexeme" : ["arshtote"],
-"IPA" : ["aɾʂtote"],
+"IPA" : ["aɾʃtote"],
 "IPA2" : ["aɾʂtote"],
 "Spanish" : ["muchísimo"],
 "Quichua" : ["achia"],
@@ -29827,7 +29827,7 @@ var nouns =
 "Dict" : ["SPG"]},
 
 {"Lexeme" : ["arshto"],
-"IPA" : ["aɾʂto"],
+"IPA" : ["aɾʃto"],
 "IPA2" : ["aɾʂto"],
 "Spanish" : ["mucho"],
 "Quichua" : ["achia"],
@@ -44205,6 +44205,16 @@ var nouns =
 "Spanish" : ["perro"],
 "Quichua" : ["jari.alcu"],
 "English" : ["dog"],
+"Root" : ["NA"],
+"Origin" : ["ML"],
+"Dict" : ["SPG"]},
+
+{"Lexeme" : ["cachorro"],
+"IPA" : ["kaʧoʐo"],
+"IPA2" : ["kaʧoʐo"],
+"Spanish" : ["cachorro"],
+"Quichua" : ["alcugu"],
+"English" : ["puppy"],
 "Root" : ["NA"],
 "Origin" : ["ML"],
 "Dict" : ["SPG"]},
